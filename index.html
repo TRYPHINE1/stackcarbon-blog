@@ -3,960 +3,3023 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stack Carbon Insights & Stories — carbon removal, climate innovation, sustainable agriculture and partnerships across Africa.">
+
+  <meta
+    name="description"
+    content="Stack Carbon Insights & Stories — carbon removal, climate innovation, sustainable agriculture and partnerships across Africa."
+  >
+
   <title>Insights & Stories | Stack Carbon</title>
 
-  <link rel="icon" type="image/png" href="https://res.cloudinary.com/drqsua6wp/image/upload/f_png,q_auto,w_64,h_64,c_fill,g_auto/v1772185133/favicon_stack_logo_tmjlpa.png">
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://res.cloudinary.com/drqsua6wp/image/upload/f_png,q_auto,w_64,h_64,c_fill,g_auto/v1772185133/favicon_stack_logo_tmjlpa.png"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
 
   <style>
-    :root{
-      --deep:#203319;
-      --olive:#5B7D3F;
-      --lime:#A4CF5B;
-      --neutral:#E3DED7;
-      --teal:#2B7A69;
-      --blue:#2078B4;
-      --gold:#F3AB22;
-      --white:#fff;
-      --deep-rgb:32,51,25;
-      --olive-rgb:91,125,63;
-      --lime-rgb:164,207,91;
-      --max:1200px;
-      --text-dark:#1A2814;
-      --shadow:0 18px 45px rgba(0,0,0,.22);
-      --ease:cubic-bezier(.2,0,.2,1);
-      --header-h:75px;
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
+    :root {
+      --deep: #203319;
+      --olive: #5B7D3F;
+      --lime: #A4CF5B;
+      --neutral: #E3DED7;
+      --teal: #2B7A69;
+      --blue: #2078B4;
+      --gold: #F3AB22;
+
+      --white: #ffffff;
+      --text-dark: #1A2814;
+
+      --deep-rgb: 32, 51, 25;
+      --olive-rgb: 91, 125, 63;
+      --lime-rgb: 164, 207, 91;
+
+      --max: 1200px;
+
+      --shadow: 0 18px 45px rgba(0, 0, 0, .22);
+
+      --ease: cubic-bezier(.2, 0, .2, 1);
+
+      --header-h: 75px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;overflow-x:clip}
-    body{
-      font-family:"Nunito Sans",sans-serif;
-      background:var(--white);
-      color:var(--text-dark);
-      line-height:1.65;
-      overflow-x:clip;
-      -webkit-font-smoothing:antialiased;
-    }
-    img{display:block;max-width:100%}
-    a{text-decoration:none;color:inherit}
-    button,input{font:inherit}
-    button{cursor:pointer}
-    .container{width:min(var(--max),92%);margin:auto}
-    section[id]{scroll-margin-top:110px}
 
-    /* ---------- HEADER ---------- */
-    .site-header{
-      position:fixed;
-      top:16px;
-      left:0;
-      right:0;
-      z-index:999;
-      pointer-events:none;
-    }
-    .nav-shell{
-      width:min(var(--max),92%);
-      margin:auto;
-      border:1px solid rgba(255,255,255,.14);
-      border-radius:22px;
-      background:rgba(var(--deep-rgb),.78);
-      backdrop-filter:blur(14px);
-      box-shadow:var(--shadow);
-      pointer-events:auto;
-      transition:.25s ease;
-    }
-    .nav-shell.scrolled{background:rgba(var(--deep-rgb),.94)}
-    .nav-row{
-      min-height:var(--header-h);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:0 18px;
-    }
-    .logo img{height:38px;width:auto}
-    .nav-links{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:18px;
-      flex:1;
-      color:rgba(255,255,255,.92);
-      font-size:.95rem;
-      font-weight:900;
-    }
-    .nav-links>a,.drop-btn{
-      padding:10px 12px;
-      border-radius:12px;
-      color:inherit;
-      white-space:nowrap;
-      background:transparent;
-      border:0;
-      font-weight:900;
-    }
-    .nav-links>a:hover,.drop-btn:hover{color:var(--lime);background:rgba(255,255,255,.06)}
-    .dropdown{position:relative}
-    .drop-menu{
-      position:absolute;
-      top:calc(100% + 10px);
-      left:0;
-      min-width:235px;
-      padding:8px;
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:16px;
-      background:rgba(var(--deep-rgb),.96);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(12px);
-      opacity:0;
-      visibility:hidden;
-      transform:translateY(8px);
-      transition:.22s ease;
-    }
-    .dropdown:hover .drop-menu,.dropdown.open .drop-menu{
-      opacity:1;visibility:visible;transform:translateY(0)
-    }
-    .drop-menu a{
-      display:block;
-      padding:12px;
-      border-radius:12px;
-      color:rgba(255,255,255,.9);
-      font-weight:800;
-    }
-    .drop-menu a:hover{background:rgba(var(--lime-rgb),.1);color:var(--lime)}
-    .nav-tools{display:flex;align-items:center;gap:10px}
-    .nav-cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:13px 21px;
-      border-radius:999px;
-      background:var(--lime);
-      color:#0a140a;
-      font-weight:900;
-      box-shadow:0 18px 40px rgba(var(--lime-rgb),.18);
-    }
-    .nav-cta:hover{transform:translateY(-2px)}
-    .menu-btn{
-      display:none;
-      width:44px;height:44px;
-      border:1px solid rgba(255,255,255,.16);
-      border-radius:14px;
-      background:rgba(255,255,255,.06);
-      color:#fff;
-      font-size:20px;
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* ---------- MOBILE DRAWER ---------- */
-    .drawer{
-      position:fixed;inset:0;z-index:2000;
-      background:rgba(0,0,0,.55);
-      opacity:0;visibility:hidden;
-      transition:.25s ease;
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
     }
-    .drawer.open{opacity:1;visibility:visible}
-    .drawer-panel{
-      position:absolute;right:0;top:0;bottom:0;
-      width:min(420px,92vw);
-      padding:22px;
-      overflow-y:auto;
+
+    body {
+      font-family: "Nunito Sans", sans-serif;
+      background: var(--white);
+      color: var(--text-dark);
+      line-height: 1.65;
+
+      overflow-x: clip;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(var(--max), 92%);
+      margin: auto;
+    }
+
+    section[id] {
+      scroll-margin-top: 110px;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .site-header {
+      position: fixed;
+      top: 16px;
+      left: 0;
+      right: 0;
+
+      z-index: 999;
+
+      pointer-events: none;
+    }
+
+    .nav-shell {
+      width: min(var(--max), 92%);
+      margin: auto;
+
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 22px;
+
+      background: rgba(var(--deep-rgb), .78);
+
+      backdrop-filter: blur(14px);
+
+      box-shadow: var(--shadow);
+
+      pointer-events: auto;
+
+      transition: .25s ease;
+    }
+
+    .nav-shell.scrolled {
+      background: rgba(var(--deep-rgb), .94);
+    }
+
+    .nav-row {
+      min-height: var(--header-h);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 14px;
+
+      padding: 0 18px;
+    }
+
+    .logo img {
+      height: 38px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 18px;
+
+      flex: 1;
+
+      color: rgba(255, 255, 255, .92);
+
+      font-size: .95rem;
+      font-weight: 900;
+    }
+
+    .nav-links > a,
+    .drop-btn {
+      padding: 10px 12px;
+
+      border-radius: 12px;
+
+      color: inherit;
+
+      white-space: nowrap;
+
+      background: transparent;
+      border: 0;
+
+      font-weight: 900;
+    }
+
+    .nav-links > a:hover,
+    .drop-btn:hover {
+      color: var(--lime);
+      background: rgba(255, 255, 255, .06);
+    }
+
+
+    /* =========================================================
+       DESKTOP DROPDOWNS
+    ========================================================= */
+
+    .dropdown {
+      position: relative;
+    }
+
+    .drop-menu {
+      position: absolute;
+
+      top: calc(100% + 10px);
+      left: 0;
+
+      min-width: 235px;
+
+      padding: 8px;
+
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 16px;
+
+      background: rgba(var(--deep-rgb), .96);
+
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(12px);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(8px);
+
+      transition: .22s ease;
+    }
+
+    .dropdown:hover .drop-menu,
+    .dropdown.open .drop-menu {
+      opacity: 1;
+      visibility: visible;
+
+      transform: translateY(0);
+    }
+
+    .drop-menu a {
+      display: block;
+
+      padding: 12px;
+
+      border-radius: 12px;
+
+      color: rgba(255, 255, 255, .9);
+
+      font-weight: 800;
+    }
+
+    .drop-menu a:hover {
+      background: rgba(var(--lime-rgb), .1);
+      color: var(--lime);
+    }
+
+
+    /* =========================================================
+       NAV TOOLS
+    ========================================================= */
+
+    .nav-tools {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 13px 21px;
+
+      border-radius: 999px;
+
+      background: var(--lime);
+      color: #0a140a;
+
+      font-weight: 900;
+
+      box-shadow:
+        0 18px 40px rgba(var(--lime-rgb), .18);
+
+      transition: .25s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+    }
+
+    .menu-btn {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 14px;
+
+      background: rgba(255, 255, 255, .06);
+
+      color: #fff;
+
+      font-size: 20px;
+    }
+
+
+    /* =========================================================
+       MOBILE DRAWER
+    ========================================================= */
+
+    .drawer {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 2000;
+
+      background: rgba(0, 0, 0, .55);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition: .25s ease;
+    }
+
+    .drawer.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drawer-panel {
+      position: absolute;
+
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      width: min(420px, 92vw);
+
+      padding: 22px;
+
+      overflow-y: auto;
+
       background:
-        radial-gradient(800px 400px at 10% 0%,rgba(var(--olive-rgb),.16),transparent 60%),
-        linear-gradient(180deg,rgba(var(--deep-rgb),.98),rgba(var(--deep-rgb),.9));
-      border-left:1px solid rgba(255,255,255,.12);
-      color:#fff;
-      transform:translateX(110%);
-      transition:transform .3s var(--ease);
-    }
-    .drawer.open .drawer-panel{transform:translateX(0)}
-    .drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-    .drawer-top img{height:32px;filter:brightness(5)}
-    .drawer-close{
-      width:44px;height:44px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.06);
-      color:#fff;font-size:22px;
-    }
-    .drawer-links{display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
-    .drawer-link,.acc-btn{
-      width:100%;
-      padding:14px;
-      border:1px solid rgba(255,255,255,.15);
-      border-radius:16px;
-      background:rgba(255,255,255,.06);
-      color:#fff;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      font-weight:900;
-    }
-    .drawer-link:hover,.acc-btn:hover{color:var(--lime);border-color:rgba(var(--lime-rgb),.4)}
-    .acc-panel{display:none;padding:5px 0 2px}
-    .acc-panel.open{display:block}
-    .drawer-link.sub{margin:5px 0 0 12px;width:calc(100% - 12px);font-size:.94rem}
-    .drawer-cta{background:var(--lime);color:#0a140a;justify-content:center}
+        radial-gradient(
+          800px 400px at 10% 0%,
+          rgba(var(--olive-rgb), .16),
+          transparent 60%
+        ),
+        linear-gradient(
+          180deg,
+          rgba(var(--deep-rgb), .98),
+          rgba(var(--deep-rgb), .9)
+        );
 
-    /* ---------- HERO ---------- */
-    .hero{
-      position:relative;
-      min-height:88svh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      overflow:hidden;
-      isolation:isolate;
+      border-left: 1px solid rgba(255, 255, 255, .12);
+
+      color: #fff;
+
+      transform: translateX(110%);
+
+      transition:
+        transform .3s var(--ease);
+    }
+
+    .drawer.open .drawer-panel {
+      transform: translateX(0);
+    }
+
+    .drawer-top {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 20px;
+    }
+
+    .drawer-top img {
+      height: 32px;
+
+      filter: brightness(5);
+    }
+
+    .drawer-close {
+      width: 44px;
+      height: 44px;
+
+      border-radius: 14px;
+
+      border: 1px solid rgba(255, 255, 255, .16);
+
+      background: rgba(255, 255, 255, .06);
+
+      color: #fff;
+
+      font-size: 22px;
+    }
+
+    .drawer-links {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+
+      border-top: 1px solid rgba(255, 255, 255, .12);
+
+      padding-top: 18px;
+    }
+
+    .drawer-link,
+    .acc-btn {
+      width: 100%;
+
+      padding: 14px;
+
+      border: 1px solid rgba(255, 255, 255, .15);
+
+      border-radius: 16px;
+
+      background: rgba(255, 255, 255, .06);
+
+      color: #fff;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      font-weight: 900;
+    }
+
+    .drawer-link:hover,
+    .acc-btn:hover {
+      color: var(--lime);
+
+      border-color:
+        rgba(var(--lime-rgb), .4);
+    }
+
+    .acc-panel {
+      display: none;
+
+      padding: 5px 0 2px;
+    }
+
+    .acc-panel.open {
+      display: block;
+    }
+
+    .drawer-link.sub {
+      margin: 5px 0 0 12px;
+
+      width: calc(100% - 12px);
+
+      font-size: .94rem;
+    }
+
+    .drawer-cta {
+      background: var(--lime);
+
+      color: #0a140a;
+
+      justify-content: center;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+
+      min-height: 88svh;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      overflow: hidden;
+
+      isolation: isolate;
+
       background:
-        linear-gradient(180deg,rgba(20,55,45,.28),rgba(10,25,15,.82)),
+        linear-gradient(
+          180deg,
+          rgba(20, 55, 45, .28),
+          rgba(10, 25, 15, .82)
+        ),
         url("https://res.cloudinary.com/drqsua6wp/image/upload/v1773052368/Screenshot_2026-03-09_133128_hogykg.jpg")
-        center/cover;
-      color:#fff;
-      padding:150px 20px 110px;
-    }
-    .hero::after{
-      content:"INSIGHTS";
-      position:absolute;
-      left:-8%;right:-8%;bottom:-18%;
-      font-size:clamp(5rem,16vw,15rem);
-      line-height:1;
-      font-weight:900;
-      letter-spacing:.12em;
-      color:#fff;
-      opacity:.07;
-      transform:rotate(-7deg);
-      z-index:1;
-      pointer-events:none;
-      white-space:nowrap;
-    }
-    .hero-content{position:relative;z-index:2;max-width:900px}
-    .hero-kicker{
-      text-transform:uppercase;
-      letter-spacing:.22em;
-      font-size:.82rem;
-      font-weight:900;
-      color:var(--lime);
-      margin-bottom:16px;
-    }
-    .hero h1{
-      font-size:clamp(2.8rem,7vw,6.2rem);
-      line-height:1;
-      font-weight:900;
-      letter-spacing:-.04em;
-      margin-bottom:22px;
-    }
-    .hero p{
-      max-width:720px;
-      margin:auto;
-      color:rgba(255,255,255,.82);
-      font-size:clamp(1rem,1.6vw,1.16rem);
-      line-height:1.8;
+        center / cover;
+
+      color: #fff;
+
+      padding: 150px 20px 110px;
     }
 
-    /* ---------- FEATURED ---------- */
-    .featured-wrap{
-      position:relative;
-      z-index:5;
-      margin-top:-75px;
-      padding-bottom:30px;
+    .hero::after {
+      content: "INSIGHTS";
+
+      position: absolute;
+
+      left: -8%;
+      right: -8%;
+      bottom: -18%;
+
+      font-size: clamp(5rem, 16vw, 15rem);
+
+      line-height: 1;
+
+      font-weight: 900;
+
+      letter-spacing: .12em;
+
+      color: #fff;
+
+      opacity: .07;
+
+      transform: rotate(-7deg);
+
+      z-index: 1;
+
+      pointer-events: none;
+
+      white-space: nowrap;
     }
-    .featured{
-      display:grid;
-      grid-template-columns:1.12fr 1fr;
-      overflow:hidden;
-      border-radius:28px;
-      background:#fff;
-      border:1px solid rgba(var(--deep-rgb),.08);
-      box-shadow:0 28px 70px rgba(0,0,0,.13);
+
+    .hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 900px;
     }
-    .featured-image{
-      min-height:480px;
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 6.2rem);
+
+      line-height: 1;
+
+      font-weight: 900;
+
+      letter-spacing: -.04em;
+
+      margin-bottom: 22px;
+    }
+
+
+    /* =========================================================
+       FEATURED ARTICLE
+    ========================================================= */
+
+    .featured-wrap {
+      position: relative;
+
+      z-index: 5;
+
+      margin-top: -75px;
+
+      padding-bottom: 30px;
+    }
+
+    .featured {
+      display: grid;
+
+      grid-template-columns: 1.12fr 1fr;
+
+      overflow: hidden;
+
+      border-radius: 28px;
+
+      background: #fff;
+
+      border:
+        1px solid rgba(var(--deep-rgb), .08);
+
+      box-shadow:
+        0 28px 70px rgba(0, 0, 0, .13);
+    }
+
+    .featured-image {
+      min-height: 480px;
+
       background:
-        linear-gradient(180deg,rgba(32,51,25,.05),rgba(32,51,25,.18)),
+        linear-gradient(
+          180deg,
+          rgba(32, 51, 25, .05),
+          rgba(32, 51, 25, .18)
+        ),
         url("https://res.cloudinary.com/drqsua6wp/image/upload/v1771913240/conifer-5864516_gaxkyt.jpg")
-        center/cover;
-    }
-    .featured-content{
-      padding:clamp(2rem,5vw,4rem);
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-    .label{
-      color:var(--olive);
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      font-size:.74rem;
-      font-weight:900;
-      margin-bottom:15px;
-    }
-    .featured h2{
-      color:var(--deep);
-      font-size:clamp(2rem,4vw,3.15rem);
-      line-height:1.08;
-      font-weight:900;
-      margin-bottom:18px;
-    }
-    .featured p{color:#607064;font-size:1rem;margin-bottom:22px}
-    .meta{color:#87928a;font-size:.78rem;font-weight:700;margin-bottom:24px}
-    .read-link{
-      width:max-content;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      color:var(--deep);
-      font-weight:900;
-    }
-    .read-link .arrow{font-size:1.25rem;transition:.25s}
-    .read-link:hover{color:var(--olive)}
-    .read-link:hover .arrow{transform:translateX(6px)}
-
-    /* ---------- CATEGORIES ---------- */
-    .categories{padding:55px 0 35px}
-    .category-list{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-    .category{
-      padding:10px 18px;
-      border:1px solid rgba(var(--deep-rgb),.18);
-      border-radius:999px;
-      color:var(--deep);
-      background:#fff;
-      font-weight:800;
-      font-size:.84rem;
-      transition:.25s;
-    }
-    .category:hover,.category.active{
-      background:var(--deep);
-      border-color:var(--deep);
-      color:#fff;
+        center / cover;
     }
 
-    /* ---------- ARTICLES ---------- */
-    .articles-section{
-      padding:35px 0 110px;
-      background:#fff;
-    }
-    .section-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:30px;
-      margin-bottom:38px;
-    }
-    .section-header h2{
-      color:var(--deep);
-      font-size:clamp(2.2rem,5vw,3.5rem);
-      line-height:1.05;
-      font-weight:900;
-    }
-    .section-header p{
-      max-width:480px;
-      color:#657269;
-      font-weight:600;
-    }
-    .articles-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-    }
-    .article-card{
-      background:#fff;
-      border:1px solid rgba(var(--deep-rgb),.09);
-      border-radius:24px;
-      overflow:hidden;
-      transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
-    }
-    .article-card:hover{
-      transform:translateY(-7px);
-      border-color:rgba(var(--lime-rgb),.55);
-      box-shadow:0 22px 50px rgba(0,0,0,.1);
-    }
-    .article-image{height:255px;overflow:hidden}
-    .article-image img{
-      width:100%;height:100%;object-fit:cover;
-      transition:transform .5s ease,filter .5s ease;
-    }
-    .article-card:hover .article-image img{transform:scale(1.05);filter:saturate(1.08)}
-    .article-body{padding:27px}
-    .article-body h3{
-      color:var(--deep);
-      font-size:1.45rem;
-      line-height:1.2;
-      font-weight:900;
-      margin-bottom:12px;
-    }
-    .article-body p{color:#66746b;font-size:.94rem;margin-bottom:20px}
-    .article-meta{font-size:.73rem;color:#929d96;font-weight:700;margin-bottom:16px}
+    .featured-content {
+      padding: clamp(2rem, 5vw, 4rem);
 
-    /* ---------- PERSPECTIVE ---------- */
-    .perspective{
-      padding:105px 0;
-      color:#fff;
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+    }
+
+    .label {
+      color: var(--olive);
+
+      text-transform: uppercase;
+
+      letter-spacing: .14em;
+
+      font-size: .74rem;
+
+      font-weight: 900;
+
+      margin-bottom: 15px;
+    }
+
+    .featured h2 {
+      color: var(--deep);
+
+      font-size: clamp(2rem, 4vw, 3.15rem);
+
+      line-height: 1.08;
+
+      font-weight: 900;
+
+      margin-bottom: 18px;
+    }
+
+    .featured p {
+      color: #607064;
+
+      font-size: 1rem;
+
+      margin-bottom: 22px;
+    }
+
+    .meta {
+      color: #87928a;
+
+      font-size: .78rem;
+
+      font-weight: 700;
+
+      margin-bottom: 24px;
+    }
+
+    .read-link {
+      width: max-content;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      color: var(--deep);
+
+      font-weight: 900;
+    }
+
+    .read-link .arrow {
+      font-size: 1.25rem;
+
+      transition: .25s;
+    }
+
+    .read-link:hover {
+      color: var(--olive);
+    }
+
+    .read-link:hover .arrow {
+      transform: translateX(6px);
+    }
+
+
+    /* =========================================================
+       CATEGORIES
+    ========================================================= */
+
+    .categories {
+      padding: 55px 0 35px;
+    }
+
+    .category-list {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    .category {
+      padding: 10px 18px;
+
+      border: 1px solid rgba(var(--deep-rgb), .18);
+
+      border-radius: 999px;
+
+      color: var(--deep);
+
+      background: #fff;
+
+      font-weight: 800;
+
+      font-size: .84rem;
+
+      transition: .25s;
+    }
+
+    .category:hover,
+    .category.active {
+      background: var(--deep);
+
+      border-color: var(--deep);
+
+      color: #fff;
+    }
+
+
+    /* =========================================================
+       ARTICLES
+    ========================================================= */
+
+    .articles-section {
+      padding: 35px 0 110px;
+
+      background: #fff;
+    }
+
+    .section-header {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: end;
+
+      gap: 30px;
+
+      margin-bottom: 38px;
+    }
+
+    .section-header h2 {
+      color: var(--deep);
+
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+      line-height: 1.05;
+
+      font-weight: 900;
+    }
+
+    .articles-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+    }
+
+    .article-card {
+      background: #fff;
+
+      border:
+        1px solid rgba(var(--deep-rgb), .09);
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(var(--lime-rgb), .55);
+
+      box-shadow:
+        0 22px 50px rgba(0, 0, 0, .1);
+    }
+
+    .article-image {
+      height: 255px;
+
+      overflow: hidden;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform .5s ease,
+        filter .5s ease;
+    }
+
+    .article-card:hover .article-image img {
+      transform: scale(1.05);
+
+      filter: saturate(1.08);
+    }
+
+    .article-body {
+      padding: 27px;
+    }
+
+    .article-body h3 {
+      color: var(--deep);
+
+      font-size: 1.45rem;
+
+      line-height: 1.2;
+
+      font-weight: 900;
+
+      margin-bottom: 12px;
+    }
+
+    .article-body p {
+      color: #66746b;
+
+      font-size: .94rem;
+
+      margin-bottom: 20px;
+    }
+
+    .article-meta {
+      font-size: .73rem;
+
+      color: #929d96;
+
+      font-weight: 700;
+
+      margin-bottom: 16px;
+    }
+
+
+    /* =========================================================
+       PERSPECTIVE
+       DESKTOP = ORIGINAL 3-COLUMN GRID
+    ========================================================= */
+
+    .perspective {
+      padding: 105px 0;
+
+      color: #fff;
+
       background:
-        radial-gradient(900px 500px at 50% 0%,rgba(var(--lime-rgb),.12),transparent 60%),
-        linear-gradient(180deg,#183b31 0%,var(--deep) 100%);
-    }
-    .perspective-head{
-      max-width:760px;
-      text-align:center;
-      margin:0 auto 50px;
-    }
-    .perspective-kicker{
-      color:var(--lime);
-      text-transform:uppercase;
-      letter-spacing:.22em;
-      font-size:.76rem;
-      font-weight:900;
-    }
-    .perspective h2{
-      font-size:clamp(2.3rem,5vw,4rem);
-      line-height:1.05;
-      font-weight:900;
-      margin:15px 0;
-    }
-    .perspective-head p{color:rgba(255,255,255,.72)}
-    .perspective-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
-    .perspective-card{
-      min-height:300px;
-      padding:30px;
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:24px;
-      display:flex;
-      align-items:end;
-      background-size:cover;
-      background-position:center;
-      overflow:hidden;
-      transition:.3s;
-    }
-    .perspective-card:hover{transform:translateY(-5px);border-color:rgba(var(--lime-rgb),.5)}
-    .perspective-card:nth-child(1){
-      background-image:linear-gradient(transparent,rgba(0,0,0,.7)),url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80")
-    }
-    .perspective-card:nth-child(2){
-      background-image:linear-gradient(transparent,rgba(0,0,0,.7)),url("https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1000&q=80")
-    }
-    .perspective-card:nth-child(3){
-      background-image:linear-gradient(transparent,rgba(0,0,0,.7)),url("https://res.cloudinary.com/drqsua6wp/image/upload/v1771917569/Field_Trips_13_ex8bjr.jpg")
-    }
-    .perspective-card h3{font-size:1.55rem;line-height:1.15;font-weight:900}
-
-    /* ---------- NEWSLETTER ---------- */
-    .newsletter{
-      padding:100px 20px;
-      text-align:center;
-      background:var(--neutral);
-    }
-    .newsletter-content{max-width:760px;margin:auto}
-    .newsletter-label{
-      color:var(--olive);
-      text-transform:uppercase;
-      letter-spacing:.22em;
-      font-size:.75rem;
-      font-weight:900;
-      margin-bottom:14px;
-    }
-    .newsletter h2{
-      color:var(--deep);
-      font-size:clamp(2.3rem,5vw,4rem);
-      line-height:1.05;
-      font-weight:900;
-      margin-bottom:16px;
-    }
-    .newsletter p{color:#596961;max-width:650px;margin:0 auto 28px}
-    .newsletter-form{
-      max-width:600px;
-      margin:auto;
-      padding:6px;
-      display:flex;
-      background:#fff;
-      border-radius:999px;
-      box-shadow:0 15px 40px rgba(32,51,25,.08);
-    }
-    .newsletter-form input{
-      flex:1;
-      min-width:0;
-      border:0;
-      outline:0;
-      padding:13px 20px;
-      color:var(--deep);
-      background:transparent;
-    }
-    .newsletter-form button{
-      border:0;
-      border-radius:999px;
-      padding:13px 24px;
-      background:var(--deep);
-      color:#fff;
-      font-weight:900;
-    }
-    .newsletter-form button:hover{background:var(--olive)}
-    .newsletter-message{display:none;margin-top:15px;color:var(--olive);font-weight:800}
-
-    /* ---------- FOOTER ---------- */
-    .main-footer{
-      position:relative;
-      padding:75px 0 30px;
-      background:var(--deep);
-      color:rgba(255,255,255,.86);
-      overflow:hidden;
-    }
-    .footer-watermark{
-      position:absolute;inset:0;width:100%;height:100%;
-      object-fit:cover;opacity:.055;
-      filter:grayscale(100%) brightness(130%);
-      pointer-events:none;
-    }
-    .footer-inner,.footer-bottom{position:relative;z-index:2}
-    .footer-inner{
-      display:grid;
-      grid-template-columns:1.5fr 1fr 1fr;
-      gap:45px;
-    }
-    .footer-logo{height:42px;width:auto;margin-bottom:15px}
-    .footer-col h4{
-      color:#fff;
-      font-size:.95rem;
-      text-transform:uppercase;
-      letter-spacing:.1em;
-      margin-bottom:14px;
-    }
-    .footer-col p,.footer-col a{
-      display:block;
-      color:rgba(255,255,255,.7);
-      font-size:.93rem;
-      margin-bottom:9px;
-    }
-    .footer-col a:hover{color:var(--lime)}
-    .footer-social{display:inline-flex!important;gap:8px;align-items:center;margin-top:8px}
-    .footer-btn{
-      display:inline-flex!important;
-      width:max-content;
-      margin-top:10px;
-      padding:12px 18px;
-      border-radius:999px;
-      background:var(--lime);
-      color:var(--deep)!important;
-      font-weight:900;
-    }
-    .footer-bottom{
-      margin-top:45px;
-      padding-top:18px;
-      border-top:1px solid rgba(255,255,255,.1);
-      text-align:center;
-      color:rgba(255,255,255,.55);
-      font-size:.85rem;
+        radial-gradient(
+          900px 500px at 50% 0%,
+          rgba(var(--lime-rgb), .12),
+          transparent 60%
+        ),
+        linear-gradient(
+          180deg,
+          #183b31 0%,
+          var(--deep) 100%
+        );
     }
 
-    /* ---------- REVEAL ---------- */
-    .reveal{
-      opacity:0;
-      transform:translateY(28px);
-      filter:blur(3px);
-      transition:opacity .7s var(--ease),transform .7s var(--ease),filter .7s var(--ease);
-    }
-    .reveal.visible{opacity:1;transform:none;filter:none}
+    .perspective-head {
+      max-width: 760px;
 
-    /* ---------- RESPONSIVE ---------- */
-    @media(max-width:950px){
-      .nav-links,.nav-cta{display:none}
-      .menu-btn{display:grid;place-items:center}
-      .featured{grid-template-columns:1fr}
-      .featured-image{min-height:360px}
-      .articles-grid{grid-template-columns:repeat(2,1fr)}
-      .perspective-grid{grid-template-columns:1fr}
-      .footer-inner{grid-template-columns:1fr}
+      text-align: center;
+
+      margin: 0 auto 50px;
     }
-    @media(max-width:650px){
-      .site-header{top:10px}
-      .nav-shell{border-radius:18px}
-      .nav-row{min-height:70px;padding:0 13px}
-      .logo img{height:31px;max-width:145px}
-      .hero{min-height:620px;padding:130px 16px 90px}
-      .hero h1{font-size:clamp(2.7rem,13vw,4.5rem)}
-      .featured-wrap{margin-top:-45px}
-      .featured-image{min-height:280px}
-      .featured-content{padding:30px}
-      .categories{padding-top:55px}
-      .section-header{display:block}
-      .section-header p{margin-top:15px}
-      .articles-grid{grid-template-columns:1fr}
-      .perspective{padding:80px 0}
-      .newsletter{padding:80px 18px}
-      .newsletter-form{flex-direction:column;background:transparent;box-shadow:none;gap:10px}
-      .newsletter-form input{background:#fff;border-radius:999px}
-      .newsletter-form button{width:100%}
-      .footer-inner{gap:30px}
+
+    .perspective-kicker {
+      color: var(--lime);
+
+      text-transform: uppercase;
+
+      letter-spacing: .22em;
+
+      font-size: .76rem;
+
+      font-weight: 900;
     }
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*:before,*:after{animation:none!important;transition:none!important}
-      .reveal{opacity:1;transform:none;filter:none}
+
+    .perspective h2 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+
+      line-height: 1.05;
+
+      font-weight: 900;
+
+      margin: 15px 0;
     }
+
+    .perspective-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .perspective-card {
+      min-height: 300px;
+
+      padding: 30px;
+
+      border:
+        1px solid rgba(255, 255, 255, .12);
+
+      border-radius: 24px;
+
+      display: flex;
+
+      align-items: end;
+
+      background-size: cover;
+
+      background-position: center;
+
+      overflow: hidden;
+
+      transition: .3s;
+
+      flex-shrink: 0;
+    }
+
+    .perspective-card:hover {
+      transform: translateY(-5px);
+
+      border-color:
+        rgba(var(--lime-rgb), .5);
+    }
+
+    .perspective-card:nth-child(1) {
+      background-image:
+        linear-gradient(
+          transparent,
+          rgba(0, 0, 0, .7)
+        ),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80");
+    }
+
+    .perspective-card:nth-child(2) {
+      background-image:
+        linear-gradient(
+          transparent,
+          rgba(0, 0, 0, .7)
+        ),
+        url("https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1000&q=80");
+    }
+
+    .perspective-card:nth-child(3) {
+      background-image:
+        linear-gradient(
+          transparent,
+          rgba(0, 0, 0, .7)
+        ),
+        url("https://res.cloudinary.com/drqsua6wp/image/upload/v1771917569/Field_Trips_13_ex8bjr.jpg");
+    }
+
+    .perspective-card h3 {
+      font-size: 1.55rem;
+
+      line-height: 1.15;
+
+      font-weight: 900;
+    }
+
+
+    /* =========================================================
+       NEWSLETTER
+    ========================================================= */
+
+    .newsletter {
+      padding: 100px 20px;
+
+      text-align: center;
+
+      background: var(--neutral);
+    }
+
+    .newsletter-content {
+      max-width: 760px;
+
+      margin: auto;
+    }
+
+    .newsletter-label {
+      color: var(--olive);
+
+      text-transform: uppercase;
+
+      letter-spacing: .22em;
+
+      font-size: .75rem;
+
+      font-weight: 900;
+
+      margin-bottom: 14px;
+    }
+
+    .newsletter h2 {
+      color: var(--deep);
+
+      font-size: clamp(2.3rem, 5vw, 4rem);
+
+      line-height: 1.05;
+
+      font-weight: 900;
+
+      margin-bottom: 16px;
+    }
+
+    .newsletter p {
+      color: #596961;
+
+      max-width: 650px;
+
+      margin: 0 auto 28px;
+    }
+
+    .newsletter-form {
+      max-width: 600px;
+
+      margin: auto;
+
+      padding: 6px;
+
+      display: flex;
+
+      background: #fff;
+
+      border-radius: 999px;
+
+      box-shadow:
+        0 15px 40px rgba(32, 51, 25, .08);
+    }
+
+    .newsletter-form input {
+      flex: 1;
+
+      min-width: 0;
+
+      border: 0;
+
+      outline: 0;
+
+      padding: 13px 20px;
+
+      color: var(--deep);
+
+      background: transparent;
+    }
+
+    .newsletter-form button {
+      border: 0;
+
+      border-radius: 999px;
+
+      padding: 13px 24px;
+
+      background: var(--deep);
+
+      color: #fff;
+
+      font-weight: 900;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--olive);
+    }
+
+    .newsletter-message {
+      display: none;
+
+      margin-top: 15px;
+
+      color: var(--olive);
+
+      font-weight: 800;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .main-footer {
+      position: relative;
+
+      padding: 75px 0 30px;
+
+      background: var(--deep);
+
+      color: rgba(255, 255, 255, .86);
+
+      overflow: hidden;
+    }
+
+    .footer-watermark {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      opacity: .055;
+
+      filter:
+        grayscale(100%)
+        brightness(130%);
+
+      pointer-events: none;
+    }
+
+    .footer-inner,
+    .footer-bottom {
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .footer-inner {
+      display: grid;
+
+      grid-template-columns: 1.5fr 1fr 1fr;
+
+      gap: 45px;
+    }
+
+    .footer-logo {
+      height: 42px;
+
+      width: auto;
+
+      margin-bottom: 15px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+
+      font-size: .95rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: .1em;
+
+      margin-bottom: 14px;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      display: block;
+
+      color: rgba(255, 255, 255, .7);
+
+      font-size: .93rem;
+
+      margin-bottom: 9px;
+    }
+
+    .footer-col a:hover {
+      color: var(--lime);
+    }
+
+    .footer-social {
+      display: inline-flex !important;
+
+      gap: 8px;
+
+      align-items: center;
+
+      margin-top: 8px;
+    }
+
+    .footer-btn {
+      display: inline-flex !important;
+
+      width: max-content;
+
+      margin-top: 10px;
+
+      padding: 12px 18px;
+
+      border-radius: 999px;
+
+      background: var(--lime);
+
+      color: var(--deep) !important;
+
+      font-weight: 900;
+    }
+
+    .footer-bottom {
+      margin-top: 45px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid rgba(255, 255, 255, .1);
+
+      text-align: center;
+
+      color: rgba(255, 255, 255, .55);
+
+      font-size: .85rem;
+    }
+
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(28px);
+
+      filter: blur(3px);
+
+      transition:
+        opacity .7s var(--ease),
+        transform .7s var(--ease),
+        filter .7s var(--ease);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: none;
+
+      filter: none;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-btn {
+        display: grid;
+
+        place-items: center;
+      }
+
+      .featured {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-image {
+        min-height: 360px;
+      }
+
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /*
+        IMPORTANT:
+        Perspective remains a normal grid here.
+        The slider starts ONLY at 650px.
+      */
+
+      .perspective-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* =========================================================
+       PHONE
+       PERSPECTIVE BECOMES REAL TOUCH SLIDER
+    ========================================================= */
+
+    @media (max-width: 650px) {
+
+      .site-header {
+        top: 10px;
+      }
+
+      .nav-shell {
+        border-radius: 18px;
+      }
+
+      .nav-row {
+        min-height: 70px;
+
+        padding: 0 13px;
+      }
+
+      .logo img {
+        height: 31px;
+
+        max-width: 145px;
+      }
+
+
+      /* HERO */
+
+      .hero {
+        min-height: 620px;
+
+        padding: 130px 16px 90px;
+      }
+
+      .hero h1 {
+        font-size:
+          clamp(2.7rem, 13vw, 4.5rem);
+      }
+
+
+      /* FEATURED */
+
+      .featured-wrap {
+        margin-top: -45px;
+      }
+
+      .featured-image {
+        min-height: 280px;
+      }
+
+      .featured-content {
+        padding: 30px;
+      }
+
+
+      /* CATEGORIES */
+
+      .categories {
+        padding-top: 55px;
+      }
+
+
+      /* ARTICLES */
+
+      .section-header {
+        display: block;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      /* =====================================================
+         PERSPECTIVE MOBILE SLIDER
+      ===================================================== */
+
+      .perspective {
+        padding: 80px 0;
+
+        /*
+          Prevent the horizontal slider from creating
+          horizontal page overflow.
+        */
+        overflow: hidden;
+      }
+
+      .perspective-head {
+        padding: 0 20px;
+
+        margin-bottom: 35px;
+      }
+
+      .perspective-grid {
+
+        /*
+          THIS IS THE IMPORTANT PART.
+
+          Desktop:
+          display:grid
+
+          Phone:
+          display:flex
+        */
+
+        display: flex;
+
+        flex-direction: row;
+
+        gap: 16px;
+
+        width: 100%;
+
+        /*
+          Allow the user to physically swipe.
+        */
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        /*
+          Smooth native phone scrolling.
+        */
+        -webkit-overflow-scrolling: touch;
+
+        /*
+          Snap each card into position.
+        */
+        scroll-snap-type: x mandatory;
+
+        scroll-behavior: smooth;
+
+        /*
+          Hide scrollbar.
+        */
+        scrollbar-width: none;
+
+        -ms-overflow-style: none;
+
+        /*
+          Tell browser horizontal touch gestures
+          belong to this slider.
+        */
+        touch-action: pan-x;
+
+        /*
+          Gives the first and last card breathing room.
+        */
+        padding: 5px 6% 20px;
+
+        /*
+          Important: don't let flex items shrink.
+        */
+        align-items: stretch;
+      }
+
+      .perspective-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .perspective-card {
+
+        /*
+          One card at a time, with part of the next
+          card visible.
+        */
+        flex: 0 0 88%;
+
+        width: 88%;
+
+        min-width: 88%;
+
+        min-height: 320px;
+
+        /*
+          Snap cards into the center.
+        */
+        scroll-snap-align: center;
+
+        scroll-snap-stop: always;
+
+        /*
+          Don't let hover styles interfere with
+          mobile swiping.
+        */
+        transform: none !important;
+
+        /*
+          Prevent accidental shrinking.
+        */
+        flex-shrink: 0;
+
+        /*
+          Make sure touch gestures work.
+        */
+        touch-action: pan-x;
+      }
+
+      .perspective-card:hover {
+        transform: none !important;
+      }
+
+
+      /* NEWSLETTER */
+
+      .newsletter {
+        padding: 80px 18px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        gap: 10px;
+      }
+
+      .newsletter-form input {
+        background: #fff;
+
+        border-radius: 999px;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+      }
+
+
+      /* FOOTER */
+
+      .footer-inner {
+        gap: 30px;
+      }
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+
+        filter: none;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =======================================================
+       HEADER
+  ======================================================= -->
+
   <header class="site-header">
+
     <div class="nav-shell" id="navShell">
+
       <div class="nav-row">
-        <a class="logo" href="index.html" aria-label="Stack Carbon home">
-          <img src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png" alt="Stack Carbon Logo">
+
+        <a
+          class="logo"
+          href="index.html"
+          aria-label="Stack Carbon home"
+        >
+          <img
+            src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+            alt="Stack Carbon Logo"
+          >
         </a>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html">Home</a>
+
+        <nav
+          class="nav-links"
+          aria-label="Main navigation"
+        >
+
+          <a href="index.html">
+            Home
+          </a>
+
 
           <div class="dropdown">
-            <button class="drop-btn" type="button">About Us <span>▾</span></button>
+
+            <button
+              class="drop-btn"
+              type="button"
+            >
+              About Us <span>▾</span>
+            </button>
+
             <div class="drop-menu">
-              <a href="who-we-are.html">Who We Are</a>
-              <a href="our-team.html">Our Team</a>
+
+              <a href="who-we-are.html">
+                Who We Are
+              </a>
+
+              <a href="our-team.html">
+                Our Team
+              </a>
+
             </div>
+
           </div>
+
 
           <div class="dropdown">
-            <button class="drop-btn" type="button">Projects <span>▾</span></button>
+
+            <button
+              class="drop-btn"
+              type="button"
+            >
+              Projects <span>▾</span>
+            </button>
+
             <div class="drop-menu">
-              <a href="karibu.html">Karibu Project</a>
-              <a href="nile.html">Nile Char Project</a>
-              <a href="monsoon.html">Madagascar Monsoon Project</a>
+
+              <a href="karibu.html">
+                Karibu Project
+              </a>
+
+              <a href="nile.html">
+                Nile Char Project
+              </a>
+
+              <a href="monsoon.html">
+                Madagascar Monsoon Project
+              </a>
+
             </div>
+
           </div>
 
-          <a href="blog.html" aria-current="page">Insights</a>
+
+          <a
+            href="blog.html"
+            aria-current="page"
+          >
+            Insights
+          </a>
+
         </nav>
 
+
         <div class="nav-tools">
-          <a class="nav-cta" href="contact.html">Contact us</a>
-          <button class="menu-btn" id="openDrawer" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+          <a
+            class="nav-cta"
+            href="contact.html"
+          >
+            Contact us
+          </a>
+
+          <button
+            class="menu-btn"
+            id="openDrawer"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
         </div>
+
       </div>
+
     </div>
+
   </header>
 
-  <!-- MOBILE MENU -->
-  <div class="drawer" id="drawer" aria-hidden="true">
+
+
+  <!-- =======================================================
+       MOBILE MENU
+  ======================================================= -->
+
+  <div
+    class="drawer"
+    id="drawer"
+    aria-hidden="true"
+  >
+
     <div class="drawer-panel">
+
       <div class="drawer-top">
-        <img src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png" alt="Stack Carbon Logo">
-        <button class="drawer-close" id="closeDrawer" type="button" aria-label="Close menu">×</button>
+
+        <img
+          src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+          alt="Stack Carbon Logo"
+        >
+
+        <button
+          class="drawer-close"
+          id="closeDrawer"
+          type="button"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
       </div>
+
 
       <div class="drawer-links">
-        <a href="index.html" class="drawer-link">Home</a>
 
-        <button class="acc-btn" type="button">About Us <span>▾</span></button>
+        <a
+          href="index.html"
+          class="drawer-link"
+        >
+          Home
+        </a>
+
+
+        <button
+          class="acc-btn"
+          type="button"
+        >
+          About Us <span>▾</span>
+        </button>
+
         <div class="acc-panel">
-          <a href="who-we-are.html" class="drawer-link sub">Who We Are</a>
-          <a href="our-team.html" class="drawer-link sub">Our Team</a>
+
+          <a
+            href="who-we-are.html"
+            class="drawer-link sub"
+          >
+            Who We Are
+          </a>
+
+          <a
+            href="our-team.html"
+            class="drawer-link sub"
+          >
+            Our Team
+          </a>
+
         </div>
 
-        <button class="acc-btn" type="button">Projects <span>▾</span></button>
+
+        <button
+          class="acc-btn"
+          type="button"
+        >
+          Projects <span>▾</span>
+        </button>
+
         <div class="acc-panel">
-          <a href="karibu.html" class="drawer-link sub">Karibu Project</a>
-          <a href="nile.html" class="drawer-link sub">Nile Char Project</a>
-          <a href="monsoon.html" class="drawer-link sub">Madagascar Monsoon Project</a>
+
+          <a
+            href="karibu.html"
+            class="drawer-link sub"
+          >
+            Karibu Project
+          </a>
+
+          <a
+            href="nile.html"
+            class="drawer-link sub"
+          >
+            Nile Char Project
+          </a>
+
+          <a
+            href="monsoon.html"
+            class="drawer-link sub"
+          >
+            Madagascar Monsoon Project
+          </a>
+
         </div>
 
-        <a href="blog.html" class="drawer-link">Insights</a>
-        <a href="contact.html" class="drawer-link drawer-cta">Contact us →</a>
+
+        <a
+          href="blog.html"
+          class="drawer-link"
+        >
+          Insights
+        </a>
+
+
+        <a
+          href="contact.html"
+          class="drawer-link drawer-cta"
+        >
+          Contact us →
+        </a>
+
       </div>
+
     </div>
+
   </div>
 
-  <!-- HERO -->
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================= -->
+
   <section class="hero">
+
     <div class="hero-content reveal">
-      
-      <h1>Insights &amp; Stories</h1>
-      
+
+      <h1>
+        Insights &amp; Stories
+      </h1>
+
     </div>
+
   </section>
 
-  <!-- FEATURED ARTICLE -->
+
+
+  <!-- =======================================================
+       FEATURED ARTICLE
+  ======================================================= -->
+
   <section class="featured-wrap">
+
     <div class="container">
+
       <article class="featured reveal">
-        <div class="featured-image" aria-label="Featured article image"></div>
+
+        <div
+          class="featured-image"
+          aria-label="Featured article image"
+        ></div>
+
+
         <div class="featured-content">
-          <div class="label">Featured • Carbon Removal</div>
-          <h2>Stack Carbon Secures Multi-Year Enhanced Rock Weathering Offtake with Wild Assets</h2>
+
+          <div class="label">
+            Featured • Carbon Removal
+          </div>
+
+
+          <h2>
+            Stack Carbon Secures Multi-Year Enhanced Rock Weathering Offtake with Wild Assets
+          </h2>
+
+
           <p>
             Stack Carbon has finalized a landmark multi-year carbon dioxide removal
             offtake agreement with Wild Assets, securing future delivery of tens of
             thousands of tonnes of durable carbon removals from its flagship Enhanced
             Rock Weathering initiative in Uganda.
           </p>
-          <div class="meta">Stack Carbon • Latest Update</div>
-          <a href="article-wild-assets.html" class="read-link">Read Article <span class="arrow">→</span></a>
+
+
+          <div class="meta">
+            Stack Carbon • Latest Update
+          </div>
+
+
+          <a
+            href="article-wild-assets.html"
+            class="read-link"
+          >
+            Read Article
+            <span class="arrow">→</span>
+          </a>
+
         </div>
+
       </article>
+
     </div>
+
   </section>
 
-  <!-- CATEGORIES -->
-  <section class="categories" id="categories">
+
+
+  <!-- =======================================================
+       CATEGORIES
+  ======================================================= -->
+
+  <section
+    class="categories"
+    id="categories"
+  >
+
     <div class="container">
+
       <div class="category-list">
-        <button class="category active" data-category="all">All</button>
-        <button class="category" data-category="carbon">Carbon Removal</button>
-        <button class="category" data-category="erw">ERW</button>
-        <button class="category" data-category="climate">Climate</button>
-        <button class="category" data-category="communities">Communities</button>
-        <button class="category" data-category="partnership">Partnerships</button>
+
+        <button
+          class="category active"
+          data-category="all"
+        >
+          All
+        </button>
+
+        <button
+          class="category"
+          data-category="carbon"
+        >
+          Carbon Removal
+        </button>
+
+        <button
+          class="category"
+          data-category="erw"
+        >
+          ERW
+        </button>
+
+        <button
+          class="category"
+          data-category="climate"
+        >
+          Climate
+        </button>
+
+        <button
+          class="category"
+          data-category="communities"
+        >
+          Communities
+        </button>
+
+        <button
+          class="category"
+          data-category="partnership"
+        >
+          Partnerships
+        </button>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ARTICLES -->
-  <section class="articles-section" id="insights">
+
+
+  <!-- =======================================================
+       ARTICLES
+  ======================================================= -->
+
+  <section
+    class="articles-section"
+    id="insights"
+  >
+
     <div class="container">
+
       <div class="section-header reveal">
-        <h2>Latest Insights</h2>
-        
+
+        <h2>
+          Latest Insights
+        </h2>
+
       </div>
+
 
       <div class="articles-grid">
 
-        <article class="article-card reveal" data-category="climate">
+
+        <!-- ARTICLE 1 -->
+
+        <article
+          class="article-card reveal"
+          data-category="climate"
+        >
+
           <div class="article-image">
-            <img src="https://res.cloudinary.com/drqsua6wp/image/upload/v1777313821/ff9752c3-2196-4c7b-b8f3-24177328cf4b_EFB317B3-0A2A-42D9-BDF4-803E765A5DBD_vachvm.jpg" alt="Climate research" loading="lazy">
+
+            <img
+              src="https://res.cloudinary.com/drqsua6wp/image/upload/v1777313821/ff9752c3-2196-4c7b-b8f3-24177328cf4b_EFB317B3-0A2A-42D9-BDF4-803E765A5DBD_vachvm.jpg"
+              alt="Climate research"
+              loading="lazy"
+            >
+
           </div>
+
+
           <div class="article-body">
-            <div class="label">Climate Policy</div>
-            <h3>How SBTi’s Net-Zero Evolution Is Driving Corporate Demand for Carbon Removal</h3>
-            <p>How the evolution of the SBTi Corporate Net-Zero Standard is reshaping corporate carbon removal procurement.</p>
-            <div class="article-meta">Carbon Markets • Corporate Climate Action</div>
-            <a href="article-sbti.html" class="read-link">Read Article <span class="arrow">→</span></a>
+
+            <div class="label">
+              Climate Policy
+            </div>
+
+            <h3>
+              How SBTi’s Net-Zero Evolution Is Driving Corporate Demand for Carbon Removal
+            </h3>
+
+            <p>
+              How the evolution of the SBTi Corporate Net-Zero Standard is reshaping
+              corporate carbon removal procurement.
+            </p>
+
+            <div class="article-meta">
+              Carbon Markets • Corporate Climate Action
+            </div>
+
+            <a
+              href="article-sbti.html"
+              class="read-link"
+            >
+              Read Article
+              <span class="arrow">→</span>
+            </a>
+
           </div>
+
         </article>
 
-        <article class="article-card reveal" data-category="communities">
+
+
+        <!-- ARTICLE 2 -->
+
+        <article
+          class="article-card reveal"
+          data-category="communities"
+        >
+
           <div class="article-image">
-            <img src="https://res.cloudinary.com/drqsua6wp/image/upload/v1773051514/WhatsApp_Image_2026-03-09_at_10.40.20_AM_nrvoh8.jpg" alt="Agricultural community" loading="lazy">
+
+            <img
+              src="https://res.cloudinary.com/drqsua6wp/image/upload/v1773051514/WhatsApp_Image_2026-03-09_at_10.40.20_AM_nrvoh8.jpg"
+              alt="Agricultural community"
+              loading="lazy"
+            >
+
           </div>
+
+
           <div class="article-body">
-            <div class="label">Communities</div>
-            <h3>Why Community Co-Design Is the True Indicator of Carbon Removal Integrity</h3>
-            <p>Why technical rigor must be matched by community trust, local participation and social permanence.</p>
-            <div class="article-meta">Community • Carbon Removal Integrity</div>
-            <a href="article-community.html" class="read-link">Read Article <span class="arrow">→</span></a>
+
+            <div class="label">
+              Communities
+            </div>
+
+            <h3>
+              Why Community Co-Design Is the True Indicator of Carbon Removal Integrity
+            </h3>
+
+            <p>
+              Why technical rigor must be matched by community trust,
+              local participation and social permanence.
+            </p>
+
+            <div class="article-meta">
+              Community • Carbon Removal Integrity
+            </div>
+
+            <a
+              href="article-community.html"
+              class="read-link"
+            >
+              Read Article
+              <span class="arrow">→</span>
+            </a>
+
           </div>
+
         </article>
 
-        <article class="article-card reveal" data-category="erw partnership">
+
+
+        <!-- ARTICLE 3 -->
+
+        <article
+          class="article-card reveal"
+          data-category="erw partnership"
+        >
+
           <div class="article-image">
-            <img src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771917570/Field_Trips_15_g56mas.jpg" alt="Agriculture and minerals" loading="lazy">
+
+            <img
+              src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771917570/Field_Trips_15_g56mas.jpg"
+              alt="Agriculture and minerals"
+              loading="lazy"
+            >
+
           </div>
+
+
           <div class="article-body">
-            <div class="label">Partnership</div>
-            <h3>Stack Carbon Partners with ALOM to Secure High-Reactivity Silicate Feedstocks</h3>
-            <p>How the partnership strengthens Stack Carbon’s mineral supply chain and geological infrastructure across Uganda.</p>
-            <div class="article-meta">ERW • Uganda • Infrastructure</div>
-            <a href="article-alom.html" class="read-link">Read Article <span class="arrow">→</span></a>
+
+            <div class="label">
+              Partnership
+            </div>
+
+            <h3>
+              Stack Carbon Partners with ALOM to Secure High-Reactivity Silicate Feedstocks
+            </h3>
+
+            <p>
+              How the partnership strengthens Stack Carbon’s mineral supply chain
+              and geological infrastructure across Uganda.
+            </p>
+
+            <div class="article-meta">
+              ERW • Uganda • Infrastructure
+            </div>
+
+            <a
+              href="article-alom.html"
+              class="read-link"
+            >
+              Read Article
+              <span class="arrow">→</span>
+            </a>
+
           </div>
+
         </article>
 
-       
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- PERSPECTIVE -->
+
+
+  <!-- =======================================================
+       PERSPECTIVE
+  ======================================================= -->
+
   <section class="perspective">
+
     <div class="container">
+
+
       <div class="perspective-head reveal">
-        <div class="perspective-kicker">Our Perspective</div>
-        <h2>Building Carbon Removal From the Ground Up</h2>
-       
+
+        <div class="perspective-kicker">
+          Our Perspective
+        </div>
+
+        <h2>
+          Building Carbon Removal From the Ground Up
+        </h2>
+
       </div>
 
-      <div class="perspective-grid">
-        <div class="perspective-card reveal"><h3>Science Meets Agriculture</h3></div>
-        <div class="perspective-card reveal"><h3>Communities at the Centre</h3></div>
-        <div class="perspective-card reveal"><h3>Scaling Durable Carbon Removal</h3></div>
+
+      <!--
+        DESKTOP:
+        Three cards side-by-side.
+
+        PHONE:
+        This becomes a horizontal touch slider.
+      -->
+
+      <div
+        class="perspective-grid"
+        id="perspectiveSlider"
+      >
+
+
+        <div class="perspective-card reveal">
+
+          <h3>
+            Science Meets Agriculture
+          </h3>
+
+        </div>
+
+
+        <div class="perspective-card reveal">
+
+          <h3>
+            Communities at the Centre
+          </h3>
+
+        </div>
+
+
+        <div class="perspective-card reveal">
+
+          <h3>
+            Scaling Durable Carbon Removal
+          </h3>
+
+        </div>
+
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- NEWSLETTER -->
+
+
+  <!-- =======================================================
+       NEWSLETTER
+  ======================================================= -->
+
   <section class="newsletter">
+
     <div class="newsletter-content reveal">
-      <div class="newsletter-label">Stay Connected</div>
-      <h2>Get Stack Carbon Insights</h2>
+
+      <div class="newsletter-label">
+        Stay Connected
+      </div>
+
+      <h2>
+        Get Stack Carbon Insights
+      </h2>
+
       <p>
-        Subscribe for the latest news, project updates, climate insights and stories from Stack Carbon.
+        Subscribe for the latest news, project updates,
+        climate insights and stories from Stack Carbon.
       </p>
 
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" id="email" placeholder="Enter your email address" aria-label="Email address" required>
-        <button type="submit">Subscribe</button>
+
+      <form
+        class="newsletter-form"
+        id="newsletterForm"
+      >
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          aria-label="Email address"
+          required
+        >
+
+        <button type="submit">
+          Subscribe
+        </button>
+
       </form>
-      <div class="newsletter-message" id="newsletterMessage">Thank you for subscribing to Stack Carbon.</div>
+
+
+      <div
+        class="newsletter-message"
+        id="newsletterMessage"
+      >
+        Thank you for subscribing to Stack Carbon.
+      </div>
+
     </div>
+
   </section>
 
-  <!-- FOOTER -->
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================= -->
+
   <footer class="main-footer">
-    <img class="footer-watermark" src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771854835/seedlings-7110591_rocloz.jpg" alt="" aria-hidden="true" loading="lazy">
+
+
+    <img
+      class="footer-watermark"
+      src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771854835/seedlings-7110591_rocloz.jpg"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+    >
+
 
     <div class="container footer-inner">
+
+
+      <!-- FOOTER ABOUT -->
+
       <div class="footer-col reveal">
+
         <a href="index.html">
-          <img src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png" alt="Stack Carbon Logo" class="footer-logo">
+
+          <img
+            src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+            alt="Stack Carbon Logo"
+            class="footer-logo"
+          >
+
         </a>
-        <p>Scaling impact-driven climate action in Africa.</p>
+
+        <p>
+          Scaling impact-driven climate action in Africa.
+        </p>
+
       </div>
 
-      <div class="footer-col reveal">
-        <h4>Company</h4>
-        <a href="karibu.html">Projects</a>
-        <a href="our-team.html">Our Team</a>
-        <a href="who-we-are.html">Who We Are</a>
-        <a href="blog.html">Insights</a>
-      </div>
+
+
+      <!-- FOOTER COMPANY -->
 
       <div class="footer-col reveal">
-        <h4>Contact</h4>
-        <p><i class="fa-solid fa-envelope"></i> info@stackcarbon.earth</p>
-        <p><i class="fa-solid fa-phone"></i> (+256) 039 3001954</p>
-        <p><i class="fa-solid fa-location-dot"></i> 8H9R+27V, Nile Ave,<br>Kampala, Uganda</p>
-        <a href="https://www.linkedin.com/company/stack-carbon/" target="_blank" rel="noopener" class="footer-social">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
+
+        <h4>
+          Company
+        </h4>
+
+        <a href="karibu.html">
+          Projects
         </a>
-        <a href="contact.html" class="footer-btn">Get in touch →</a>
+
+        <a href="our-team.html">
+          Our Team
+        </a>
+
+        <a href="who-we-are.html">
+          Who We Are
+        </a>
+
+        <a href="blog.html">
+          Insights
+        </a>
+
       </div>
+
+
+
+      <!-- FOOTER CONTACT -->
+
+      <div class="footer-col reveal">
+
+        <h4>
+          Contact
+        </h4>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          info@stackcarbon.earth
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          (+256) 039 3001954
+        </p>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          8H9R+27V, Nile Ave,
+          <br>
+          Kampala, Uganda
+        </p>
+
+
+        <a
+          href="https://www.linkedin.com/company/stack-carbon/"
+          target="_blank"
+          rel="noopener"
+          class="footer-social"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+
+
+        <a
+          href="contact.html"
+          class="footer-btn"
+        >
+          Get in touch →
+        </a>
+
+      </div>
+
     </div>
+
+
 
     <div class="container footer-bottom">
-      © <span id="year"></span> Stack Carbon. All rights reserved.
 
-    <br>  Designed by Trixie Technologies
+      © <span id="year"></span>
+      Stack Carbon. All rights reserved.
+
+      <br>
+
+      Designed by Trixie Technologies
+
     </div>
+
   </footer>
 
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================= -->
+
   <script>
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Header scroll state
-    const navShell = document.getElementById("navShell");
-    function updateHeader(){
-      navShell.classList.toggle("scrolled", window.scrollY > 10);
+
+    /* =========================================================
+       FOOTER YEAR
+    ========================================================= */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+
+    /* =========================================================
+       HEADER SCROLL
+    ========================================================= */
+
+    const navShell =
+      document.getElementById("navShell");
+
+    function updateHeader() {
+
+      navShell.classList.toggle(
+        "scrolled",
+        window.scrollY > 10
+      );
+
     }
+
     updateHeader();
-    window.addEventListener("scroll", updateHeader, {passive:true});
 
-    // Mobile drawer
-    const drawer = document.getElementById("drawer");
-    const openDrawer = document.getElementById("openDrawer");
-    const closeDrawer = document.getElementById("closeDrawer");
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      { passive: true }
+    );
 
-    function closeMenu(){
+
+
+    /* =========================================================
+       MOBILE DRAWER
+    ========================================================= */
+
+    const drawer =
+      document.getElementById("drawer");
+
+    const openDrawer =
+      document.getElementById("openDrawer");
+
+    const closeDrawer =
+      document.getElementById("closeDrawer");
+
+
+    function closeMenu() {
+
       drawer.classList.remove("open");
-      drawer.setAttribute("aria-hidden","true");
-      openDrawer.setAttribute("aria-expanded","false");
+
+      drawer.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      openDrawer.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
       document.body.style.overflow = "";
+
     }
 
-    openDrawer.addEventListener("click",()=>{
-      drawer.classList.add("open");
-      drawer.setAttribute("aria-hidden","false");
-      openDrawer.setAttribute("aria-expanded","true");
-      document.body.style.overflow = "hidden";
-    });
 
-    closeDrawer.addEventListener("click",closeMenu);
+    openDrawer.addEventListener(
+      "click",
+      () => {
 
-    drawer.addEventListener("click",(e)=>{
-      if(e.target === drawer) closeMenu();
-      if(e.target.closest("a")) closeMenu();
-    });
+        drawer.classList.add("open");
 
-    document.addEventListener("keydown",(e)=>{
-      if(e.key === "Escape") closeMenu();
-    });
+        drawer.setAttribute(
+          "aria-hidden",
+          "false"
+        );
 
-    // Mobile accordions
-    document.querySelectorAll(".acc-btn").forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        btn.nextElementSibling.classList.toggle("open");
+        openDrawer.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+        document.body.style.overflow =
+          "hidden";
+
+      }
+    );
+
+
+    closeDrawer.addEventListener(
+      "click",
+      closeMenu
+    );
+
+
+    drawer.addEventListener(
+      "click",
+      (e) => {
+
+        if (e.target === drawer) {
+          closeMenu();
+        }
+
+        if (e.target.closest("a")) {
+          closeMenu();
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      (e) => {
+
+        if (e.key === "Escape") {
+          closeMenu();
+        }
+
+      }
+    );
+
+
+
+    /* =========================================================
+       MOBILE ACCORDIONS
+    ========================================================= */
+
+    document
+      .querySelectorAll(".acc-btn")
+      .forEach(btn => {
+
+        btn.addEventListener(
+          "click",
+          () => {
+
+            const panel =
+              btn.nextElementSibling;
+
+            panel.classList.toggle("open");
+
+          }
+        );
+
       });
-    });
 
-    // Desktop dropdown buttons
-    document.querySelectorAll(".drop-btn").forEach(btn=>{
-      btn.addEventListener("click",(e)=>{
-        e.stopPropagation();
-        const parent = btn.parentElement;
-        document.querySelectorAll(".dropdown").forEach(d=>{
-          if(d !== parent) d.classList.remove("open");
-        });
-        parent.classList.toggle("open");
+
+
+    /* =========================================================
+       DESKTOP DROPDOWNS
+    ========================================================= */
+
+    document
+      .querySelectorAll(".drop-btn")
+      .forEach(btn => {
+
+        btn.addEventListener(
+          "click",
+          (e) => {
+
+            e.stopPropagation();
+
+            const parent =
+              btn.parentElement;
+
+
+            document
+              .querySelectorAll(".dropdown")
+              .forEach(dropdown => {
+
+                if (dropdown !== parent) {
+
+                  dropdown.classList.remove(
+                    "open"
+                  );
+
+                }
+
+              });
+
+
+            parent.classList.toggle("open");
+
+          }
+        );
+
       });
+
+
+    document.addEventListener(
+      "click",
+      () => {
+
+        document
+          .querySelectorAll(".dropdown")
+          .forEach(dropdown => {
+
+            dropdown.classList.remove(
+              "open"
+            );
+
+          });
+
+      }
+    );
+
+
+
+    /* =========================================================
+       CATEGORY FILTER
+    ========================================================= */
+
+    const categoryButtons =
+      document.querySelectorAll(".category");
+
+    const articleCards =
+      document.querySelectorAll(".article-card");
+
+
+    categoryButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          categoryButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+          });
+
+
+          button.classList.add("active");
+
+
+          const selected =
+            button.dataset.category;
+
+
+          articleCards.forEach(card => {
+
+            const categories =
+              (card.dataset.category || "")
+              .split(/\s+/);
+
+
+            const show =
+              selected === "all" ||
+              categories.includes(selected);
+
+
+            card.style.display =
+              show ? "" : "none";
+
+          });
+
+        }
+      );
+
     });
 
-    document.addEventListener("click",()=>{
-      document.querySelectorAll(".dropdown").forEach(d=>d.classList.remove("open"));
-    });
 
-    // Category filter — supports multiple category values
-    const categoryButtons = document.querySelectorAll(".category");
-    const articleCards = document.querySelectorAll(".article-card");
 
-    categoryButtons.forEach(button=>{
-      button.addEventListener("click",()=>{
-        categoryButtons.forEach(btn=>btn.classList.remove("active"));
-        button.classList.add("active");
+    /* =========================================================
+       NEWSLETTER
+    ========================================================= */
 
-        const selected = button.dataset.category;
+    const newsletterForm =
+      document.getElementById("newsletterForm");
 
-        articleCards.forEach(card=>{
-          const categories = (card.dataset.category || "").split(/\s+/);
-          const show = selected === "all" || categories.includes(selected);
+    const newsletterMessage =
+      document.getElementById("newsletterMessage");
 
-          card.style.display = show ? "" : "none";
-        });
-      });
-    });
 
-    // Newsletter
-    const newsletterForm = document.getElementById("newsletterForm");
-    const newsletterMessage = document.getElementById("newsletterMessage");
+    newsletterForm.addEventListener(
+      "submit",
+      (e) => {
 
-    newsletterForm.addEventListener("submit",(e)=>{
-      e.preventDefault();
-      newsletterMessage.style.display = "block";
-      newsletterForm.reset();
-    });
+        e.preventDefault();
 
-    // Reveal animations
-    const revealEls = document.querySelectorAll(".reveal");
+        newsletterMessage.style.display =
+          "block";
 
-    if("IntersectionObserver" in window){
-      const observer = new IntersectionObserver((entries,obs)=>{
-        entries.forEach(entry=>{
-          if(!entry.isIntersecting) return;
-          entry.target.classList.add("visible");
-          obs.unobserve(entry.target);
-        });
-      },{threshold:.12});
+        newsletterForm.reset();
 
-      revealEls.forEach((el,i)=>{
-        el.style.transitionDelay = `${(i % 6) * 70}ms`;
+      }
+    );
+
+
+
+    /* =========================================================
+       REVEAL ANIMATIONS
+    ========================================================= */
+
+    const revealEls =
+      document.querySelectorAll(".reveal");
+
+
+    if ("IntersectionObserver" in window) {
+
+      const observer =
+        new IntersectionObserver(
+          (entries, obs) => {
+
+            entries.forEach(entry => {
+
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+
+              obs.unobserve(
+                entry.target
+              );
+
+            });
+
+          },
+          {
+            threshold: .12
+          }
+        );
+
+
+      revealEls.forEach((el, i) => {
+
+        el.style.transitionDelay =
+          `${(i % 6) * 70}ms`;
+
         observer.observe(el);
+
       });
-    }else{
-      revealEls.forEach(el=>el.classList.add("visible"));
+
+    } else {
+
+      revealEls.forEach(el => {
+
+        el.classList.add("visible");
+
+      });
+
     }
+
+
+
+    /* =========================================================
+       MOBILE PERSPECTIVE SLIDER
+       =========================================================
+
+       Desktop is NOT touched.
+
+       Only screens 650px and below use this
+       JavaScript slider.
+
+       The slider supports:
+       - finger swiping
+       - left/right movement
+       - snap positioning
+       - mouse dragging when testing on desktop
+       ========================================================= */
+
+    const perspectiveSlider =
+      document.getElementById(
+        "perspectiveSlider"
+      );
+
+    const perspectiveCards =
+      document.querySelectorAll(
+        ".perspective-card"
+      );
+
+
+    if (
+      perspectiveSlider &&
+      perspectiveCards.length
+    ) {
+
+      let startX = 0;
+      let startY = 0;
+
+      let isTouching = false;
+
+
+      /* -----------------------------------------
+         TOUCH START
+      ----------------------------------------- */
+
+      perspectiveSlider.addEventListener(
+        "touchstart",
+        (e) => {
+
+          startX =
+            e.touches[0].clientX;
+
+          startY =
+            e.touches[0].clientY;
+
+          isTouching = true;
+
+        },
+        {
+          passive: true
+        }
+      );
+
+
+      /* -----------------------------------------
+         TOUCH END
+      ----------------------------------------- */
+
+      perspectiveSlider.addEventListener(
+        "touchend",
+        (e) => {
+
+          if (!isTouching) {
+            return;
+          }
+
+          isTouching = false;
+
+
+          const endX =
+            e.changedTouches[0].clientX;
+
+          const endY =
+            e.changedTouches[0].clientY;
+
+
+          const differenceX =
+            startX - endX;
+
+          const differenceY =
+            startY - endY;
+
+
+          /*
+            Ignore small movements.
+            Also ignore vertical swipes.
+          */
+
+          if (
+            Math.abs(differenceX) < 40 ||
+            Math.abs(differenceX) <=
+            Math.abs(differenceY)
+          ) {
+
+            return;
+
+          }
+
+
+          /*
+            Calculate actual card width
+            including the 16px gap.
+          */
+
+          const card =
+            perspectiveCards[0];
+
+          const cardWidth =
+            card.getBoundingClientRect().width;
+
+          const gap = 16;
+
+          const movement =
+            cardWidth + gap;
+
+
+          /*
+            Swipe LEFT
+            → move to next card
+          */
+
+          if (differenceX > 0) {
+
+            perspectiveSlider.scrollBy({
+              left: movement,
+              behavior: "smooth"
+            });
+
+          }
+
+
+          /*
+            Swipe RIGHT
+            → move to previous card
+          */
+
+          else {
+
+            perspectiveSlider.scrollBy({
+              left: -movement,
+              behavior: "smooth"
+            });
+
+          }
+
+        },
+        {
+          passive: true
+        }
+      );
+
+
+
+      /* =====================================================
+         DESKTOP MOUSE DRAG SUPPORT
+         Only useful for testing the slider.
+         It does NOT change the desktop layout.
+      ===================================================== */
+
+      let mouseDown = false;
+
+      let mouseStartX = 0;
+
+      let initialScroll = 0;
+
+
+      perspectiveSlider.addEventListener(
+        "mousedown",
+        (e) => {
+
+          /*
+            Only activate this behaviour
+            on small screens.
+          */
+
+          if (window.innerWidth > 650) {
+            return;
+          }
+
+
+          mouseDown = true;
+
+          mouseStartX = e.pageX;
+
+          initialScroll =
+            perspectiveSlider.scrollLeft;
+
+          perspectiveSlider.style.cursor =
+            "grabbing";
+
+        }
+      );
+
+
+      perspectiveSlider.addEventListener(
+        "mousemove",
+        (e) => {
+
+          if (!mouseDown) {
+            return;
+          }
+
+          if (window.innerWidth > 650) {
+            return;
+          }
+
+
+          const distance =
+            e.pageX - mouseStartX;
+
+
+          perspectiveSlider.scrollLeft =
+            initialScroll - distance;
+
+        }
+      );
+
+
+      function stopMouseDrag() {
+
+        mouseDown = false;
+
+        perspectiveSlider.style.cursor =
+          "";
+
+      }
+
+
+      perspectiveSlider.addEventListener(
+        "mouseup",
+        stopMouseDrag
+      );
+
+      perspectiveSlider.addEventListener(
+        "mouseleave",
+        stopMouseDrag
+      );
+
+    }
+
+
   </script>
+
 </body>
 </html>
