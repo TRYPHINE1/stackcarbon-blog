@@ -1,0 +1,3615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="How Stack Carbon secures reactive minerals and sustainable biomass to deliver high-integrity carbon removal at scale across East Africa and the Indian Ocean region."
+  />
+
+  <title>
+    Feedstock Security: The Physical Anchor of Durable Carbon Removal at Scale | Stack Carbon
+  </title>
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="https://res.cloudinary.com/drqsua6wp/image/upload/c_thumb,w_128,h_128,g_west/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+    type="image/png"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    :root {
+      --deep: #203319;
+      --deep-2: #172710;
+      --article: #29421f;
+      --olive: #5b7d3f;
+      --lime: #a4cf5b;
+      --neutral: #e3ded7;
+      --text-dark: #1a2814;
+      --white: #ffffff;
+
+      /* Required variables */
+      --deep-rgb: 32, 51, 25;
+      --deep-2-rgb: 23, 39, 16;
+      --article-rgb: 41, 66, 31;
+      --olive-rgb: 91, 125, 63;
+      --lime-rgb: 164, 207, 91;
+
+      --max: 1200px;
+      --header-h: 70px;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Nunito Sans", sans-serif;
+      background: var(--deep);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .site-header {
+      position: fixed;
+      top: 16px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    .nav-shell {
+      width: min(var(--max), 92%);
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 22px;
+      background: rgba(var(--deep-rgb), 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+      pointer-events: auto;
+      transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .nav-shell.scrolled {
+      background: rgba(var(--deep-rgb), 0.94);
+    }
+
+    .nav-row {
+      min-height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 0 18px;
+    }
+
+    /* LOGO */
+
+    .logo {
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 38px;
+      width: auto;
+      max-width: 180px;
+    }
+
+    /* DESKTOP NAV */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex: 1;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.95rem;
+      font-weight: 900;
+    }
+
+    .nav-links > a,
+    .drop-btn {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 0;
+      color: inherit;
+      background: transparent;
+      white-space: nowrap;
+      font-weight: 900;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .nav-links > a:hover,
+    .drop-btn:hover {
+      color: var(--lime);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* DROPDOWN */
+
+    .dropdown {
+      position: relative;
+    }
+
+    .drop-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      min-width: 235px;
+      padding: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      background: rgba(var(--deep-rgb), 0.96);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease,
+        transform 0.22s ease;
+    }
+
+    .dropdown:hover .drop-menu,
+    .dropdown.open .drop-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .drop-menu a {
+      display: block;
+      padding: 12px;
+      border-radius: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 800;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .drop-menu a:hover {
+      background: rgba(var(--lime-rgb), 0.1);
+      color: var(--lime);
+    }
+
+    /* HEADER TOOLS */
+
+    .nav-tools {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #0a140a;
+      font-weight: 900;
+      box-shadow:
+        0 18px 40px rgba(var(--lime-rgb), 0.18);
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      background: #b5dd70;
+    }
+
+    /* MOBILE MENU BUTTON */
+
+    .menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      font-size: 20px;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       MOBILE DRAWER
+    ========================================================= */
+
+    .drawer {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+    }
+
+    .drawer.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drawer-panel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: min(420px, 92vw);
+      padding: 22px;
+      overflow-y: auto;
+      background:
+        radial-gradient(
+          800px 400px at 10% 0%,
+          rgba(var(--olive-rgb), 0.16),
+          transparent 60%
+        ),
+        linear-gradient(
+          180deg,
+          rgba(var(--deep-rgb), 0.98),
+          rgba(var(--deep-rgb), 0.94)
+        );
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      transform: translateX(110%);
+      transition:
+        transform 0.3s var(--ease);
+    }
+
+    .drawer.open .drawer-panel {
+      transform: translateX(0);
+    }
+
+    .drawer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .drawer-top img {
+      height: 32px;
+      width: auto;
+      filter: brightness(5);
+    }
+
+    .drawer-close {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 18px;
+    }
+
+    .drawer-link,
+    .acc-btn {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .drawer-link:hover,
+    .acc-btn:hover {
+      color: var(--lime);
+      border-color: rgba(var(--lime-rgb), 0.4);
+    }
+
+    .acc-btn {
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .acc-panel {
+      display: none;
+      padding: 5px 0 2px;
+    }
+
+    .acc-panel.open {
+      display: block;
+    }
+
+    .drawer-link.sub {
+      margin: 5px 0 0 12px;
+      width: calc(100% - 12px);
+      font-size: 0.94rem;
+    }
+
+    .drawer-cta {
+      background: var(--lime);
+      color: #0a140a;
+      justify-content: center;
+    }
+
+    .drawer-cta:hover {
+      color: #0a140a;
+      background: #b5dd70;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .article-hero {
+      min-height: 68vh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(
+          to top,
+          rgba(23, 39, 16, 0.98),
+          rgba(23, 39, 16, 0.2)
+        ),
+        url("https://res.cloudinary.com/drqsua6wp/image/upload/v1771500958/IMG_5554_qmkkgb.jpg")
+        center / cover no-repeat;
+      padding: 150px 25px 70px;
+    }
+
+    .hero-inner {
+      max-width: 1000px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .article-category {
+      display: inline-block;
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 18px;
+    }
+
+    .article-hero h1 {
+      max-width: 920px;
+      color: #fff;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.08;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #d8dfd4;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .article-meta i {
+      color: var(--lime);
+    }
+
+    /* =========================
+       ARTICLE
+    ========================= */
+
+    .article-area {
+      background: var(--article);
+      padding: 75px 25px 85px;
+    }
+
+    .article-wrapper {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .article-intro {
+      font-size: 21px;
+      line-height: 1.75;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 38px;
+    }
+
+    .back-to-insights {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      color: var(--lime);
+      font-size: 13px;
+      font-weight: 900;
+      transition: color 0.2s ease;
+    }
+
+    .back-to-insights:hover {
+      color: #ffffff;
+    }
+
+    .article-content {
+      color: #e7ede2;
+      font-size: 17px;
+    }
+
+    .legacy-wild-assets {
+      display: none;
+    }
+
+    .alom-article,
+    .community-article,
+    .sbti-article {
+      display: none;
+    }
+
+    .feedstock-table-wrap {
+      margin: 30px 0 38px;
+      overflow-x: auto;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+    }
+
+    .feedstock-table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .feedstock-table th {
+      padding: 15px;
+      text-align: left;
+      color: var(--deep);
+      background: var(--lime);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .feedstock-table td {
+      padding: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e7ede2;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    .feedstock-stat {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 35px 0 45px;
+      padding: 25px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--deep-2), var(--olive));
+      color: #fff;
+    }
+
+    .feedstock-stat strong {
+      display: block;
+      color: var(--lime);
+      font-size: 22px;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .feedstock-stat span {
+      display: block;
+      margin-top: 7px;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .sbti-article {
+      display: none;
+    }
+
+    .community-article blockquote {
+      margin: 38px 0;
+      padding: 15px 0 15px 25px;
+      border-left: 4px solid var(--lime);
+      color: #d2ddcc;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    .community-article,
+    .sbti-article {
+      display: none;
+    }
+
+    .article-stat {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 35px 0 45px;
+      padding: 25px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--deep-2), var(--olive));
+      color: #fff;
+    }
+
+    .stat {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--lime);
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 7px;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .permanence-box {
+      margin: 45px 0;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      background: rgba(164, 207, 91, 0.1);
+    }
+
+    .permanence-title {
+      margin-bottom: 24px;
+      color: var(--lime);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .permanence-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .permanence-column {
+      padding: 22px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .permanence-column h3 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 19px;
+    }
+
+    .permanence-column ul {
+      margin: 0 0 0 20px;
+    }
+
+    .permanence-result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: var(--deep-2);
+      color: var(--lime);
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .diligence {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 30px 0 35px;
+    }
+
+    .diligence-card {
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .diligence-number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      background: var(--lime);
+      color: var(--deep);
+      font-weight: 900;
+    }
+
+    .diligence-card h3 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .diligence-card p {
+      font-size: 14px;
+    }
+
+    .article-table-wrap {
+      margin: 30px 0 38px;
+      overflow-x: auto;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+    }
+
+    .article-table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .article-table th {
+      padding: 15px;
+      text-align: left;
+      color: var(--deep);
+      background: var(--lime);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .article-table td {
+      padding: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e7ede2;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    .article-portfolio {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 30px 0;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .article-portfolio > div {
+      padding: 24px;
+      background: rgba(164, 207, 91, 0.1);
+    }
+
+    .article-portfolio > div + div {
+      border-left: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .article-portfolio h3 {
+      margin: 0 0 14px;
+      color: var(--lime);
+      font-size: 16px;
+    }
+
+    .article-portfolio ul {
+      margin: 0 0 0 20px;
+    }
+
+    .article-portfolio li {
+      font-size: 14px;
+    }
+
+    .article-content h2 {
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.25;
+      margin: 48px 0 18px;
+      font-weight: 900;
+    }
+
+    .article-content h3 {
+      color: var(--lime);
+      font-size: 22px;
+      margin: 35px 0 14px;
+      font-weight: 800;
+    }
+
+    .article-content p {
+      margin-bottom: 22px;
+    }
+
+    .article-content strong {
+      color: #fff;
+    }
+
+    .article-content blockquote {
+      font-style: italic;
+      border-left: 3px solid var(--lime);
+      padding-left: 16px;
+      margin: 28px 0;
+    }
+
+    .article-content ul {
+      margin: 15px 0 28px 25px;
+    }
+
+    .article-content li {
+      margin-bottom: 10px;
+      padding-left: 5px;
+    }
+
+    .article-content li::marker {
+      color: var(--lime);
+    }
+
+    .article-highlight {
+      margin: 38px 0;
+      padding: 25px 28px;
+      border-left: 4px solid var(--lime);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .article-highlight p {
+      margin: 0;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ARTICLE IMAGES
+    ========================= */
+
+    .article-image {
+      margin: 42px 0;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .article-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .article-image figcaption {
+      padding: 12px 16px;
+      color: #bfcbb9;
+      background: rgba(0, 0, 0, 0.18);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* =========================
+       RELATED BLOGS
+    ========================= */
+
+    .related-section {
+      max-width: 1100px;
+      margin: 75px auto 0;
+      padding-top: 55px;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .related-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .related-header h2 {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .related-header p {
+      color: #bdc9b8;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .slider-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .slider-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .slider-btn:hover {
+      background: var(--lime);
+      color: var(--deep);
+      border-color: var(--lime);
+    }
+
+    .blog-slider {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.55s ease;
+    }
+
+    .blog-card {
+      position: relative;
+      flex: 0 0 calc((100% - 40px) / 3);
+      height: 200px;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      background: #203319;
+      display: block;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .blog-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .blog-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.92) 0%,
+          rgba(0, 0, 0, 0.65) 38%,
+          rgba(0, 0, 0, 0.1) 76%,
+          transparent 100%
+        );
+      z-index: 1;
+    }
+
+    .blog-card-content {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 13px;
+      z-index: 2;
+    }
+
+    .blog-card-category {
+      display: inline-block;
+      color: var(--lime);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .blog-card h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .blog-card-read {
+      display: inline-block;
+      margin-top: 6px;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 20px;
+    }
+
+    .slider-dot {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .slider-dot.active {
+      width: 22px;
+      border-radius: 10px;
+      background: var(--lime);
+    }
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter {
+      background: var(--deep-2);
+      padding: 70px 25px;
+      text-align: center;
+    }
+
+    .newsletter-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .newsletter h2 {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      color: #c1cdbb;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 560px;
+      margin: auto;
+      background: #fff;
+      border-radius: 50px;
+      padding: 5px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+      padding: 13px 18px;
+      border-radius: 50px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .newsletter-form button {
+      border: 0;
+      background: var(--lime);
+      color: var(--deep);
+      border-radius: 50px;
+      padding: 0 23px;
+      font-family: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #b7df72;
+    }
+
+    .newsletter-success {
+      display: none;
+      margin-top: 15px;
+      color: var(--lime);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .main-footer {
+      position: relative;
+      padding: 75px 0 30px;
+      background: #15220f;
+      color: rgba(255, 255, 255, 0.86);
+      overflow: hidden;
+    }
+
+    .footer-watermark {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.055;
+      filter:
+        grayscale(100%)
+        brightness(130%);
+      pointer-events: none;
+    }
+
+    .footer-inner,
+    .footer-bottom {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-inner {
+      width: min(var(--max), 92%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns:
+        1.5fr
+        1fr
+        1.2fr;
+      gap: 45px;
+    }
+
+    .footer-logo {
+      height: 42px;
+      width: auto;
+      margin-bottom: 15px;
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      display: block;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.93rem;
+      margin-bottom: 9px;
+    }
+
+    .footer-col p i {
+      width: 20px;
+      color: var(--lime);
+      margin-right: 4px;
+    }
+
+    .footer-col a:hover {
+      color: var(--lime);
+    }
+
+    .footer-social {
+      display: inline-flex !important;
+      gap: 8px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .footer-social i {
+      color: var(--lime);
+    }
+
+    .footer-btn {
+      display: inline-flex !important;
+      width: max-content;
+      margin-top: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--deep) !important;
+      font-weight: 900;
+    }
+
+    .footer-btn:hover {
+      background: #b5dd70;
+      color: var(--deep) !important;
+    }
+
+    .footer-bottom {
+      width: min(var(--max), 92%);
+      margin: 45px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.85rem;
+    }
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      filter: blur(3px);
+      transition:
+        opacity 0.7s var(--ease),
+        transform 0.7s var(--ease),
+        filter 0.7s var(--ease);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 950px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-btn {
+        display: grid;
+      }
+
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+      }
+
+      .article-stat {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner .footer-col:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 650px) {
+      .site-header {
+        top: 10px;
+      }
+
+      .nav-shell {
+        border-radius: 18px;
+      }
+
+      .nav-row {
+        min-height: 70px;
+        padding: 0 13px;
+      }
+
+      .logo img {
+        height: 31px;
+        max-width: 145px;
+      }
+
+      .hero {
+        min-height: 270px;
+      }
+
+      .hero-content {
+        padding: 35px 18px;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(2.4rem, 12vw, 4rem);
+      }
+
+      .articles-section {
+        padding: 50px 0 75px;
+      }
+
+      .section-header {
+        margin-bottom: 28px;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .article-image {
+        height: auto;
+      }
+
+      .heading-overlay {
+        font-size: 1.3rem;
+      }
+
+      .article-body {
+        padding: 23px;
+      }
+
+      .newsletter {
+        padding: 55px 0;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+        border-radius: 18px;
+        background: transparent;
+        gap: 10px;
+      }
+
+      .newsletter-form input {
+        width: 100%;
+        border-radius: 12px;
+        padding: 15px 16px;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+        min-height: 50px;
+        border-radius: 12px;
+      }
+
+      .main-footer {
+        padding: 60px 0 25px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-inner .footer-col:first-child {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        margin-top: 35px;
+      }
+
+      .article-hero {
+        min-height: 65vh;
+        padding: 130px 20px 55px;
+      }
+
+      .article-area {
+        padding: 55px 20px 70px;
+      }
+
+      .article-intro {
+        font-size: 18px;
+      }
+
+      .article-content {
+        font-size: 16px;
+      }
+
+      .article-content h2 {
+        font-size: 27px;
+      }
+
+      .article-image img {
+        height: 250px;
+      }
+
+      .related-header {
+        align-items: flex-start;
+      }
+
+      .related-header h2 {
+        font-size: 24px;
+      }
+
+      .blog-card {
+        flex: 0 0 100%;
+      }
+
+      .article-portfolio {
+        grid-template-columns: 1fr;
+      }
+
+      .article-portfolio > div + div {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .permanence-grid,
+      .diligence {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =========================================================
+       SMALL PHONES
+    ========================================================= */
+
+    @media (max-width: 400px) {
+      .nav-shell {
+        width: 94%;
+      }
+
+      .logo img {
+        max-width: 130px;
+      }
+
+      .article-image {
+        height: auto;
+      }
+
+      .logo-container {
+        padding: 0 14px;
+      }
+
+      .logo-box {
+        width: 105px;
+        height: 45px;
+      }
+
+      .wild-logo {
+        width: 120px;
+        height: 60px;
+      }
+
+      .wild-logo img {
+        width: 120px;
+        height: 60px;
+      }
+    }
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       HEADER
+  ======================================================= -->
+
+  <header class="site-header">
+    <div class="nav-shell" id="navShell">
+      <div class="nav-row">
+
+        <a
+          class="logo"
+          href="index.html"
+          aria-label="Stack Carbon home"
+        >
+          <img
+            src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+            alt="Stack Carbon Logo"
+          />
+        </a>
+
+        <!-- DESKTOP NAV -->
+
+        <nav
+          class="nav-links"
+          aria-label="Main navigation"
+        >
+          <a href="index.html">
+            Home
+          </a>
+
+          <div class="dropdown">
+            <button
+              class="drop-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+              <span>▾</span>
+            </button>
+
+            <div class="drop-menu">
+              <a href="who-we-are.html">
+                Who We Are
+              </a>
+
+              <a href="our-team.html">
+                Our Team
+              </a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="drop-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Projects
+              <span>▾</span>
+            </button>
+
+            <div class="drop-menu">
+              <a href="karibu.html">
+                Karibu Project
+              </a>
+
+              <a href="nile.html">
+                Nile Char Project
+              </a>
+
+              <a href="monsoon.html">
+                Madagascar Monsoon Project
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="blog.html"
+            aria-current="page"
+          >
+            Insights
+          </a>
+        </nav>
+
+        <!-- HEADER TOOLS -->
+
+        <div class="nav-tools">
+          <a
+            class="nav-cta"
+            href="contact.html"
+          >
+            Contact us
+          </a>
+
+          <button
+            class="menu-btn"
+            id="openDrawer"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================================================
+       MOBILE DRAWER
+  ======================================================= -->
+
+  <div
+    class="drawer"
+    id="drawer"
+    aria-hidden="true"
+  >
+    <div class="drawer-panel">
+
+      <div class="drawer-top">
+        <img
+          src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+          alt="Stack Carbon Logo"
+        />
+
+        <button
+          class="drawer-close"
+          id="closeDrawer"
+          type="button"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="drawer-links">
+
+        <a
+          href="index.html"
+          class="drawer-link"
+        >
+          Home
+        </a>
+
+        <button
+          class="acc-btn"
+          type="button"
+          aria-expanded="false"
+        >
+          About Us
+          <span>▾</span>
+        </button>
+
+        <div class="acc-panel">
+          <a
+            href="who-we-are.html"
+            class="drawer-link sub"
+          >
+            Who We Are
+          </a>
+
+          <a
+            href="our-team.html"
+            class="drawer-link sub"
+          >
+            Our Team
+          </a>
+        </div>
+
+        <button
+          class="acc-btn"
+          type="button"
+          aria-expanded="false"
+        >
+          Projects
+          <span>▾</span>
+        </button>
+
+        <div class="acc-panel">
+          <a
+            href="karibu.html"
+            class="drawer-link sub"
+          >
+            Karibu Project
+          </a>
+
+          <a
+            href="nile.html"
+            class="drawer-link sub"
+          >
+            Nile Char Project
+          </a>
+
+          <a
+            href="monsoon.html"
+            class="drawer-link sub"
+          >
+            Madagascar Monsoon Project
+          </a>
+        </div>
+
+        <a
+          href="blog.html"
+          class="drawer-link"
+        >
+          Insights
+        </a>
+
+        <a
+          href="contact.html"
+          class="drawer-link drawer-cta"
+        >
+          Contact us →
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================
+       ARTICLE HERO
+  ========================= -->
+
+  <section class="article-hero">
+
+    <div class="hero-inner reveal">
+
+      <h1>
+        Feedstock Security: The Physical Anchor of Durable Carbon Removal at Scale
+      </h1>
+
+      <div class="article-meta">
+
+        <span>
+          <i class="fa-regular fa-calendar"></i>
+          2026
+        </span>
+
+        <span>
+          <i class="fa-regular fa-clock"></i>
+          5 min read
+        </span>
+
+        <span>
+          <i class="fa-solid fa-leaf"></i>
+          Stack Carbon
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       ARTICLE
+  ========================= -->
+
+  <main class="article-area">
+
+    <article class="article-wrapper">
+
+      <a
+        class="back-to-insights"
+        href="blog.html"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Insights
+      </a>
+
+      <p class="article-intro reveal">
+        In discussions around land-based carbon dioxide removal (CDR), attention naturally centers
+        on measurement, reporting, and verification (MRV) protocols, geochemical modeling, or credit
+        pricing. Yet for high-permanence pathways like Enhanced Rock Weathering (ERW) and Biochar
+        Systems, project success ultimately hinges on a much simpler physical requirement: feedstock security.
+      </p>
+
+      <div class="article-content">
+
+        <div class="feedstock-article">
+
+          <p>
+            Without a guaranteed, long-term supply of reactive minerals and sustainable biomass,
+            even the most advanced carbon removal platforms face supply bottlenecks, volatile
+            production costs, and idle processing infrastructure.
+          </p>
+
+          <p>
+            At Stack Carbon, securing scalable, high-purity inputs is not an afterthought—it is a
+            core operational strategy. By building strategic supply partnerships across Uganda and
+            Madagascar, we have anchored the physical foundations needed to deliver verified,
+            high-integrity carbon removals across East Africa and the Indian Ocean region.
+          </p>
+
+          <h2>1. The ERW Mineral Pipeline: High-Reactivity Silicates Without Greenfield Mining Delays</h2>
+
+          <p>
+            Enhanced Rock Weathering accelerates Earth's natural geological carbon cycle by applying
+            finely ground silicate rocks—such as nepheline and mafic minerals—to warm, acidic
+            tropical soils. Rainwater carrying dissolved CO<sub>2</sub> reacts with these minerals,
+            converting soil carbon into stable bicarbonate ions that remain locked away for over
+            1,000 years.
+          </p>
+
+          <p>
+            Executing ERW at scale requires continuous access to suitable silicate rocks without
+            incurring exorbitant extraction costs or long-distance transport emissions.
+          </p>
+
+          <h3>Strategic Quarry Partnership with ALOM</h3>
+
+          <p>
+            To anchor our mineral supply chain in Uganda, Stack Carbon partners directly with ALOM
+            Mining &amp; Geohydro Services. Rather than establishing new greenfield mines, which would
+            cause local land disruption, our operations draw from ALOM’s active, fully operational
+            quarry network.
+          </p>
+
+          <ul>
+            <li><strong>Immediate Volume &amp; Low Extraction Overhead:</strong> Tapping into existing, active quarries bypasses greenfield development friction, drastically shortening lead times and ensuring immediate mineral availability.</li>
+            <li><strong>Geochemical Rigor:</strong> Every deposit undergoes rigorous testing to confirm high dissolution kinetics, rich concentrations of calcium and magnesium, and zero heavy-metal contamination.</li>
+            <li><strong>Low-Carbon Supply Chains:</strong> Sourcing locally near agricultural application zones minimizes transport emissions, ensuring a high net-carbon efficiency ratio for every tonne of silicate rock spread.</li>
+          </ul>
+
+          <h2>2. The Biochar Biomass Pipeline: Non-Food Agricultural Residues Across Uganda and Madagascar</h2>
+
+          <p>
+            While ERW addresses multi-millennial permanence, Biochar Systems provide rapid carbon
+            lock-up, immediate credit availability, and vital soil moisture retention. The primary
+            operational bottleneck for biochar is securing agricultural waste streams that do not
+            compete with food production, local energy needs, or livestock feed.
+          </p>
+
+          <p>
+            Stack Carbon addresses this by tapping into two distinct, high-volume industrial waste
+            streams across two regional hubs:
+          </p>
+
+          <div class="feedstock-table-wrap">
+            <table class="feedstock-table">
+              <thead>
+                <tr>
+                  <th>Regional Hub</th>
+                  <th>Primary Biomass Stream</th>
+                  <th>Sourcing &amp; Supply Characteristics</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Uganda</td>
+                  <td>Sugarcane Bagasse</td>
+                  <td>Sourced directly from major industrial sugar processors; dense, high-thermal biomass ideal for high-temperature gasification.</td>
+                </tr>
+                <tr>
+                  <td>Madagascar</td>
+                  <td>Rice Husks</td>
+                  <td>Sourced directly from commercial rice milling hubs; rich in natural biogenic silica with low alternative economic value.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Circular Energy Synergies</h3>
+
+          <p>
+            In addition to producing recalcitrant biochar for soil application, high-temperature
+            biomass gasification captures energy-rich thermal syngas. Through structured
+            energy-offtake agreements, we convert this excess thermal power into dispatchable
+            energy for flexible industrial and computing applications, creating a dual-revenue
+            model that lowers net credit production costs.
+          </p>
+
+          <h2>3. Additionality, Circularity, and Environmental Safeguards</h2>
+
+          <p>
+            To meet the rigorous standards of international carbon registries, feedstock procurement
+            must adhere to strict environmental criteria:
+          </p>
+
+          <ul>
+            <li><strong>True Waste Utilization:</strong> We strictly utilize agricultural residues that would otherwise decompose rapidly, emit methane, or be burned openly in uncontrolled fires.</li>
+            <li><strong>Zero Deforestation or Land Competition:</strong> Sourcing relies entirely on existing, established agricultural supply chains, guaranteeing zero land conversion, forest clearing, or competition with food crops.</li>
+            <li><strong>Agronomic Regeneration:</strong> Biochar and silicate minerals are returned directly to local farmlands, neutralizing tropical soil acidity, releasing essential micronutrients (like silica, calcium, and magnesium), and restoring degraded soil organic carbon.</li>
+          </ul>
+
+          <h2>4. Comprehensive Supply Risk Matrix &amp; Developer Mitigations</h2>
+
+          <p>
+            As corporate procurement leads perform due diligence on land-based CDR developers,
+            scrutiny is rapidly shifting from theoretical models to physical supply chain readiness.
+            Below is a detailed breakdown of the primary feedstock risks in land-based CDR and how
+            Stack Carbon addresses them structurally:
+          </p>
+
+          <div class="feedstock-table-wrap">
+            <table class="feedstock-table">
+              <thead>
+                <tr>
+                  <th>Supply Chain Risk Domain</th>
+                  <th>Industry Vulnerability &amp; Impact</th>
+                  <th>Stack Carbon Mitigation Strategy</th>
+                  <th>Operational Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Raw Material Bottlenecks</td>
+                  <td>Project halts due to lack of accessible minerals or biomass</td>
+                  <td>Dual-pathway sourcing via ALOM’s active quarries &amp; contracted industrial waste streams</td>
+                  <td>Eliminates greenfield quarry lead times and secures multi-crop agricultural waste</td>
+                </tr>
+                <tr>
+                  <td>Feedstock Quality &amp; Contamination</td>
+                  <td>Heavy-metal contamination or unsuitable mineral/carbon ratios invalidating MRV</td>
+                  <td>Pre-screened mafic silicates and unadulterated bagasse/rice husk streams</td>
+                  <td>Guarantees high dissolution kinetics, non-toxic, and verified credit issuance</td>
+                </tr>
+                <tr>
+                  <td>Price Volatility &amp; Cost Inefficiency</td>
+                  <td>Fluctuating credit production costs driven by expensive raw material spot markets</td>
+                  <td>Long-term, multi-year supply agreements with fixed operational cost structures</td>
+                  <td>Provides long-term pricing stability and predictable credit delivery for buyers</td>
+                </tr>
+                <tr>
+                  <td>Seasonal Sourcing Gaps</td>
+                  <td>Harvesting cycles causing operational downtime during off-peak months</td>
+                  <td>Multi-regional, multi-crop footprint spanning Uganda and Madagascar</td>
+                  <td>Ensures continuous year-round processing and gasification operations</td>
+                </tr>
+                <tr>
+                  <td>Logistical &amp; Transport Emissions</td>
+                  <td>High embodied carbon from long-distance feedstock transport eroding net CDR efficiency</td>
+                  <td>Distributed regional hub-and-spoke processing situated near farmland application sites</td>
+                  <td>Maximizes net carbon accounting per tonne delivered to agricultural soils</td>
+                </tr>
+                <tr>
+                  <td>Delivery &amp; Performance Risk</td>
+                  <td>Delayed credit issuance or under-delivery due to unexpected supply failure</td>
+                  <td>Dual-country, dual-pathway portfolio flexibility across ERW and Biochar</td>
+                  <td>Offers contract resilience, hedging risk across geographies and technologies</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            By anchoring ERW operations with ALOM’s active quarry network and securing industrial
+            biomass streams across Uganda and Madagascar, Stack Carbon provides buyers with total
+            execution certainty, demonstrating that our carbon removal platform is backed by real,
+            accessible physical assets on the ground.
+          </p>
+
+          <h2>Building Sustainable Climate Infrastructure</h2>
+
+          <p>
+            Durable carbon removal cannot scale on theoretical models alone, it requires physical
+            supply chains built on ground-level partnerships, robust logistics, and verified
+            environmental integrity.
+          </p>
+
+          <p>
+            By securing high-reactivity silicates alongside industrial agricultural residues, Stack
+            Carbon continues to build the physical infrastructure required to drive climate action
+            and rural soil regeneration across the Global South.
+          </p>
+
+        </div>
+
+        <div class="alom-article">
+
+          <p>
+            The partnership combines Stack Carbon's carbon removal deployment platform with
+            ALOM's extensive geological expertise, active quarry network, and mineral processing
+            infrastructure across the country. Together, the two organizations are establishing
+            an end-to-end mineral supply chain designed to scale permanent carbon removal across
+            East Africa.
+          </p>
+
+          <div class="article-stat">
+            <div class="stat">
+              <strong>Uganda</strong>
+              <span>Geological and mineral operations</span>
+            </div>
+            <div class="stat">
+              <strong>ERW</strong>
+              <span>Enhanced Rock Weathering deployment</span>
+            </div>
+            <div class="stat">
+              <strong>East Africa</strong>
+              <span>Regional carbon removal ambition</span>
+            </div>
+          </div>
+
+          <h2>Why Stack Carbon Chose ALOM</h2>
+
+          <p>
+            Executing Enhanced Rock Weathering with scientific rigor requires far more than
+            sourcing raw rock. It demands precise mineral selection, verified geochemical safety,
+            low-carbon transport logistics, and responsible local operational stewardship.
+          </p>
+
+          <p>
+            ALOM emerged as the ideal strategic partner because its operational footprint and
+            geological expertise provide the physical foundation required to build a reliable
+            and scalable mineral supply chain.
+          </p>
+
+          <h2>1. Multi-Quarry Footprint &amp; Industrial Mineral Reserves</h2>
+
+          <p>
+            ALOM operates and manages a network of quarry operations and industrial mineral assets
+            across Uganda. Sourcing directly from ALOM's established quarrying footprint provides
+            Stack Carbon with greater visibility into feedstock availability and supply-chain execution.
+          </p>
+
+          <div class="article-highlight">
+            <div class="article-highlight-title">What this enables</div>
+            <ul>
+              <li>
+                <strong>Guaranteed Mineral Access:</strong> Reliable supply lines of high-purity
+                silicate rocks, including basalt, nepheline and other mafic minerals rich in the
+                cations needed for rapid dissolution in tropical soils.
+              </li>
+              <li>
+                <strong>Low Extraction Overhead:</strong> Leveraging active, operational quarries
+                rather than developing greenfield extraction sites significantly reduces capital
+                expenditure and supply-chain lead times.
+              </li>
+            </ul>
+          </div>
+
+          <h2>2. Deep Geological Expertise &amp; Geochemical Rigor</h2>
+
+          <p>
+            With over a decade of experience in geological mapping, geochemical sampling, core
+            drilling, and mineral exploration across Uganda, ALOM's team of geologists and mining
+            engineers brings the technical depth required to support rigorous feedstock qualification.
+          </p>
+
+          <p>
+            Every silicate deposit designated for ERW undergoes rigorous geochemical screening to
+            confirm suitability for weathering in warm, acidic tropical soils, evaluate concentrations
+            of calcium and magnesium, and identify potential heavy-metal contamination.
+          </p>
+
+          <p>
+            ALOM's technical oversight supports Stack Carbon's objective of ensuring that mineral
+            feedstocks meet strict environmental safety and registry requirements, including
+            applicable requirements under standards such as the <strong>Rainbow Standard</strong>.
+          </p>
+
+          <h2>3. Regional Logistics &amp; Community-First Operations</h2>
+
+          <p>
+            Beyond geology, ALOM brings experience in local stakeholder engagement, environmental
+            compliance, and regional logistics management across Ugandan districts.
+          </p>
+
+          <p>
+            Sourcing and processing rock locally can help minimize transport emissions, supporting
+            stronger net-carbon efficiency while generating local economic value around the mineral
+            supply chain.
+          </p>
+
+          <blockquote>
+            Building permanent carbon removal requires infrastructure on the ground — from verified
+            mineral resources and processing capacity to logistics and responsible local operations.
+          </blockquote>
+
+          <h2>Accelerating Permanent Carbon Removal in Tropical Soils</h2>
+
+          <p>
+            Enhanced Rock Weathering accelerates the Earth's natural geological carbon cycle. When
+            finely ground silicate rock is applied to warm, acidic agricultural soils, atmospheric
+            CO<sub>2</sub> dissolved in rainwater reacts with the minerals.
+          </p>
+
+          <p>
+            This geochemical reaction converts dissolved carbon into stable bicarbonate ions, which
+            can drain through watersheds toward ocean basins, contributing to long-duration carbon
+            storage within the natural carbon cycle.
+          </p>
+
+          <p>
+            The combination of Uganda's tropical agricultural landscapes and locally available
+            silicate resources creates an opportunity to develop an ERW deployment model that
+            connects carbon removal with agricultural regeneration.
+          </p>
+
+          <h2>Creating Value Beyond Carbon Removal</h2>
+
+          <p>
+            In addition to permanent atmospheric carbon removal, applying suitable silicate minerals
+            can deliver immediate agronomic value to smallholder farmers.
+          </p>
+
+          <ul>
+            <li><strong>Neutralizing Soil Acidity:</strong> Restoring pH balance in degraded tropical soils.</li>
+            <li><strong>Replenishing Vital Minerals:</strong> Releasing essential plant nutrients such as silica, calcium and magnesium.</li>
+            <li><strong>Enhancing Crop Resilience:</strong> Supporting soil structure and moisture retention during dry spells.</li>
+          </ul>
+
+          <h2>What Supply Security Means for Carbon Buyers Evaluating Projects</h2>
+
+          <p>
+            As institutional carbon buyers evaluate land-based carbon removal projects, scrutiny is
+            shifting from theoretical models toward physical supply-chain security, feedstock
+            availability, and execution readiness.
+          </p>
+
+          <p>
+            When corporate procurement teams perform due diligence on ERW developers, the primary
+            operational risks can include raw material bottlenecks, unverified mineral chemistry,
+            and logistics delays.
+          </p>
+
+          <p>
+            By anchoring its mineral supply chain with a proven in-country mining and geological
+            partner, Stack Carbon offers buyers greater clarity on feedstock origin, chemical
+            characterization, and physical delivery capability.
+          </p>
+
+          <div class="article-highlight">
+            <div class="article-highlight-title">Supply Chain Readiness</div>
+            <ul>
+              <li>Established access to active quarry infrastructure.</li>
+              <li>Geological and geochemical expertise for mineral screening.</li>
+              <li>Local processing and logistics capabilities.</li>
+              <li>In-country operational and stakeholder relationships.</li>
+            </ul>
+          </div>
+
+          <p>
+            The partnership demonstrates that Stack Carbon's ERW deployment is backed by accessible
+            mineral resources and active industrial infrastructure on the ground — an important
+            consideration as the carbon removal market moves toward larger-scale procurement.
+          </p>
+
+          <h2>Building Sustainable Climate Infrastructure</h2>
+
+          <p>
+            "Scaling permanent carbon removal is fundamentally a physical supply chain challenge,"
+            said <strong>Bashir Dan, CEO of Stack Carbon</strong>. "Partnering with ALOM provides us
+            with both the geological foundation and the physical quarry infrastructure needed to
+            scale Enhanced Rock Weathering across Uganda with uncompromised scientific integrity and
+            operational reliability."
+          </p>
+
+          <p>
+            The collaboration marks another major milestone as Stack Carbon continues expanding its
+            dual-pathway carbon removal footprint, combining <strong>Enhanced Rock Weathering and
+            Biochar Systems</strong> to drive climate action and rural agricultural regeneration
+            across the Global South.
+          </p>
+
+          <h2>From Geological Resources to Climate Action</h2>
+
+          <p>
+            The Stack Carbon and ALOM partnership represents an important step toward building the
+            physical infrastructure required for high-integrity carbon removal in Africa.
+          </p>
+
+          <p>
+            By bringing together mineral resources, geological expertise, local operations and
+            carbon removal deployment capabilities, the collaboration creates a foundation for
+            scaling ERW while maintaining a strong focus on scientific rigor, supply-chain
+            transparency and local value creation.
+          </p>
+
+          <p>
+            As Stack Carbon continues developing projects across the Global South, partnerships
+            like this will play an important role in connecting the physical realities of carbon
+            removal with the growing demand for durable, high-integrity climate solutions.
+          </p>
+
+        </div>
+
+        <div class="legacy-wild-assets">
+
+        <p>
+          As the largest ERW offtake agreement signed in Africa to date, the
+          partnership represents a major commercial milestone for Stack Carbon
+          and signals growing institutional confidence in Africa's emerging
+          high-integrity carbon removal market.
+        </p>
+
+        <h2>Building Durable Carbon Removal in Africa</h2>
+
+        <p>
+          Stack Carbon develops scalable, high-integrity carbon removal solutions
+          tailored to African agricultural landscapes. Our mission centers on
+          deploying technologies that deliver verified atmospheric carbon removal
+          while creating tangible, localized value for host communities.
+        </p>
+
+        <p>
+          Our Enhanced Rock Weathering pathway accelerates natural geological
+          carbon sequestration. By applying finely crushed silicate rock to active
+          agricultural soils, atmospheric CO2 reacts with dissolving minerals to
+          permanently trap carbon in bicarbonate form.
+        </p>
+
+        <figure class="article-image reveal">
+          <img
+            src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771917569/Field_Trips_9_ftk8yk.jpg"
+            alt="Enhanced Rock Weathering field project in Africa"
+            loading="lazy"
+          />
+
+          <figcaption>
+            Enhanced Rock Weathering supporting durable carbon removal across
+            African agricultural landscapes.
+          </figcaption>
+        </figure>
+
+        <p>
+          Beyond carbon removal, soil application offers critical co-benefits for
+          smallholder farmers:
+        </p>
+
+        <ul>
+          <li>
+            Soil Health Regeneration: Neutralizes soil acidity and replenishes vital micronutrients.
+          </li>
+
+          <li>
+            Agricultural Yield Support: Enhances soil structure and nutrient retention
+          </li>
+
+          <li>
+            Climate Resilience: Improves crop vitality in regions increasingly vulnerable to climate volatility.
+          </li>
+        </ul>
+
+        <p>
+          The project is registered under the Rainbow Standard’s ERW Methodology,
+          establishing a transparent and rigorous framework for monitoring,
+          reporting, and verification (MRV).
+        </p>
+
+        <h2>A Major Milestone for African CDR Landscape</h2>
+
+        <p>
+          Long-term offtake agreements provide the foundation for scaling the
+          carbon removal ecosystem. They grant developers the revenue certainty
+          needed to expand operations while guaranteeing buyers access to
+          high-quality, durable credits.
+        </p>
+
+        <p>
+          For Wild Assets, this transaction marks its largest global ERW commitment
+          to date and its initial asset entry into Africa.
+        </p>
+
+        <blockquote>
+          "This is our largest ERW offtake to date, and our first asset in Africa.
+          Our trust in Stack Carbon originates from the demonstrated conduct of the
+          team—in the field, in the lab, and throughout the commercial process—as
+          well as the thoughtful fit of the project to the region’s geography."
+        </blockquote>
+
+        <p>
+          — Matan Rudis, Partner and Co-founder at Wild Assets
+        </p>
+
+        <p>
+          Central to Stack Carbon’s operational philosophy is the alignment of
+          global climate demand with local economic development. Carbon removal
+          projects in emerging economies must deliver direct benefits to the
+          landscapes and communities hosting them.
+        </p>
+
+        <p>
+          By integrating rock application into existing farming workflows, Stack
+          Carbon ensures that the financial and environmental value generated by
+          the net-zero transition directly supports rural livelihoods and soil
+          restoration.
+        </p>
+
+        <h2>Scaling Future Ambitions</h2>
+
+        <p>
+          The Wild Assets agreement provides momentum toward a much broader target:
+        </p>
+
+        <ul>
+          <li>
+            1,000,000+ Tonnes: Total durable CDR targeted for delivery by 2035.
+          </li>
+
+          <li>
+            250,000 Hectares: Agricultural land targeted for regeneration across Uganda and Madagascar.
+          </li>
+
+          <li>
+            Local Infrastructure: Long-term investment in regional sampling labs, MRV logistics, and supply chain capacity.
+          </li>
+        </ul>
+
+        <p>
+          Africa possesses the geological assets, agricultural scale, and
+          entrepreneurial capability to lead the next generation of durable carbon
+          removal. Stack Carbon is building that infrastructure from the ground up.
+        </p>
+
+        </div>
+
+        <div class="community-article">
+
+          <p>
+            While scientific rigor remains non-negotiable, a critical consensus is emerging
+            among institutional carbon buyers and climate leaders:
+            <strong>a carbon removal project cannot achieve operational permanence if it
+            fails to build social permanence.</strong>
+          </p>
+
+          <p>
+            Long before any rock dust or biochar reaches a field, scaling carbon removal
+            starts with a simpler, deeper commitment: building community trust. In land-based
+            carbon dioxide removal (CDR) pathways—such as Enhanced Rock Weathering (ERW) and
+            Biochar—the local leaders, residents, and smallholder farmers who steward the land
+            are not passive beneficiaries. They are the core operational partners who transform
+            scientific ambition into meaningful climate action.
+          </p>
+
+          <figure class="article-image">
+            <img
+              src="https://res.cloudinary.com/drqsua6wp/image/upload/v1772536662/WhatsApp_Image_2026-03-03_at_2.14.50_PM_w8oq1l.jpg"
+              alt="Community-led carbon removal work across African agricultural landscapes"
+              loading="lazy"
+            />
+            <figcaption>
+              Community partnership connects carbon removal science with the farmers
+              and landscapes that make long-term climate action possible.
+            </figcaption>
+          </figure>
+
+          <h2>Answering the Hard Questions at Stack Carbon</h2>
+
+          <p>
+            At Stack Carbon, we place a heavy emphasis on scientific rigor—deploying finely
+            ground silicate rock (such as nepheline and mafic minerals) alongside biochar
+            systems across tropical agricultural landscapes in East Africa. But we also know
+            that even the strongest technical design fails if it operates in a vacuum.
+          </p>
+
+          <p>
+            When we enter a new deployment zone, we don’t ask communities to sign onto a
+            finished blueprint. We invite them to interrogate it. Across community halls and
+            field sites, we sit down with local leaders, farmers, and regional agronomists to
+            tackle the hard questions head-on:
+          </p>
+
+          <h3>"Will this rock dust or biochar affect our crop yields or harm our soil over time?"</h3>
+
+          <p>
+            <strong>How Stack Carbon addresses it:</strong> We walk through the geochemistry
+            transparently. Finely crushed silicate rock and biochar aren't synthetic chemicals—
+            they are natural mineral and carbon amendments that neutralize tropical soil acidity,
+            release vital micronutrients (like silica, calcium, and magnesium), and dramatically
+            improve soil water retention. We share localized field data and set up demonstration
+            plots so farmers can evaluate the agronomic performance on their own land before committing.
+          </p>
+
+          <h3>"Who owns the carbon rights, and how does value actually flow back to us?"</h3>
+
+          <p>
+            <strong>How Stack Carbon addresses it:</strong> We establish clear, transparent legal
+            and economic frameworks before any field work begins. Landowners and farmers retain
+            full control of their land and crops, while benefiting from free soil-conditioning
+            inputs, localized soil testing, and direct economic opportunities created across our
+            supply chain operations.
+          </p>
+
+          <h3>"Will participating restrict what crops I can plant or how I manage my land in the future?"</h3>
+
+          <p>
+            <strong>How Stack Carbon addresses it:</strong> Not at all. Stack Carbon operates on
+            a non-intrusive, agronomy-first model. Farmers maintain 100% decision-making authority
+            over their crop choices, land rotations, and management practices. Our soil amendments—
+            whether finely ground silicate rock or biochar—are integrated into existing farming
+            calendars without requiring farmers to alter their traditional agricultural routines
+            or sign away control over their land.
+          </p>
+
+          <p>
+            These are just a few of the many candid questions raised during our community town halls.
+            From discussing feedstock safety and road traffic during spreading seasons to clarifying
+            how soil data is stored and shared, we welcome every concern. Open, unfiltered dialogue
+            before deployment isn't a hurdle for us—it is the foundation of mutual trust and long-term
+            operational success.
+          </p>
+
+          <h2>Social Permanence Protects Carbon Permanence</h2>
+
+          <p>
+            For corporate buyers seeking 100-to-1,000+ year durability under frameworks like the
+            <strong>SBTi Corporate Net-Zero Standard V2.0,</strong> project continuity is paramount.
+            While geochemical mechanisms guarantee the chemical permanence of locked CO2, operational
+            stability ensures that field operations survive over decades.
+          </p>
+
+          <div class="permanence-box">
+            <div class="permanence-title">The Dual-Permanence Integrity Framework</div>
+            <div class="permanence-grid">
+              <div class="permanence-column">
+                <h3>Geochemical Permanence</h3>
+                <ul>
+                  <li>Silicate rock dissolution</li>
+                  <li>Stable bicarbonate formation</li>
+                  <li>Biochar recalcitrant carbon</li>
+                </ul>
+              </div>
+              <div class="permanence-column">
+                <h3>Social Permanence</h3>
+                <ul>
+                  <li>Local community trust</li>
+                  <li>Cooperative stewardship</li>
+                  <li>Multi-generational alignment</li>
+                </ul>
+              </div>
+            </div>
+            <div class="permanence-result">HIGH-INTEGRITY, LOW-RISK CARBON REMOVAL ASSETS</div>
+          </div>
+
+          <p>
+            Even the strongest technical protocol cannot survive without local partnership.
+            When farmers observe tangible, multi-year benefits, such as balanced soil pH,
+            restored soil organic carbon, and enhanced drought resilience, they become the
+            primary stewards of the deployment. Social permanence protects physical permanence.
+          </p>
+
+          <h2>Community Partnership Drives Ground-Truth MRV</h2>
+
+          <p>
+            High-integrity MRV requires dense, continuous data collection: baseline soil core
+            sampling, trace-element monitoring, pH tracking, and application logging across
+            distributed farm plots.
+          </p>
+
+          <p>
+            Attempting to execute field-level MRV purely through external, fly-in technical teams
+            is inefficient and difficult to scale. By grounding our operations in community
+            partnership, Stack Carbon embeds technical capacity directly on the ground:
+          </p>
+
+          <ul>
+            <li><strong>Local Agronomic Training:</strong> Training community members as field technicians to conduct standardized soil sampling, GPS mapping, and moisture monitoring.</li>
+            <li><strong>Ground-Truth Feedback:</strong> Utilizing local farming knowledge to optimize feedstock transport, local grinding operations, and spreading techniques tailored to micro-climates.</li>
+            <li><strong>Data Transparency:</strong> Returning soil test results directly to farmers, empowering them with actionable agronomic data to optimize their own crop management.</li>
+          </ul>
+
+          <p>
+            This creates a resilient operational network where scientific verification is carried
+            out by the people who know the soil best.
+          </p>
+
+          <h2>What Corporate Buyers Should Look For in Project Due Diligence</h2>
+
+          <p>
+            For corporate procurement teams navigating land-based carbon dioxide removal (CDR)
+            under frameworks like the SBTi Corporate Net-Zero Standard V2.0, evaluating social
+            integrity is just as critical as validating geochemical modeling. Projects that
+            overlook community alignment carry severe delivery, operational, and reputational risks.
+          </p>
+
+          <p>
+            When conducting due diligence on project developers, corporate buyers should scrutinize
+            three core pillars of community-centered design:
+          </p>
+
+          <div class="diligence">
+            <div class="diligence-card">
+              <div class="diligence-number">1</div>
+              <h3>Authentic Consultation vs. Post-Hoc Notification</h3>
+              <p><strong>The Benchmark:</strong> Does the developer engage local communities before physical deployment begins?</p>
+              <p><strong>What to Look For:</strong> Evidence of structured community engagement and open consultation frameworks where landowners, local leaders, and smallholder farmers are invited to interrogate the science, clarify land autonomy, and shape field scheduling.</p>
+            </div>
+            <div class="diligence-card">
+              <div class="diligence-number">2</div>
+              <h3>Tangible Agronomic &amp; Economic Alignment</h3>
+              <p><strong>The Benchmark:</strong> Does the carbon removal pathway actively enhance the host landscape?</p>
+              <p><strong>What to Look For:</strong> Clear evidence that the technology delivers direct, measurable benefits to local agricultural systems, such as soil acidity neutralization, restored soil organic carbon, micronutrient replenishment, and improved moisture retention.</p>
+            </div>
+            <div class="diligence-card">
+              <div class="diligence-number">3</div>
+              <h3>Embedded Local Infrastructure &amp; Supply Chains</h3>
+              <p><strong>The Benchmark:</strong> Is long-term operational capital staying within the host economy?</p>
+              <p><strong>What to Look For:</strong> Investment in physical regional infrastructure, such as local laboratories, regional feedstock crushing and grinding partnerships, biochar processing setups, and localized transport networks. Building in-country operational capacity ensures multi-decade stability and local economic integration.</p>
+            </div>
+          </div>
+
+          <h2>One Community at a Time</h2>
+
+          <p>
+            High-integrity carbon removal is not an abstract financial transaction, it is a
+            physical process rooted in real soils, real farms, and real human relationships.
+          </p>
+
+          <p>
+            As Stack Carbon prepares for our next phases of deployment across East Africa, our
+            work remains guided by a core conviction: lasting climate impact is built together.
+            By pairing rigorous science with deep community trust, we ensure that every tonne of
+            carbon removed represents both verified atmospheric permanence and verified rural
+            regeneration—one community at a time.
+          </p>
+
+        </div>
+
+        <div class="sbti-article">
+
+          <p>
+            For over 11,000 companies globally, the Science Based Targets
+            initiative (SBTi) serves as the definitive rulebook for setting,
+            validating, and achieving corporate climate targets.
+          </p>
+
+          <p>
+            With the publication of the SBTi Corporate Net-Zero Standard V2.0,
+            two fundamental questions that previously hung over the carbon
+            management market have received much clearer direction: Does
+            permanence matter, and when do companies need to buy?
+          </p>
+
+          <p>
+            The update delivers actionable answers to both—reshaping corporate
+            procurement strategies and highlighting how a diverse portfolio of
+            carbon management solutions will be essential to reaching global
+            climate goals.
+          </p>
+
+          <h2>1. The "Like-for-Like" Principle: Aligning Removal Pathways with Emissions Profiles</h2>
+
+          <p>
+            Corporate climate action relies on a spectrum of vital solutions, from
+            forestry and soil organic carbon practices to durable engineered and
+            mineral removals. Standard V2.0 clarifies how different mitigation
+            tools align with long-term climate targets through the "like-for-like"
+            principle:
+          </p>
+
+          <p>
+            When a company reaches its net-zero target year, its residual long-lived
+            greenhouse gas emissions, primarily fossil CO2, must be neutralized
+            with permanent removals of matching durability.
+          </p>
+
+          <p>
+            This approach ensures that every carbon removal pathway plays to its
+            distinct strength: short-to-medium term nature-based solutions deliver
+            immediate ecosystem restoration and biodiversity protection, while
+            high-permanence pathways like Enhanced Rock Weathering (ERW), which
+            locks atmospheric carbon into stable bicarbonate form for over 1,000
+            years, provide long-term neutralization for persistent fossil emissions.
+          </p>
+
+          <h2>2. A Concrete Timeline: Ongoing Emissions Responsibility (OER)</h2>
+
+          <p>
+            Rather than waiting until final target net-zero dates (e.g., 2040 or
+            2050) to build removal portfolios, SBTi V2.0 introduces the Ongoing
+            Emissions Responsibility (OER) framework. OER provides a structured
+            roadmap for companies to invest in carbon removal pathways alongside
+            ongoing internal decarbonization.
+          </p>
+
+          <p>The framework outlines three voluntary engagement tiers today:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>OER Tier</th>
+                  <th>Scope Coverage Requirement</th>
+                  <th>Financial / Removal Target</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Engaged</td>
+                  <td>Mitigate at least 1% of ongoing Scope 1–3 emissions</td>
+                  <td>Initial commitment entry point</td>
+                </tr>
+                <tr>
+                  <td>Advanced</td>
+                  <td>Cover 10% of full Scope 1, 2, and 3 footprint</td>
+                  <td>Mandatory minimum spend of $20/tonne</td>
+                </tr>
+                <tr>
+                  <td>Leadership</td>
+                  <td>Cover 100% of full Scope 1–3 footprint</td>
+                  <td>Dedicated budget target of $80/tonne</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>The 2035 Compliance Checkpoint</h3>
+
+          <p>
+            Starting in 2035, Category A companies (large enterprises and
+            mid-sized firms in high-income economies) face mandatory compliance.
+            They must neutralize at least 1% of their long-lived Scope 1–3
+            emissions with permanent carbon removals, scaling linearly to 100% by
+            their net-zero target year.
+          </p>
+
+          <h2>3. Clarifying Corresponding Adjustments</h2>
+
+          <p>
+            In earlier drafts of the V2.0 standard, proposed rules would have
+            barred corporates from claiming credits if host countries counted
+            those removals toward their own Nationally Determined Contributions
+            (NDCs).
+          </p>
+
+          <p>
+            The finalized V2.0 settled this debate: credits remain eligible for
+            corporate claims regardless of whether a Corresponding Adjustment
+            (CA) under Article 6 has been applied.
+          </p>
+
+          <p>
+            Companies must transparently disclose whether CAs are attached to their
+            credits. While credits backed by Corresponding Adjustments carry the
+            highest integrity tier, unadjusted credits remain valid for corporate
+            net-zero and OER claims. This decision opens a clear runway for
+            high-integrity carbon projects across Africa and the Global South to
+            supply global corporate buyers across various credit categories.
+          </p>
+
+          <h2>4. Committing Today: Multi-Pathway Flexibility for Corporate Buyers</h2>
+
+          <p>
+            Waiting until 2035 to secure carbon removal volume exposes corporate
+            buyers to severe market bottlenecks, price volatility, and unhedged
+            compliance risk. Because project infrastructure—from feedstock supply
+            chains to field-level measurement, reporting, and verification
+            (MRV)—takes years to scale, forward-thinking organizations are
+            committing now through early-stage investments, pre-purchases, and
+            structured multi-year offtakes.
+          </p>
+
+          <p>
+            Under the SBTi V2.0 framework, corporate procurement teams need options
+            that balance immediate budget constraints, near-term recognition, and
+            long-term permanence criteria. Stack Carbon meets this demand by
+            offering two complementary, high-integrity carbon removal pathways
+            from a single operational platform across East Africa:
+          </p>
+
+          <div class="article-portfolio">
+            <div>
+              <h3>ENHANCED ROCK WEATHERING (ERW)</h3>
+              <ul>
+                <li>Durability: 1,000+ Years</li>
+                <li>Optimal For: Long-lived fossil GHG neutralization &amp; maximum permanence</li>
+                <li>Agronomic Co-benefits: Soil pH balancing &amp; silica replenishment</li>
+              </ul>
+            </div>
+            <div>
+              <h3>BIOCHAR</h3>
+              <ul>
+                <li>Durability: Hundreds of Years</li>
+                <li>Optimal For: Rapid scaling &amp; near-term OER budget optimization</li>
+                <li>Agronomic Co-benefits: Carbon retention &amp; soil water-holding</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            By offering both pathways from a single operational platform across
+            Africa, Stack Carbon provides corporate procurement teams with total
+            contract flexibility. Sustainability leaders can structure tailored
+            portfolios, combining ERW for maximum long-term permanence with
+            Biochar for immediate deployment, matching their exact budget tiers,
+            volume targets, and SBTi compliance timelines without being locked into
+            a single technology.
+          </p>
+
+          <h2>Moving Toward a Balanced Carbon Market</h2>
+
+          <p>
+            SBTi’s Corporate Net-Zero Standard V2.0 reinforces that meeting global
+            climate goals requires a portfolio approach, combining rapid internal
+            emissions reductions, immediate nature-based conservation, and
+            scalable durable removals.
+          </p>
+
+          <p>
+            By providing clear rules for long-term neutrality alongside actionable
+            entry points today, the new standard gives corporate leaders the
+            clarity needed to invest in high-integrity carbon removal pathways with
+            confidence.
+          </p>
+
+        </div>
+
+        <!-- =========================
+             RELATED BLOGS
+        ========================= -->
+
+        <section class="related-section reveal">
+
+          <div class="related-header">
+
+            <div>
+              <h2>
+                More from Stack Carbon
+              </h2>
+
+              <p>
+                Explore more of our projects, stories and climate insights.
+              </p>
+            </div>
+
+            <div class="slider-controls">
+
+              <button
+                class="slider-btn"
+                id="prevBlog"
+                aria-label="Previous blogs"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+
+              <button
+                class="slider-btn"
+                id="nextBlog"
+                aria-label="Next blogs"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+          <div
+            class="blog-slider"
+            id="blogSlider"
+          >
+
+            <div
+              class="blog-track"
+              id="blogTrack"
+            >
+
+              <a
+                href="article-wild-assets.html"
+                class="blog-card"
+              >
+                <img
+                  src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771913240/conifer-5864516_gaxkyt.jpg"
+                  alt="Stack Carbon and Wild Assets partnership"
+                  loading="lazy"
+                />
+
+                <div class="blog-card-content">
+                  <span class="blog-card-category">
+                    Partnerships
+                  </span>
+
+                  <h3>
+                    Stack Carbon Secures Multi-Year Enhanced Rock Weathering Offtake with Wild Assets
+                  </h3>
+
+                  <span class="blog-card-read">
+                    Read More →
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="article-sbti.html"
+                class="blog-card"
+              >
+                <img
+                  src="https://res.cloudinary.com/drqsua6wp/image/upload/v1788343174/WhatsApp_Image_2026-09-02_at_10.19.44_AM_g2zydm.jpg"
+                  alt="SBTi climate policy"
+                  loading="lazy"
+                />
+
+                <div class="blog-card-content">
+                  <span class="blog-card-category">
+                    Climate Policy
+                  </span>
+
+                  <h3>
+                    How SBTi’s Net-Zero Evolution Is Driving Corporate Demand for Carbon Removal
+                  </h3>
+
+                  <span class="blog-card-read">
+                    Read More →
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="article-community.html"
+                class="blog-card"
+              >
+                <img
+                  src="https://res.cloudinary.com/drqsua6wp/image/upload/v1773051514/WhatsApp_Image_2026-03-09_at_10.40.20_AM_nrvoh8.jpg"
+                  alt="Community co-design in carbon removal"
+                  loading="lazy"
+                />
+
+                <div class="blog-card-content">
+                  <span class="blog-card-category">
+                    Communities
+                  </span>
+
+                  <h3>
+                    Why Community Co-Design Is the True Indicator of Carbon Removal Integrity
+                  </h3>
+
+                  <span class="blog-card-read">
+                    Read More →
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="article-alom.html"
+                class="blog-card"
+              >
+                <img
+                  src="https://res.cloudinary.com/drqsua6wp/image/upload/v1788343174/WhatsApp_Image_2026-09-02_at_10.14.32_AM_vftx2a.jpg"
+                  alt="ALOM feedstock partnership"
+                  loading="lazy"
+                />
+
+                <div class="blog-card-content">
+                  <span class="blog-card-category">
+                    Partnership
+                  </span>
+
+                  <h3>
+                    Stack Carbon Partners with ALOM to Secure High-Reactivity Silicate Feedstocks
+                  </h3>
+
+                  <span class="blog-card-read">
+                    Read More →
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="article-innovation.html"
+                class="blog-card"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80"
+                  alt="Carbon removal innovation"
+                  loading="lazy"
+                />
+
+                <div class="blog-card-content">
+                  <span class="blog-card-category">
+                    Climate Innovation
+                  </span>
+
+                  <h3>
+                    Innovations Paving the Way for Scalable Carbon Removal Technologies
+                  </h3>
+
+                  <span class="blog-card-read">
+                    Read More →
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="blog.html"
+                class="blog-card"
+              >
+                <img
+                  src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771917569/Field_Trips_9_ftk8yk.jpg"
+                  alt="African climate and agriculture"
+                  loading="lazy"
+                />
+
+                <div class="blog-card-content">
+                  <span class="blog-card-category">
+                    Carbon Removal
+                  </span>
+
+                  <h3>
+                    Why Climate Action and Agriculture Must Move Forward Together
+                  </h3>
+
+                  <span class="blog-card-read">
+                    Read More →
+                  </span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <div
+            class="slider-dots"
+            id="sliderDots"
+          ></div>
+
+        </section>
+
+      </div>
+    </article>
+
+  </main>
+
+  <!-- =========================
+       NEWSLETTER
+  ========================= -->
+
+  <section class="newsletter">
+
+    <div class="newsletter-inner reveal">
+
+      <h2>
+        Stay Connected
+      </h2>
+
+      <p>
+        Get the latest Stack Carbon stories, project updates and climate
+        insights delivered to your inbox.
+      </p>
+
+      <form
+        class="newsletter-form"
+        id="newsletterForm"
+      >
+
+        <input
+          type="email"
+          id="newsletterEmail"
+          placeholder="Your email address"
+          required
+        />
+
+        <button type="submit">
+          Subscribe
+        </button>
+
+      </form>
+
+      <div
+        class="newsletter-success"
+        id="newsletterSuccess"
+      >
+        Thank you for subscribing to Stack Carbon.
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================= -->
+
+  <footer class="main-footer">
+
+    <img
+      class="footer-watermark"
+      src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771854835/seedlings-7110591_rocloz.jpg"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+    />
+
+    <div class="container footer-inner">
+
+      <!-- FOOTER BRAND -->
+
+      <div class="footer-col">
+
+        <a href="index.html">
+          <img
+            src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+            alt="Stack Carbon Logo"
+            class="footer-logo"
+          />
+        </a>
+
+        <p>
+          Scaling impact-driven climate action in Africa.
+        </p>
+
+      </div>
+
+      <!-- COMPANY -->
+
+      <div class="footer-col">
+
+        <h4>
+          Company
+        </h4>
+
+        <a href="karibu.html">
+          Projects
+        </a>
+
+        <a href="our-team.html">
+          Our Team
+        </a>
+
+        <a href="who-we-are.html">
+          Who We Are
+        </a>
+
+        <a href="blog.html">
+          Insights
+        </a>
+
+      </div>
+
+      <!-- CONTACT -->
+
+      <div class="footer-col">
+
+        <h4>
+          Contact
+        </h4>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          info@stackcarbon.earth
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          (+256) 039 3001954
+        </p>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          8H9R+27V, Nile Ave,
+          <br />
+          Kampala, Uganda
+        </p>
+
+        <a
+          href="https://www.linkedin.com/company/stack-carbon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+
+        <br />
+
+        <a
+          href="contact.html"
+          class="footer-btn"
+        >
+          Get in touch →
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+      ©
+      <span id="year"></span>
+      Stack Carbon. All rights reserved.
+
+      <br />
+
+      Designed by Trixie Technologies
+
+    </div>
+
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+    /* =========================
+       HEADER SCROLL
+    ========================= */
+
+    const navShell = document.getElementById("navShell");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        navShell.classList.add("scrolled");
+      } else {
+        navShell.classList.remove("scrolled");
+      }
+    });
+
+
+    /* =========================
+       DESKTOP DROPDOWNS
+    ========================= */
+
+    const dropdownButtons =
+      document.querySelectorAll(".drop-btn");
+
+    dropdownButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        const dropdown =
+          button.closest(".dropdown");
+
+        const isOpen =
+          dropdown.classList.contains("open");
+
+        document
+          .querySelectorAll(".dropdown.open")
+          .forEach((item) => {
+            item.classList.remove("open");
+
+            const itemButton =
+              item.querySelector(".drop-btn");
+
+            if (itemButton) {
+              itemButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+            }
+          });
+
+        if (!isOpen) {
+          dropdown.classList.add("open");
+
+          button.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+        }
+      });
+    });
+
+    document.addEventListener("click", () => {
+      document
+        .querySelectorAll(".dropdown.open")
+        .forEach((dropdown) => {
+          dropdown.classList.remove("open");
+
+          const button =
+            dropdown.querySelector(".drop-btn");
+
+          if (button) {
+            button.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+          }
+        });
+    });
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const openDrawerButton =
+      document.getElementById("openDrawer");
+
+    const drawer =
+      document.getElementById("drawer");
+
+    const closeDrawerButton =
+      document.getElementById("closeDrawer");
+
+
+    function openDrawer() {
+      drawer.classList.add("open");
+
+      drawer.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+      openDrawerButton.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      document.body.style.overflow = "hidden";
+    }
+
+
+    function closeDrawer() {
+      drawer.classList.remove("open");
+
+      drawer.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      openDrawerButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      document.body.style.overflow = "";
+    }
+
+
+    openDrawerButton.addEventListener(
+      "click",
+      openDrawer
+    );
+
+
+    closeDrawerButton.addEventListener(
+      "click",
+      closeDrawer
+    );
+
+
+    drawer.addEventListener(
+      "click",
+      (event) => {
+        if (event.target === drawer) {
+          closeDrawer();
+        }
+      }
+    );
+
+
+    /* =========================
+       MOBILE ACCORDIONS
+    ========================= */
+
+    const accordionButtons =
+      document.querySelectorAll(".acc-btn");
+
+    accordionButtons.forEach((button) => {
+
+      button.addEventListener("click", () => {
+
+        const submenu =
+          button.nextElementSibling;
+
+        const isOpen =
+          submenu.classList.contains("open");
+
+        submenu.classList.toggle("open");
+
+        button.setAttribute(
+          "aria-expanded",
+          String(!isOpen)
+        );
+
+        const arrow =
+          button.querySelector("span");
+
+        if (arrow) {
+          arrow.style.transform =
+            !isOpen
+              ? "rotate(180deg)"
+              : "rotate(0deg)";
+        }
+
+      });
+
+    });
+
+
+    /* =========================
+       RELATED BLOG SLIDER
+    ========================= */
+
+    const blogSlider =
+      document.getElementById("blogSlider");
+
+    const blogTrack =
+      document.getElementById("blogTrack");
+
+    const prevBlog =
+      document.getElementById("prevBlog");
+
+    const nextBlog =
+      document.getElementById("nextBlog");
+
+    const sliderDots =
+      document.getElementById("sliderDots");
+
+    const blogCards =
+      Array.from(
+        blogTrack.querySelectorAll(".blog-card")
+      );
+
+    let currentSlide = 0;
+    let cardsPerView = 3;
+    let autoSlide;
+
+
+    function getCardsPerView() {
+
+      if (window.innerWidth <= 650) {
+        return 1;
+      }
+
+      if (window.innerWidth <= 950) {
+        return 2;
+      }
+
+      return 3;
+    }
+
+
+    function getMaxSlide() {
+
+      return Math.max(
+        0,
+        blogCards.length - cardsPerView
+      );
+    }
+
+
+    function createDots() {
+
+      sliderDots.innerHTML = "";
+
+      const maxSlide =
+        getMaxSlide();
+
+      for (
+        let i = 0;
+        i <= maxSlide;
+        i++
+      ) {
+
+        const dot =
+          document.createElement("button");
+
+        dot.className =
+          "slider-dot";
+
+        if (i === currentSlide) {
+          dot.classList.add("active");
+        }
+
+        dot.setAttribute(
+          "aria-label",
+          `Go to related blogs ${i + 1}`
+        );
+
+        dot.addEventListener(
+          "click",
+          () => {
+
+            currentSlide = i;
+
+            updateSlider();
+
+            restartAutoSlide();
+
+          }
+        );
+
+        sliderDots.appendChild(dot);
+
+      }
+    }
+
+
+    function updateSlider() {
+
+      cardsPerView =
+        getCardsPerView();
+
+      const maxSlide =
+        getMaxSlide();
+
+      if (currentSlide > maxSlide) {
+        currentSlide = maxSlide;
+      }
+
+      if (!blogCards.length) {
+        return;
+      }
+
+      const cardWidth =
+        blogCards[0].offsetWidth;
+
+      const gap = 20;
+
+      const movement =
+        currentSlide *
+        (cardWidth + gap);
+
+      blogTrack.style.transform =
+        `translateX(-${movement}px)`;
+
+      document
+        .querySelectorAll(".slider-dot")
+        .forEach((dot, index) => {
+
+          dot.classList.toggle(
+            "active",
+            index === currentSlide
+          );
+
+        });
+
+    }
+
+
+    function nextSlide() {
+
+      const maxSlide =
+        getMaxSlide();
+
+      if (currentSlide >= maxSlide) {
+        currentSlide = 0;
+      } else {
+        currentSlide++;
+      }
+
+      updateSlider();
+    }
+
+
+    function previousSlide() {
+
+      const maxSlide =
+        getMaxSlide();
+
+      if (currentSlide <= 0) {
+        currentSlide = maxSlide;
+      } else {
+        currentSlide--;
+      }
+
+      updateSlider();
+    }
+
+
+    nextBlog.addEventListener(
+      "click",
+      () => {
+        nextSlide();
+        restartAutoSlide();
+      }
+    );
+
+
+    prevBlog.addEventListener(
+      "click",
+      () => {
+        previousSlide();
+        restartAutoSlide();
+      }
+    );
+
+
+    function startAutoSlide() {
+
+      clearInterval(autoSlide);
+
+      autoSlide =
+        setInterval(() => {
+          nextSlide();
+        }, 5000);
+
+    }
+
+
+    function restartAutoSlide() {
+
+      clearInterval(autoSlide);
+
+      startAutoSlide();
+
+    }
+
+
+    blogSlider.addEventListener(
+      "mouseenter",
+      () => {
+        clearInterval(autoSlide);
+      }
+    );
+
+
+    blogSlider.addEventListener(
+      "mouseleave",
+      () => {
+        startAutoSlide();
+      }
+    );
+
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        cardsPerView =
+          getCardsPerView();
+
+        createDots();
+
+        updateSlider();
+
+      }
+    );
+
+
+    cardsPerView =
+      getCardsPerView();
+
+    createDots();
+
+
+    window.addEventListener(
+      "load",
+      () => {
+
+        updateSlider();
+
+        startAutoSlide();
+
+      }
+    );
+
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    const newsletterForm =
+      document.getElementById(
+        "newsletterForm"
+      );
+
+    const newsletterSuccess =
+      document.getElementById(
+        "newsletterSuccess"
+      );
+
+
+    newsletterForm.addEventListener(
+      "submit",
+      (event) => {
+
+        event.preventDefault();
+
+        newsletterSuccess.style.display =
+          "block";
+
+        newsletterForm.reset();
+
+      }
+    );
+
+
+    /* =========================
+       YEAR
+    ========================= */
+
+    document.getElementById(
+      "year"
+    ).textContent =
+      new Date().getFullYear();
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        (entries, observer) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(
+      (element) => {
+
+        revealObserver.observe(
+          element
+        );
+
+      }
+    );
+  </script>
+
+</body>
+</html>
+
