@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="https://res.cloudinary.com/drqsua6wp/image/upload/f_png,q_auto,w_32,h_32,c_fill,g_auto/v1772185133/favicon_stack_logo_tmjlpa.png">
+
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="https://res.cloudinary.com/drqsua6wp/image/upload/f_png,q_auto,w_16,h_16,c_fill,g_auto/v1772185133/favicon_stack_logo_tmjlpa.png">
+
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="https://res.cloudinary.com/drqsua6wp/image/upload/f_png,q_auto,w_180,h_180,c_fill,g_auto/v1772185133/favicon_stack_logo_tmjlpa.png">
+
+  <link rel="shortcut icon"
+        href="https://res.cloudinary.com/drqsua6wp/image/upload/v1772185133/favicon_stack_logo_tmjlpa.png">
+
+  <title>How SBTi's Net-Zero Evolution Is Driving Corporate Demand for Carbon Removal | Stack Carbon</title>
+
+  <meta name="description"
+        content="How the SBTi Corporate Net-Zero Standard V2.0 is reshaping corporate carbon removal procurement and driving demand for permanent carbon removal solutions.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root{
+      --deep:#203319;
+      --olive:#5B7D3F;
+      --lime:#A4CF5B;
+      --neutral:#E3DED7;
+      --teal:#2B7A69;
+      --blue:#2078B4;
+      --gold:#F3AB22;
+
+      --deep-rgb:32,51,25;
+      --olive-rgb:91,125,63;
+      --lime-rgb:164,207,91;
+
+      --white:#fff;
+      --text-dark:#182514;
+      --max:1200px;
+
+      --shadow:0 20px 55px rgba(0,0,0,.16);
+      --shadow2:0 18px 45px rgba(0,0,0,.22);
+
+      --ease:cubic-bezier(.2,0,.2,1);
+    }
+
+    *,
+    *::before,
+    *::after{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+      overflow-x:clip;
+    }
+
+    body{
+      font-family:'Nunito Sans',sans-serif;
+      background:#fff;
+      color:var(--text-dark);
+      line-height:1.7;
+      overflow-x:clip;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:geometricPrecision;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+      transition:.25s ease;
+    }
+
+    button{
+      font-family:inherit;
+      border:0;
+      background:none;
+      cursor:pointer;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .site-header{
+      position:fixed;
+      top:16px;
+      left:0;
+      right:0;
+      z-index:999;
+      pointer-events:none;
+    }
+
+    .nav-shell{
+      width:min(var(--max),92%);
+      margin:auto;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(var(--deep-rgb),.78);
+      backdrop-filter:blur(14px);
+      box-shadow:var(--shadow2);
+      pointer-events:auto;
+      transition:.25s ease;
+    }
+
+    .nav-shell.scrolled{
+      background:rgba(var(--deep-rgb),.94);
+      border-color:rgba(255,255,255,.18);
+    }
+
+    .nav-row{
+      min-height:75px;
+      padding:0 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      flex-shrink:0;
+    }
+
+    .logo img{
+      height:38px;
+      width:auto;
+      max-width:180px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:15px;
+      flex:1;
+      color:rgba(255,255,255,.92);
+      font-size:.95rem;
+      font-weight:900;
+    }
+
+    .nav-links > a,
+    .drop-btn{
+      padding:10px 12px;
+      border-radius:12px;
+      color:rgba(255,255,255,.92);
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .nav-links > a:hover,
+    .drop-btn:hover{
+      color:var(--lime);
+      background:rgba(255,255,255,.06);
+    }
+
+    .dropdown{
+      position:relative;
+    }
+
+    .drop-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .drop-menu{
+      position:absolute;
+      top:calc(100% + 10px);
+      left:0;
+      min-width:240px;
+      padding:8px;
+      border-radius:16px;
+      background:rgba(var(--deep-rgb),.96);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow2);
+      backdrop-filter:blur(12px);
+
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(10px);
+      transition:.22s ease;
+    }
+
+    .dropdown:hover .drop-menu{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+
+    .drop-menu a{
+      display:block;
+      padding:12px;
+      border-radius:12px;
+      color:rgba(255,255,255,.88);
+      font-weight:800;
+    }
+
+    .drop-menu a:hover{
+      background:rgba(var(--lime-rgb),.1);
+      color:var(--lime);
+    }
+
+    .nav-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 21px;
+      border-radius:999px;
+      background:var(--lime);
+      color:#0b1509;
+      font-weight:900;
+      white-space:nowrap;
+      box-shadow:0 18px 40px rgba(var(--lime-rgb),.18);
+    }
+
+    .nav-cta:hover{
+      transform:translateY(-2px);
+      box-shadow:0 24px 60px rgba(var(--lime-rgb),.25);
+    }
+
+    .menu-btn{
+      display:none;
+      width:45px;
+      height:45px;
+      place-items:center;
+      border-radius:14px;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.06);
+      font-size:20px;
+    }
+
+    /* =========================
+       MOBILE DRAWER
+    ========================= */
+
+    .drawer{
+      position:fixed;
+      inset:0;
+      z-index:2000;
+      background:rgba(0,0,0,.55);
+      opacity:0;
+      visibility:hidden;
+      transition:.25s ease;
+    }
+
+    .drawer.open{
+      opacity:1;
+      visibility:visible;
+    }
+
+    .drawer-panel{
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      width:min(420px,92vw);
+      padding:22px;
+      overflow-y:auto;
+
+      background:
+        radial-gradient(800px 400px at 10% 0%,rgba(var(--olive-rgb),.18),transparent 60%),
+        linear-gradient(180deg,rgba(var(--deep-rgb),.99),rgba(var(--deep-rgb),.93));
+
+      border-left:1px solid rgba(255,255,255,.12);
+      color:#fff;
+
+      transform:translateX(110%);
+      transition:transform .3s var(--ease);
+    }
+
+    .drawer.open .drawer-panel{
+      transform:translateX(0);
+    }
+
+    .drawer-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;
+    }
+
+    .drawer-top img{
+      height:32px;
+      width:auto;
+    }
+
+    .drawer-close{
+      width:44px;
+      height:44px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:14px;
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      font-size:22px;
+    }
+
+    .drawer-links{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      border-top:1px solid rgba(255,255,255,.12);
+      padding-top:18px;
+    }
+
+    .drawer-link,
+    .acc-btn{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px;
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:16px;
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      font-weight:900;
+    }
+
+    .drawer-link:hover,
+    .acc-btn:hover{
+      color:var(--lime);
+      border-color:rgba(var(--lime-rgb),.4);
+    }
+
+    .acc-panel{
+      display:none;
+      padding-top:5px;
+    }
+
+    .acc-panel.open{
+      display:block;
+    }
+
+    .drawer-link.sub{
+      width:calc(100% - 12px);
+      margin:5px 0 0 12px;
+      font-size:.94rem;
+    }
+
+    .drawer-cta{
+      justify-content:center;
+      background:var(--lime);
+      color:var(--deep);
+    }
+
+    /* =========================
+       ARTICLE HERO
+    ========================= */
+
+    .article-hero{
+      position:relative;
+      min-height:650px;
+      display:flex;
+      align-items:flex-end;
+      overflow:hidden;
+      isolation:isolate;
+
+      padding:150px 0 95px;
+
+      color:#fff;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(19,55,44,.35),
+          rgba(19,55,44,.93)
+        ),
+        url("https://res.cloudinary.com/drqsua6wp/image/upload/v1777313821/ff9752c3-2196-4c7b-b8f3-24177328cf4b_EFB317B3-0A2A-42D9-BDF4-803E765A5DBD_vachvm.jpg")
+        center/cover;
+    }
+
+    .article-hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(
+          800px 450px at 50% 20%,
+          rgba(var(--lime-rgb),.13),
+          transparent 65%
+        );
+      z-index:-1;
+    }
+
+    .hero-content{
+      width:min(1050px,92%);
+      margin:auto;
+    }
+
+    .category{
+      display:inline-block;
+      margin-bottom:18px;
+      color:var(--lime);
+      font-size:.76rem;
+      font-weight:900;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .hero h1{
+      max-width:1000px;
+      font-size:clamp(2.6rem,6vw,5.2rem);
+      line-height:1.04;
+      letter-spacing:-.035em;
+      font-weight:900;
+      text-wrap:balance;
+    }
+
+    .hero-summary{
+      max-width:800px;
+      margin-top:22px;
+      color:rgba(255,255,255,.82);
+      font-size:1.06rem;
+      line-height:1.75;
+    }
+
+    /* =========================
+       ARTICLE
+    ========================= */
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-bottom:28px;
+color:var(--olive);
+font-size:.88rem;
+font-weight:900
+}
+
+.back-link:hover{
+color:var(--deep)
+}
+
+
+
+    .article-wrapper{
+      position:relative;
+      z-index:5;
+      width:min(1000px,92%);
+      margin:-60px auto 100px;
+    }
+
+    .article{
+      background:#fff;
+      border:1px solid rgba(var(--deep-rgb),.08);
+      border-radius:26px;
+      box-shadow:0 25px 70px rgba(0,0,0,.12);
+      padding:clamp(30px,5vw,65px);
+    }
+
+    .article-meta{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:12px;
+      padding-bottom:25px;
+      margin-bottom:35px;
+      border-bottom:1px solid rgba(var(--deep-rgb),.1);
+      color:#64705f;
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .article-meta span{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+    }
+
+    .article-content{
+      font-size:1.05rem;
+      color:#283324;
+    }
+
+    .article-content p{
+      margin-bottom:1.35rem;
+    }
+
+    .article-content strong{
+      color:var(--deep);
+      font-weight:900;
+    }
+
+    .article-content h2{
+      margin-top:58px;
+      margin-bottom:18px;
+      font-size:clamp(1.65rem,3vw,2.25rem);
+      line-height:1.15;
+      color:var(--deep);
+      font-weight:900;
+      letter-spacing:-.02em;
+    }
+
+    .article-content h3{
+      margin-top:34px;
+      margin-bottom:12px;
+      font-size:1.25rem;
+      color:var(--deep);
+      font-weight:900;
+    }
+
+    .article-content ul{
+      margin:0 0 25px 24px;
+    }
+
+    .article-content li{
+      margin-bottom:10px;
+      padding-left:5px;
+    }
+
+    .article-content li::marker{
+      color:var(--olive);
+    }
+
+    .lead{
+      font-size:1.2rem;
+      line-height:1.8;
+      color:#354230;
+      font-weight:600;
+    }
+
+    .highlight{
+      margin:32px 0;
+      padding:25px 28px;
+      border-left:5px solid var(--lime);
+      border-radius:0 18px 18px 0;
+      background:#f4f7ef;
+      color:#34402e;
+      font-size:1.05rem;
+      font-weight:700;
+    }
+
+    /* =========================
+       OER TABLE
+    ========================= */
+
+    .table-wrap{
+      margin:30px 0 38px;
+      width:100%;
+      overflow-x:auto;
+      border-radius:18px;
+      border:1px solid rgba(var(--deep-rgb),.1);
+      box-shadow:0 12px 30px rgba(0,0,0,.06);
+    }
+
+    .oer-table{
+      width:100%;
+      min-width:700px;
+      border-collapse:collapse;
+      background:#fff;
+    }
+
+    .oer-table th{
+      padding:16px 18px;
+      text-align:left;
+      background:var(--deep);
+      color:#fff;
+      font-size:.9rem;
+      font-weight:900;
+    }
+
+    .oer-table td{
+      padding:17px 18px;
+      border-bottom:1px solid rgba(var(--deep-rgb),.08);
+      color:#34402e;
+      vertical-align:top;
+      font-size:.94rem;
+    }
+
+    .oer-table tr:last-child td{
+      border-bottom:0;
+    }
+
+    .oer-table tbody tr:hover{
+      background:#f7f9f4;
+    }
+
+    .tier{
+      color:var(--deep);
+      font-weight:900;
+    }
+
+    /* =========================
+       PORTFOLIO
+    ========================= */
+
+    .portfolio{
+      margin:35px 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(var(--deep-rgb),.1);
+      box-shadow:0 15px 40px rgba(0,0,0,.08);
+    }
+
+    .portfolio-card{
+      padding:30px;
+    }
+
+    .portfolio-card.erw{
+      background:#edf5df;
+    }
+
+    .portfolio-card.biochar{
+      background:#eef3f1;
+    }
+
+    .portfolio-card + .portfolio-card{
+      border-left:1px solid rgba(var(--deep-rgb),.1);
+    }
+
+    .portfolio-label{
+      display:inline-block;
+      margin-bottom:12px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.65);
+      color:var(--deep);
+      font-size:.74rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .portfolio-card h3{
+      margin-top:0;
+      font-size:1.5rem;
+    }
+
+    .portfolio-card ul{
+      margin-left:20px;
+      margin-bottom:0;
+    }
+
+    .portfolio-card li{
+      margin-bottom:9px;
+    }
+
+    /* =========================
+       CHECKPOINT
+    ========================= */
+
+    .checkpoint{
+      margin:35px 0;
+      padding:30px;
+      border-radius:22px;
+      background:
+        radial-gradient(
+          500px 200px at 10% 0%,
+          rgba(var(--lime-rgb),.15),
+          transparent 70%
+        ),
+        var(--deep);
+      color:#fff;
+    }
+
+    .checkpoint-label{
+      color:var(--lime);
+      font-size:.75rem;
+      font-weight:900;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    .checkpoint h3{
+      color:#fff;
+      margin:0 0 12px;
+      font-size:1.55rem;
+    }
+
+    .checkpoint p{
+      color:rgba(255,255,255,.8);
+      margin-bottom:0;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .newsletter{
+      padding:95px 20px;
+      background:
+        radial-gradient(
+          850px 450px at 50% 0%,
+          rgba(var(--lime-rgb),.13),
+          transparent 65%
+        ),
+        linear-gradient(
+          180deg,
+          #132015 0%,
+          #0c1710 100%
+        );
+      color:#fff;
+      text-align:center;
+    }
+
+    .newsletter-inner{
+      width:min(850px,94%);
+      margin:auto;
+    }
+
+    .newsletter h2{
+      font-size:clamp(2rem,4vw,3.4rem);
+      line-height:1.1;
+      font-weight:900;
+      margin-bottom:15px;
+    }
+
+    .newsletter p{
+      max-width:650px;
+      margin:0 auto 28px;
+      color:rgba(255,255,255,.72);
+    }
+
+    .newsletter-form{
+      width:min(620px,100%);
+      margin:auto;
+      display:flex;
+      gap:10px;
+      padding:7px;
+      border-radius:999px;
+      background:#fff;
+      box-shadow:0 15px 40px rgba(0,0,0,.25);
+    }
+
+    .newsletter-form input{
+      flex:1;
+      min-width:0;
+      padding:14px 18px;
+      border:0;
+      outline:0;
+      border-radius:999px;
+      font-family:inherit;
+      font-size:.95rem;
+    }
+
+    .newsletter-form button{
+      padding:13px 22px;
+      border-radius:999px;
+      background:var(--lime);
+      color:var(--deep);
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .newsletter-form button:hover{
+      transform:translateY(-1px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .main-footer{
+      position:relative;
+      background:var(--deep);
+      color:rgba(255,255,255,.86);
+      overflow:hidden;
+      padding:2.8rem 0 1.5rem;
+    }
+
+    .footer-watermark-img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:.055;
+      filter:grayscale(100%) contrast(112%) brightness(120%);
+      transform:scale(1.03);
+      z-index:0;
+    }
+
+    .footer-inner{
+      position:relative;
+      z-index:2;
+      width:min(var(--max),90%);
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr;
+      gap:35px;
+    }
+
+    .footer-logo{
+      height:42px;
+      width:auto;
+      margin-bottom:15px;
+    }
+
+    .footer-col h4{
+      color:#fff;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+
+    .footer-col p{
+      color:rgba(255,255,255,.7);
+      margin-bottom:8px;
+    }
+
+    .footer-col a{
+      display:block;
+      color:rgba(255,255,255,.72);
+      margin:8px 0;
+      font-weight:600;
+    }
+
+    .footer-col a:hover{
+      color:var(--lime);
+    }
+
+    .footer-social{
+      display:inline-flex!important;
+      align-items:center;
+      gap:8px;
+      margin-top:8px;
+    }
+
+    .footer-btn{
+      display:inline-flex!important;
+      width:max-content;
+      margin-top:10px;
+      padding:12px 18px;
+      border-radius:999px;
+      background:var(--lime);
+      color:var(--deep)!important;
+      font-weight:900;
+    }
+
+    .footer-bottom{
+      position:relative;
+      z-index:2;
+      width:90%;
+      margin:45px auto 0;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.1);
+      text-align:center;
+      color:rgba(255,255,255,.55);
+      font-size:.85rem;
+    }
+
+    /* =========================
+       ANIMATION
+    ========================= */
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      filter:blur(2px);
+      transition:
+        opacity .7s var(--ease),
+        transform .7s var(--ease),
+        filter .7s var(--ease);
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+      filter:none;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width:950px){
+
+      .nav-links,
+      .nav-cta{
+        display:none;
+      }
+
+      .menu-btn{
+        display:grid;
+      }
+
+      .footer-inner{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+
+      .portfolio{
+        grid-template-columns:1fr;
+      }
+
+      .portfolio-card + .portfolio-card{
+        border-left:0;
+        border-top:1px solid rgba(var(--deep-rgb),.1);
+      }
+    }
+
+    @media(max-width:650px){
+
+      .site-header{
+        top:10px;
+      }
+
+      .nav-shell{
+        border-radius:18px;
+      }
+
+      .nav-row{
+        min-height:70px;
+        padding:0 13px;
+      }
+
+      .logo img{
+        height:31px;
+        max-width:150px;
+      }
+
+      .article-hero{
+        min-height:610px;
+        padding:130px 0 70px;
+      }
+
+      .hero-content{
+        width:92%;
+      }
+
+      .hero h1{
+        font-size:clamp(2.45rem,12vw,4rem);
+      }
+
+      .hero-summary{
+        font-size:.95rem;
+      }
+
+      .article-wrapper{
+        width:94%;
+        margin-top:-40px;
+        margin-bottom:65px;
+      }
+
+      .article{
+        padding:30px 22px;
+        border-radius:20px;
+      }
+
+      .article-content{
+        font-size:1rem;
+      }
+
+      .article-content h2{
+        margin-top:42px;
+      }
+
+      .newsletter{
+        padding:80px 18px;
+      }
+
+      .newsletter-form{
+        flex-direction:column;
+        gap:10px;
+        padding:0;
+        background:transparent;
+        box-shadow:none;
+      }
+
+      .newsletter-form input{
+        width:100%;
+        background:#fff;
+        border-radius:999px;
+      }
+
+      .newsletter-form button{
+        width:100%;
+      }
+
+      .oer-table{
+        min-width:650px;
+      }
+
+      .portfolio-card{
+        padding:24px;
+      }
+
+      .checkpoint{
+        padding:24px;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce){
+
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        animation:none!important;
+        transition:none!important;
+      }
+
+      .reveal{
+        opacity:1;
+        transform:none;
+        filter:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+  <div class="nav-shell" id="navShell">
+
+    <div class="nav-row">
+
+      <a class="logo"
+         href="index.html"
+         aria-label="Stack Carbon home">
+
+        <img
+          src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+          alt="Stack Carbon Logo">
+
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+
+          <button class="drop-btn" type="button">
+            About Us <span>▾</span>
+          </button>
+
+          <div class="drop-menu">
+
+            <a href="who-we-are.html">
+              Who We Are
+            </a>
+
+            <a href="our-team.html">
+              Our Team
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="dropdown">
+
+          <button class="drop-btn" type="button">
+            Projects <span>▾</span>
+          </button>
+
+          <div class="drop-menu">
+
+            <a href="karibu.html">
+              Karibu Project
+            </a>
+
+            <a href="nile.html">
+              Nile Char Project
+            </a>
+
+            <a href="monsoon.html">
+              Madagascar Monsoon Project
+            </a>
+
+          </div>
+
+        </div>
+
+        <a href="blog.html">
+          Insights
+        </a>
+
+      </nav>
+
+      <a class="nav-cta" href="contact.html">
+        Contact us
+      </a>
+
+      <button
+        class="menu-btn"
+        id="openDrawer"
+        type="button"
+        aria-label="Open menu">
+
+        ☰
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     MOBILE DRAWER
+========================= -->
+
+<div class="drawer" id="drawer">
+
+  <div class="drawer-panel">
+
+    <div class="drawer-top">
+
+      <img
+        src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+        alt="Stack Carbon Logo">
+
+      <button
+        class="drawer-close"
+        id="closeDrawer"
+        type="button">
+
+        ×
+
+      </button>
+
+    </div>
+
+
+    <div class="drawer-links">
+
+      <a href="index.html" class="drawer-link">
+        Home
+      </a>
+
+
+      <button
+        class="acc-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="accAbout">
+
+        About Us
+        <span>▾</span>
+
+      </button>
+
+      <div class="acc-panel" id="accAbout">
+
+        <a href="who-we-are.html"
+           class="drawer-link sub">
+
+          Who We Are
+
+        </a>
+
+        <a href="our-team.html"
+           class="drawer-link sub">
+
+          Our Team
+
+        </a>
+
+      </div>
+
+
+      <button
+        class="acc-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="accProjects">
+
+        Projects
+        <span>▾</span>
+
+      </button>
+
+      <div class="acc-panel" id="accProjects">
+
+        <a href="karibu.html"
+           class="drawer-link sub">
+
+          Karibu Project
+
+        </a>
+
+        <a href="nile.html"
+           class="drawer-link sub">
+
+          Nile Char Project
+
+        </a>
+
+        <a href="monsoon.html"
+           class="drawer-link sub">
+
+          Madagascar Monsoon Project
+
+        </a>
+
+      </div>
+
+
+      <a href="blog.html"
+         class="drawer-link">
+
+        Insights
+
+      </a>
+
+
+      <a href="contact.html"
+         class="drawer-link drawer-cta">
+
+        Contact us →
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     ARTICLE HERO
+========================= -->
+
+<section class="article-hero">
+
+  <div class="hero-content reveal">
+
+    <span class="category">
+      Carbon Markets • Corporate Net-Zero • Carbon Removal
+    </span>
+
+    <h1>
+      How SBTi’s Net-Zero Evolution Is Driving Corporate Demand for Carbon Removal
+    </h1>
+
+    <p class="hero-summary">
+      The evolution of the Science Based Targets initiative’s Corporate
+      Net-Zero Standard is giving companies clearer direction on permanence,
+      procurement timelines, and the role of carbon removal in achieving
+      long-term climate targets.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ARTICLE
+========================= -->
+
+<main class="article-wrapper">
+
+  <article class="article reveal">
+    <a href="blog.html" class="back-link"><span>←</span> Back to Insights</a>
+
+    <div class="article-meta">
+
+      <span>
+        <i class="fa-regular fa-calendar"></i>
+        August 2026
+      </span>
+
+      <span>•</span>
+
+      <span>
+        <i class="fa-regular fa-clock"></i>
+        8 min read
+      </span>
+
+      <span>•</span>
+
+      <span>
+        Carbon Removal
+      </span>
+
+    </div>
+
+
+    <div class="article-content">
+
+      <p class="lead">
+        For over 11,000 companies globally, the Science Based Targets
+        initiative (SBTi) serves as the definitive rulebook for setting,
+        validating, and achieving corporate climate targets.
+      </p>
+
+
+      <p>
+        With the publication of the
+        <strong>SBTi Corporate Net-Zero Standard V2.0</strong>,
+        two fundamental questions that previously hung over the carbon
+        management market have received much clearer direction:
+        <strong>Does permanence matter, and when do companies need to buy?</strong>
+      </p>
+
+
+      <p>
+        The update delivers actionable answers to both—reshaping corporate procurement strategies and highlighting how a diverse portfolio of carbon management solutions will be essential to reaching global climate goals.
+      </p>
+
+
+      <!-- SECTION 1 -->
+
+      <h2>
+        1. The “Like-for-Like” Principle: Aligning Removal Pathways with Emissions Profiles
+      </h2>
+
+      <p>
+        Corporate climate action relies on a spectrum of vital solutions, from forestry and soil organic carbon practices to durable engineered and mineral removals. Standard V2.0 clarifies how different mitigation tools align with long-term climate targets through the  <strong>“like-for-like” principle</strong>.
+      </p>
+
+      <p>When a company reaches its net-zero target year, its residual long-lived greenhouse gas emissions, primarily fossil CO2, must be neutralized with permanent removals of matching durability.
+      </p>
+
+      
+
+      <p>
+      This approach ensures that every carbon removal pathway plays to its distinct strength: short-to-medium term nature-based solutions deliver immediate ecosystem restoration and biodiversity protection, while high-permanence pathways like Enhanced Rock Weathering (ERW), which locks atmospheric carbon into stable bicarbonate form for over 1,000 years, provide long-term neutralization for persistent fossil emissions.
+      </p>
+
+      
+
+
+      <!-- SECTION 2 -->
+
+      <h2>
+        2. A Concrete Timeline: Ongoing Emissions Responsibility (OER)
+      </h2>
+
+      <p>
+        Rather than waiting until final target net-zero dates (e.g., 2040 or 2050) to build removal portfolios, SBTi V2.0 introduces the <strong>Ongoing Emissions Responsibility (OER)</strong> framework. OER provides a structured roadmap for companies to invest in carbon removal pathways alongside ongoing internal decarbonization.
+         
+      </p>
+
+      
+      <h3>
+       The framework outlines three voluntary engagement tiers today:
+      </h3>
+
+
+      <div class="table-wrap">
+
+        <table class="oer-table">
+
+          <thead>
+
+            <tr>
+
+              <th>
+                OER Tier
+              </th>
+
+              <th>
+                Scope Coverage Requirement
+              </th>
+
+              <th>
+                Financial / Removal Target
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td class="tier">
+                Engaged
+              </td>
+
+              <td>
+                Mitigate at least
+                <strong>1%</strong>
+                of ongoing Scope 1–3 emissions.
+              </td>
+
+              <td>
+                Initial commitment entry point.
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td class="tier">
+                Advanced
+              </td>
+
+              <td>
+                Cover
+                <strong>10%</strong>
+                of the full Scope 1, 2 and 3 footprint.
+              </td>
+
+              <td>
+                Mandatory minimum spend of
+                <strong>$20/tonne</strong>.
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td class="tier">
+                Leadership
+              </td>
+
+              <td>
+                Cover
+                <strong>100%</strong>
+                of the full Scope 1–3 footprint.
+              </td>
+
+              <td>
+                Dedicated budget target of
+                <strong>$80/tonne</strong>.
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <div class="checkpoint">
+
+        <div class="checkpoint-label">
+          The 2035 Compliance Checkpoint
+        </div>
+
+       
+
+        <p>
+          Starting in 2035, Category A companies (large enterprises and mid-sized firms in high-income economies) face mandatory compliance. They must neutralize at least 1% of their long-lived Scope 1–3 emissions with permanent carbon removals, scaling linearly to 100% by their net-zero target year.
+        </p>
+
+      </div>
+
+
+      <!-- SECTION 3 -->
+
+     <h2>3. Clarifying Corresponding Adjustments</h2>
+
+<p>
+    In earlier drafts of the V2.0 standard, proposed rules would have barred
+    corporates from claiming credits if host countries counted those removals
+    toward their own Nationally Determined Contributions (NDCs).
+</p>
+
+<p>
+    The finalized V2.0 settled this debate:
+    <strong>credits remain eligible for corporate claims regardless of whether
+    a Corresponding Adjustment (CA) under Article 6 has been applied.</strong>
+</p>
+
+
+
+<p>
+    Companies must transparently disclose whether CAs are attached to their credits. While credits backed by Corresponding Adjustments carry the highest integrity tier, unadjusted credits remain valid for corporate net-zero and OER claims. This decision opens a clear runway for high-integrity carbon projects across Africa and the Global South to supply global corporate buyers across various credit categories.
+</p>
+
+      <!-- SECTION 4 -->
+
+      <h2>
+        4. Committing Today: Multi-Pathway Flexibility for Corporate Buyers
+      </h2>
+
+      <p>
+       Waiting until 2035 to secure carbon removal volume exposes corporate buyers to severe market bottlenecks, price volatility, and unhedged compliance risk. Because project infrastructure—from feedstock supply chains to field-level measurement, reporting, and verification (MRV)—takes years to scale, forward-thinking organizations are committing now through early-stage investments, pre-purchases, and structured multi-year offtakes.
+      </p>
+
+      <p>
+       Under the SBTi V2.0 framework, corporate procurement teams need options that balance immediate budget constraints, near-term recognition, and long-term permanence criteria. Stack Carbon meets this demand by offering two complementary, high-integrity carbon removal pathways from a single operational platform across East Africa:
+      </p>
+
+     
+
+
+      <h3>
+        Stack Carbon Portfolio Flexibility
+      </h3>
+
+     
+
+
+      <div class="portfolio">
+
+        <div class="portfolio-card erw">
+
+          <span class="portfolio-label">
+            Durable Removal
+          </span>
+
+          <h3>
+            Enhanced Rock Weathering
+          </h3>
+
+          <ul>
+
+            <li>
+              <strong>Durability:</strong>
+              1,000+ years
+            </li>
+
+            <li>
+              <strong>Optimal for:</strong>
+              Long-lived fossil GHG neutralization and maximum permanence
+            </li>
+
+            <li>
+              <strong>Agronomic co-benefits:</strong>
+              Soil pH balancing and silica replenishment
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="portfolio-card biochar">
+
+          <span class="portfolio-label">
+            Scalable Removal
+          </span>
+
+          <h3>
+            Biochar
+          </h3>
+
+          <ul>
+
+            <li>
+              <strong>Durability:</strong>
+              Hundreds of years
+            </li>
+
+            <li>
+              <strong>Optimal for:</strong>
+              Rapid scaling and near-term OER budget optimization
+            </li>
+
+            <li>
+              <strong>Agronomic co-benefits:</strong>
+              Carbon retention and improved soil water-holding capacity
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <p>
+        By offering both pathways from a single operational platform across Africa, Stack Carbon provides corporate procurement teams with total contract flexibility. Sustainability leaders can structure tailored portfolios, combining ERW for maximum long-term permanence with Biochar for immediate deployment, matching their exact budget tiers, volume targets, and SBTi compliance timelines without being locked into a single technology.
+      </p>
+
+      
+
+
+      <!-- FINAL -->
+
+      <h2>
+      Moving Toward a Balanced Carbon Market
+      </h2>
+
+     
+      <p>
+       SBTi’s Corporate Net-Zero Standard V2.0 reinforces that meeting global climate goals requires a portfolio approach, combining rapid internal emissions reductions, immediate nature-based conservation, and scalable durable removals.
+      </p>
+
+    
+
+      <p>
+     By providing clear rules for long-term neutrality alongside actionable entry points today, the new standard gives corporate leaders the clarity needed to invest in high-integrity carbon removal pathways with confidence.
+      </p>
+
+    </div>
+
+  </article>
+
+</main>
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter">
+
+  <div class="newsletter-inner reveal">
+
+    <span class="category">
+      STACK CARBON INSIGHTS
+    </span>
+
+    <h2>
+      Stay Ahead of the Carbon Market
+    </h2>
+
+    <p>
+      Get the latest insights on carbon removal, climate finance,
+      carbon markets, and climate action across Africa.
+    </p>
+
+    <form class="newsletter-form"
+          onsubmit="return false;">
+
+      <input
+        type="email"
+        placeholder="Enter your email address"
+        aria-label="Email address">
+
+      <button type="submit">
+        Subscribe
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="main-footer">
+
+  <img
+    src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771854835/seedlings-7110591_rocloz.jpg"
+    alt=""
+    class="footer-watermark-img"
+    aria-hidden="true"
+    loading="lazy">
+
+
+  <div class="footer-inner">
+
+    <div class="footer-col reveal">
+
+      <a href="index.html">
+
+        <img
+          src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+          alt="Stack Carbon Logo"
+          class="footer-logo">
+
+      </a>
+
+      <p>
+        Scaling impact-driven climate action in Africa.
+      </p>
+
+    </div>
+
+
+    <div class="footer-col reveal">
+
+      <h4>
+        Company
+      </h4>
+
+      <a href="karibu.html">
+        Projects
+      </a>
+
+      <a href="our-team.html">
+        Our Team
+      </a>
+
+      <a href="who-we-are.html">
+        Who We Are
+      </a>
+
+      <a href="blog.html">
+        Insights
+      </a>
+
+    </div>
+
+
+    <div class="footer-col reveal">
+
+      <h4>
+        Contact
+      </h4>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        info@stackcarbon.earth
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        (+256) 039 3001954
+      </p>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        8H9R+27V, Nile Ave,<br>
+        Kampala, Uganda
+      </p>
+
+
+      <a
+        href="https://www.linkedin.com/company/stack-carbon/"
+        target="_blank"
+        rel="noopener"
+        class="footer-social">
+
+        <i class="fa-brands fa-linkedin"></i>
+        LinkedIn
+
+      </a>
+
+<br>
+      <a
+        href="contact.html"
+        class="footer-btn">
+
+        Get in touch →
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © <span id="year"></span>
+    Stack Carbon. All rights reserved.
+    <br>
+    Designed by Trixie Technologies
+
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+  /* YEAR */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  /* REVEAL */
+
+  const reduceMotion =
+    window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+  const revealEls =
+    document.querySelectorAll(".reveal");
+
+
+  if ("IntersectionObserver" in window) {
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (!entry.isIntersecting)
+                return;
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+          );
+
+        },
+        {
+          threshold:.12
+        }
+      );
+
+
+    revealEls.forEach(
+      (el,index) => {
+
+        if (!reduceMotion) {
+
+          el.style.transitionDelay =
+            `${(index % 7) * 80}ms`;
+
+        }
+
+        observer.observe(el);
+
+      }
+    );
+
+  } else {
+
+    revealEls.forEach(
+      el => el.classList.add("visible")
+    );
+
+  }
+
+
+  /* HEADER SCROLL */
+
+  const navShell =
+    document.getElementById("navShell");
+
+
+  function handleHeaderScroll(){
+
+    if (!navShell)
+      return;
+
+    if (window.scrollY > 10){
+
+      navShell.classList.add(
+        "scrolled"
+      );
+
+    } else {
+
+      navShell.classList.remove(
+        "scrolled"
+      );
+
+    }
+
+  }
+
+
+  handleHeaderScroll();
+
+  window.addEventListener(
+    "scroll",
+    handleHeaderScroll,
+    {
+      passive:true
+    }
+  );
+
+
+  /* MOBILE DRAWER */
+
+  const drawer =
+    document.getElementById("drawer");
+
+  const openDrawer =
+    document.getElementById(
+      "openDrawer"
+    );
+
+  const closeDrawer =
+    document.getElementById(
+      "closeDrawer"
+    );
+
+
+  function openMenu(){
+
+    drawer.classList.add("open");
+
+    document.body.style.overflow =
+      "hidden";
+
+  }
+
+
+  function closeMenu(){
+
+    drawer.classList.remove("open");
+
+    document.body.style.overflow =
+      "";
+
+  }
+
+
+  openDrawer?.addEventListener(
+    "click",
+    openMenu
+  );
+
+
+  closeDrawer?.addEventListener(
+    "click",
+    closeMenu
+  );
+
+
+  drawer?.addEventListener(
+    "click",
+    (event) => {
+
+      if (
+        event.target === drawer
+      ){
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (
+        event.key === "Escape" &&
+        drawer?.classList.contains("open")
+      ){
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+
+  /* MOBILE ACCORDIONS */
+
+  const accBtns =
+    document.querySelectorAll(
+      ".acc-btn"
+    );
+
+
+  accBtns.forEach(
+    button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const id =
+            button.getAttribute(
+              "aria-controls"
+            );
+
+          const panel =
+            document.getElementById(id);
+
+          if (!panel)
+            return;
+
+
+          const isOpen =
+            panel.classList.toggle(
+              "open"
+            );
+
+
+          button.setAttribute(
+            "aria-expanded",
+            isOpen
+              ? "true"
+              : "false"
+          );
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+</body>
+</html>

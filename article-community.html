@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Why Community Co-Design Is the True Indicator of Carbon Removal Integrity | Stack Carbon</title>
+
+<meta name="description" content="Why community co-design, social permanence and local partnerships are essential to high-integrity carbon removal across Africa.">
+
+<link rel="icon" type="image/png"
+href="https://res.cloudinary.com/drqsua6wp/image/upload/f_png,q_auto,w_64,h_64,c_fill,g_auto/v1772185133/favicon_stack_logo_tmjlpa.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+:root{
+--deep:#203319;
+--olive:#5B7D3F;
+--lime:#A4CF5B;
+--neutral:#E3DED7;
+--white:#fff;
+--deep-rgb:32,51,25;
+--olive-rgb:91,125,63;
+--lime-rgb:164,207,91;
+--max:1200px;
+--text-dark:#1A2814;
+--shadow:0 18px 45px rgba(0,0,0,.22);
+--ease:cubic-bezier(.2,0,.2,1);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+overflow-x:clip;
+}
+
+body{
+font-family:"Nunito Sans",sans-serif;
+background:#fff;
+color:var(--text-dark);
+line-height:1.7;
+overflow-x:clip;
+-webkit-font-smoothing:antialiased;
+}
+
+img{
+display:block;
+max-width:100%;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+button,
+input{
+font:inherit;
+}
+
+button{
+cursor:pointer;
+}
+
+.container{
+width:min(var(--max),92%);
+margin-inline:auto;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.site-header{
+position:fixed;
+top:16px;
+left:0;
+right:0;
+z-index:1000;
+pointer-events:none;
+}
+
+.nav-shell{
+width:min(var(--max),92%);
+margin:auto;
+border:1px solid rgba(255,255,255,.14);
+border-radius:22px;
+background:rgba(var(--deep-rgb),.8);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+box-shadow:var(--shadow);
+pointer-events:auto;
+transition:.25s ease;
+}
+
+.nav-shell.scrolled{
+background:rgba(var(--deep-rgb),.95);
+}
+
+.nav-row{
+min-height:75px;
+padding:0 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:16px;
+}
+
+.logo img{
+height:38px;
+width:auto;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+flex:1;
+color:rgba(255,255,255,.94);
+font-size:.95rem;
+font-weight:800;
+}
+
+.nav-links>a,
+.drop-btn{
+border:0;
+background:transparent;
+color:inherit;
+padding:10px 12px;
+border-radius:12px;
+font-weight:800;
+white-space:nowrap;
+}
+
+.nav-links>a:hover,
+.drop-btn:hover{
+color:var(--lime);
+background:rgba(255,255,255,.06);
+}
+
+.dropdown{
+position:relative;
+}
+
+.drop-btn span{
+font-size:.75rem;
+}
+
+.drop-menu{
+position:absolute;
+top:calc(100% + 10px);
+left:0;
+min-width:230px;
+padding:8px;
+border:1px solid rgba(255,255,255,.12);
+border-radius:16px;
+background:rgba(var(--deep-rgb),.97);
+box-shadow:var(--shadow);
+opacity:0;
+visibility:hidden;
+transform:translateY(8px);
+transition:.22s ease;
+}
+
+.dropdown:hover .drop-menu,
+.dropdown.open .drop-menu{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.drop-menu a{
+display:block;
+padding:12px;
+border-radius:12px;
+color:rgba(255,255,255,.9);
+font-weight:800;
+}
+
+.drop-menu a:hover{
+color:var(--lime);
+background:rgba(var(--lime-rgb),.1);
+}
+
+.nav-tools{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.nav-cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 20px;
+border-radius:999px;
+background:var(--lime);
+color:#0c160b;
+font-weight:900;
+transition:.2s;
+}
+
+.nav-cta:hover{
+transform:translateY(-2px);
+}
+
+.menu-btn{
+display:none;
+width:44px;
+height:44px;
+border:1px solid rgba(255,255,255,.16);
+border-radius:14px;
+background:rgba(255,255,255,.06);
+color:#fff;
+font-size:20px;
+}
+
+/* =========================
+MOBILE DRAWER
+========================= */
+
+.drawer{
+position:fixed;
+inset:0;
+z-index:2000;
+background:rgba(0,0,0,.58);
+opacity:0;
+visibility:hidden;
+transition:.25s;
+}
+
+.drawer.open{
+opacity:1;
+visibility:visible;
+}
+
+.drawer-panel{
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+width:min(420px,92vw);
+padding:22px;
+overflow-y:auto;
+background:
+radial-gradient(
+800px 400px at 10% 0%,
+rgba(var(--olive-rgb),.18),
+transparent 60%
+),
+linear-gradient(
+180deg,
+rgba(var(--deep-rgb),.99),
+rgba(var(--deep-rgb),.93)
+);
+border-left:1px solid rgba(255,255,255,.12);
+color:#fff;
+transform:translateX(110%);
+transition:transform .3s var(--ease);
+}
+
+.drawer.open .drawer-panel{
+transform:translateX(0);
+}
+
+.drawer-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:20px;
+}
+
+.drawer-top img{
+height:32px;
+width:auto;
+}
+
+.drawer-close{
+width:44px;
+height:44px;
+border:1px solid rgba(255,255,255,.16);
+border-radius:14px;
+background:rgba(255,255,255,.06);
+color:#fff;
+font-size:22px;
+}
+
+.drawer-links{
+display:flex;
+flex-direction:column;
+gap:10px;
+border-top:1px solid rgba(255,255,255,.12);
+padding-top:18px;
+}
+
+.drawer-link,
+.acc-btn{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px;
+border:1px solid rgba(255,255,255,.15);
+border-radius:16px;
+background:rgba(255,255,255,.06);
+color:#fff;
+font-weight:900;
+}
+
+.drawer-link:hover,
+.acc-btn:hover{
+color:var(--lime);
+border-color:rgba(var(--lime-rgb),.4);
+}
+
+.acc-btn{
+appearance:none;
+}
+
+.acc-panel{
+display:none;
+padding-top:5px;
+}
+
+.acc-panel.open{
+display:block;
+}
+
+.drawer-link.sub{
+width:calc(100% - 12px);
+margin:5px 0 0 12px;
+font-size:.94rem;
+}
+
+.drawer-cta{
+justify-content:center;
+background:var(--lime);
+color:var(--deep);
+}
+
+/* =========================
+ARTICLE HERO
+========================= */
+
+.article-hero{
+position:relative;
+min-height:650px;
+display:flex;
+align-items:flex-end;
+overflow:hidden;
+isolation:isolate;
+padding:150px 0 95px;
+color:#fff;
+
+background:
+linear-gradient(
+180deg,
+rgba(19,55,44,.38),
+rgba(19,55,44,.93)
+),
+url("https://res.cloudinary.com/drqsua6wp/image/upload/v1772536662/WhatsApp_Image_2026-03-03_at_2.14.50_PM_w8oq1l.jpg")
+center/cover;
+}
+
+.hero-content{
+width:min(1050px,92%);
+margin-inline:auto;
+}
+
+.category{
+display:inline-block;
+margin-bottom:18px;
+color:var(--lime);
+font-size:.76rem;
+font-weight:900;
+letter-spacing:.18em;
+text-transform:uppercase;
+}
+
+.hero h1{
+max-width:1000px;
+font-size:clamp(2.6rem,6vw,5.2rem);
+line-height:1.04;
+letter-spacing:-.035em;
+font-weight:900;
+}
+
+.hero-summary{
+max-width:780px;
+margin-top:22px;
+color:rgba(255,255,255,.8);
+font-size:1.04rem;
+}
+
+/* =========================
+ARTICLE
+========================= */
+
+.article-wrapper{
+position:relative;
+z-index:5;
+width:min(1000px,92%);
+margin:-60px auto 100px;
+}
+
+.article{
+background:#fff;
+border:1px solid rgba(var(--deep-rgb),.08);
+border-radius:26px;
+padding:clamp(30px,6vw,70px);
+box-shadow:0 28px 75px rgba(0,0,0,.1);
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-bottom:28px;
+color:var(--olive);
+font-size:.88rem;
+font-weight:900;
+}
+
+.back-link:hover{
+color:var(--deep);
+}
+
+.article-meta{
+margin-bottom:35px;
+color:#89948d;
+font-size:.74rem;
+font-weight:800;
+letter-spacing:.06em;
+}
+
+.article-content{
+color:#46554f;
+font-size:1.06rem;
+}
+
+.article-content p{
+margin-bottom:23px;
+}
+
+.article-content h2{
+margin-top:55px;
+margin-bottom:18px;
+color:var(--deep);
+font-size:clamp(1.9rem,4vw,2.4rem);
+line-height:1.15;
+font-weight:900;
+letter-spacing:-.02em;
+}
+
+.article-content h3{
+margin-top:35px;
+margin-bottom:12px;
+color:var(--deep);
+font-size:1.35rem;
+font-weight:900;
+}
+
+.article-content strong{
+color:var(--deep);
+}
+
+.article-content ul{
+margin:15px 0 25px;
+padding-left:25px;
+}
+
+.article-content li{
+margin-bottom:12px;
+}
+
+.article-content blockquote{
+margin:38px 0;
+padding:15px 0 15px 25px;
+border-left:4px solid var(--lime);
+color:#65746e;
+font-size:1.1rem;
+font-style:italic;
+}
+
+/* =========================
+DUAL PERMANENCE BOX
+========================= */
+
+.permanence-box{
+margin:45px 0;
+padding:35px;
+border-radius:22px;
+background:#f3f5ef;
+border:1px solid rgba(var(--olive-rgb),.16);
+}
+
+.permanence-title{
+margin-bottom:25px;
+text-align:center;
+color:var(--deep);
+font-size:1rem;
+font-weight:900;
+letter-spacing:.12em;
+text-transform:uppercase;
+}
+
+.permanence-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.permanence-column{
+padding:25px;
+border-radius:18px;
+background:#fff;
+}
+
+.permanence-column h3{
+margin:0 0 15px;
+font-size:1.15rem;
+}
+
+.permanence-column ul{
+margin:0;
+padding-left:20px;
+}
+
+.permanence-result{
+margin-top:25px;
+padding:18px;
+border-radius:15px;
+background:var(--deep);
+color:#fff;
+text-align:center;
+font-weight:900;
+}
+
+/* =========================
+DUE DILIGENCE CARDS
+========================= */
+
+.diligence{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin:30px 0 35px;
+}
+
+.diligence-card{
+padding:25px;
+border-radius:20px;
+background:#f5f6f2;
+border:1px solid rgba(var(--deep-rgb),.08);
+}
+
+.diligence-number{
+display:flex;
+align-items:center;
+justify-content:center;
+width:42px;
+height:42px;
+margin-bottom:18px;
+border-radius:50%;
+background:var(--lime);
+color:var(--deep);
+font-weight:900;
+}
+
+.diligence-card h3{
+margin:0 0 12px;
+color:var(--deep);
+font-size:1.15rem;
+}
+
+.diligence-card p{
+font-size:.95rem;
+}
+
+/* =========================
+NEWSLETTER
+========================= */
+
+.newsletter{
+padding:100px 20px;
+text-align:center;
+background:var(--neutral);
+}
+
+.newsletter-inner{
+width:min(760px,100%);
+margin:auto;
+}
+
+.newsletter-label{
+margin-bottom:14px;
+color:var(--olive);
+font-size:.75rem;
+font-weight:900;
+letter-spacing:.2em;
+text-transform:uppercase;
+}
+
+.newsletter h2{
+margin-bottom:15px;
+color:var(--deep);
+font-size:clamp(2.3rem,5vw,4rem);
+line-height:1.05;
+font-weight:900;
+}
+
+.newsletter p{
+max-width:600px;
+margin:0 auto 30px;
+color:#5c6c64;
+}
+
+.newsletter-form{
+max-width:550px;
+margin:auto;
+display:flex;
+padding:6px;
+background:#fff;
+border-radius:999px;
+box-shadow:0 15px 40px rgba(var(--deep-rgb),.08);
+}
+
+.newsletter-form input{
+flex:1;
+min-width:0;
+border:0;
+outline:0;
+padding:13px 20px;
+color:var(--deep);
+background:transparent;
+}
+
+.newsletter-form button{
+border:0;
+padding:13px 25px;
+border-radius:999px;
+background:var(--deep);
+color:#fff;
+font-weight:900;
+}
+
+.newsletter-form button:hover{
+background:var(--olive);
+}
+
+.newsletter-message{
+display:none;
+margin-top:15px;
+color:var(--olive);
+font-weight:800;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.main-footer{
+position:relative;
+padding:75px 0 30px;
+background:var(--deep);
+color:rgba(255,255,255,.86);
+overflow:hidden;
+}
+
+.footer-watermark{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:.055;
+filter:grayscale(100%) brightness(130%);
+pointer-events:none;
+}
+
+.footer-inner,
+.footer-bottom{
+position:relative;
+z-index:2;
+}
+
+.footer-inner{
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:45px;
+}
+
+.footer-logo{
+width:auto;
+height:42px;
+margin-bottom:15px;
+}
+
+.footer-col h4{
+margin-bottom:14px;
+color:#fff;
+font-size:.95rem;
+letter-spacing:.1em;
+text-transform:uppercase;
+}
+
+.footer-col p,
+.footer-col a{
+display:block;
+margin-bottom:9px;
+color:rgba(255,255,255,.7);
+font-size:.93rem;
+}
+
+.footer-col a:hover{
+color:var(--lime);
+}
+
+.footer-social{
+display:inline-flex!important;
+align-items:center;
+gap:8px;
+margin-top:8px;
+}
+
+.footer-btn{
+display:inline-flex!important;
+width:max-content;
+margin-top:10px;
+padding:12px 18px;
+border-radius:999px;
+background:var(--lime);
+color:var(--deep)!important;
+font-weight:900;
+}
+
+.footer-bottom{
+margin-top:45px;
+padding-top:18px;
+border-top:1px solid rgba(255,255,255,.1);
+text-align:center;
+color:rgba(255,255,255,.55);
+font-size:.85rem;
+}
+
+/* =========================
+ANIMATION
+========================= */
+
+.reveal{
+opacity:0;
+transform:translateY(24px);
+filter:blur(2px);
+transition:
+opacity .7s var(--ease),
+transform .7s var(--ease),
+filter .7s var(--ease);
+}
+
+.reveal.visible{
+opacity:1;
+transform:none;
+filter:none;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+.nav-links,
+.nav-cta{
+display:none;
+}
+
+.menu-btn{
+display:grid;
+place-items:center;
+}
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.diligence{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:650px){
+
+.site-header{
+top:10px;
+}
+
+.nav-shell{
+border-radius:18px;
+}
+
+.nav-row{
+min-height:70px;
+padding:0 13px;
+}
+
+.logo img{
+height:31px;
+max-width:150px;
+}
+
+.article-hero{
+min-height:610px;
+padding:130px 0 70px;
+}
+
+.hero-content{
+width:92%;
+}
+
+.hero h1{
+font-size:clamp(2.45rem,12vw,4rem);
+}
+
+.hero-summary{
+font-size:.95rem;
+}
+
+.article-wrapper{
+width:94%;
+margin-top:-40px;
+margin-bottom:65px;
+}
+
+.article{
+padding:30px 22px;
+border-radius:20px;
+}
+
+.article-content{
+font-size:1rem;
+}
+
+.article-content h2{
+margin-top:42px;
+}
+
+.permanence-box{
+padding:22px;
+}
+
+.permanence-grid{
+grid-template-columns:1fr;
+}
+
+.newsletter{
+padding:80px 18px;
+}
+
+.newsletter-form{
+flex-direction:column;
+gap:10px;
+padding:0;
+background:transparent;
+box-shadow:none;
+}
+
+.newsletter-form input{
+width:100%;
+background:#fff;
+border-radius:999px;
+}
+
+.newsletter-form button{
+width:100%;
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+html{
+scroll-behavior:auto;
+}
+
+*,
+*::before,
+*::after{
+animation:none!important;
+transition:none!important;
+}
+
+.reveal{
+opacity:1;
+transform:none;
+filter:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header class="site-header">
+
+<div class="nav-shell" id="navShell">
+
+<div class="nav-row">
+
+<a class="logo" href="index.html" aria-label="Stack Carbon home">
+
+<img
+src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+alt="Stack Carbon Logo">
+
+</a>
+
+<nav class="nav-links" aria-label="Main navigation">
+
+<a href="index.html">Home</a>
+
+<div class="dropdown">
+
+<button class="drop-btn" type="button">
+About Us <span>▾</span>
+</button>
+
+<div class="drop-menu">
+
+<a href="who-we-are.html">Who We Are</a>
+<a href="our-team.html">Our Team</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="drop-btn" type="button">
+Projects <span>▾</span>
+</button>
+
+<div class="drop-menu">
+
+<a href="karibu.html">Karibu Project</a>
+<a href="nile.html">Nile Char Project</a>
+<a href="monsoon.html">Madagascar Monsoon Project</a>
+
+</div>
+
+</div>
+
+<a href="blog.html" aria-current="page">Insights</a>
+
+</nav>
+
+<div class="nav-tools">
+
+<a href="contact.html" class="nav-cta">
+Contact us
+</a>
+
+<button
+class="menu-btn"
+id="openDrawer"
+type="button"
+aria-label="Open menu"
+aria-expanded="false">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+</div>
+</div>
+</header>
+
+
+<!-- =========================
+MOBILE DRAWER
+========================= -->
+
+<div class="drawer" id="drawer" aria-hidden="true">
+
+<div class="drawer-panel">
+
+<div class="drawer-top">
+
+<img
+src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+alt="Stack Carbon Logo">
+
+<button
+class="drawer-close"
+id="closeDrawer"
+type="button"
+aria-label="Close menu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="drawer-links">
+
+<a href="index.html" class="drawer-link">
+Home
+</a>
+
+<button class="acc-btn" type="button" aria-expanded="false">
+About Us <span>▾</span>
+</button>
+
+<div class="acc-panel">
+
+<a href="who-we-are.html" class="drawer-link sub">
+Who We Are
+</a>
+
+<a href="our-team.html" class="drawer-link sub">
+Our Team
+</a>
+
+</div>
+
+<button class="acc-btn" type="button" aria-expanded="false">
+Projects <span>▾</span>
+</button>
+
+<div class="acc-panel">
+
+<a href="karibu.html" class="drawer-link sub">
+Karibu Project
+</a>
+
+<a href="nile.html" class="drawer-link sub">
+Nile Char Project
+</a>
+
+<a href="monsoon.html" class="drawer-link sub">
+Madagascar Monsoon Project
+</a>
+
+</div>
+
+<a href="blog.html" class="drawer-link">
+Insights
+</a>
+
+<a href="contact.html" class="drawer-link drawer-cta">
+Contact us →
+</a>
+
+</div>
+</div>
+</div>
+
+
+<!-- =========================
+HERO
+========================= -->
+
+<section class="article-hero">
+
+<div class="hero-content reveal">
+
+<div class="category">
+Carbon Removal • Community • Climate
+</div>
+
+<h1>
+Why Community Co-Design Is the True Indicator of Carbon Removal Integrity
+</h1>
+
+<p class="hero-summary">
+As carbon removal markets mature, technical rigor alone is no longer enough.
+True project integrity depends on building lasting trust with the communities
+that steward the land.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+ARTICLE
+========================= -->
+
+<main class="article-wrapper">
+
+<article class="article reveal">
+
+<a href="blog.html" class="back-link">
+<span>←</span>
+Back to Insights
+</a>
+
+<div class="article-meta">
+STACK CARBON • CARBON REMOVAL • COMMUNITY CO-DESIGN
+</div>
+
+
+<div class="article-content">
+
+<p>
+As global voluntary carbon markets mature, the definition of "project integrity" 
+is undergoing a necessary evolution. For years, buyers evaluated integrity
+ almost exclusively through a technical lens: geochemical permanence, baseline modeling precision,
+ and measurement, reporting, and verification (MRV) protocols.
+</p>
+
+<p>
+While scientific rigor remains non-negotiable, a critical consensus is
+emerging among institutional carbon buyers and climate leaders:
+<strong>a carbon removal project cannot achieve operational permanence
+if it fails to build social permanence.</strong>
+</p>
+
+<p>
+Long before any rock dust or biochar reaches a field, scaling carbon removal starts with a simpler, 
+deeper commitment: building community trust. In land-based carbon dioxide removal
+(CDR) pathways—such as Enhanced Rock Weathering (ERW) and Biochar—the local leaders, 
+residents, and smallholder farmers who steward the land are not passive beneficiaries.
+ They are the core operational
+ partners who transform scientific ambition into meaningful climate action.
+</p>
+
+
+<h2>
+Answering the Hard Questions at Stack Carbon
+</h2>
+
+<p>
+At Stack Carbon, we place a heavy emphasis on scientific rigor—deploying 
+finely ground silicate rock (such as nepheline and mafic minerals)
+ alongside biochar systems across tropical agricultural landscapes in East Africa. 
+But we also know that even the strongest technical design fails if it operates in a vacuum.
+</p>
+
+<p>
+When we enter a new deployment zone, we don’t ask communities
+ to sign onto a finished blueprint. We invite them to interrogate it.
+  Across community halls and field sites, we sit down with local leaders, farmers, 
+and regional agronomists to tackle the hard questions head-on:
+</p>
+
+
+
+
+<h3>
+"Will this rock dust or biochar affect our crop yields or harm our soil over time?"
+</h3>
+
+<p>
+<strong>How Stack Carbon addresses it: </strong>We walk through the geochemistry transparently.
+ Finely crushed silicate rock and biochar aren't synthetic chemicals—they are 
+ natural mineral and carbon amendments that neutralize tropical soil acidity,
+  release vital micronutrients (like silica, calcium, and magnesium),
+   and dramatically improve soil water retention. We share localized field data and set up
+ demonstration plots so farmers can evaluate the agronomic performance on their own land before committing.
+</p>
+
+
+
+
+<h3>
+"Who owns the carbon rights, and how does value actually flow back to us?"
+</h3>
+
+<p>
+<strong>How Stack Carbon addresses it:</strong>
+ We establish clear, transparent legal and economic frameworks before any field work begins.
+  Landowners and farmers retain full control of their land and crops, while benefiting from free soil-conditioning inputs, 
+localized soil testing, and direct economic opportunities created across our supply chain operations.
+</p>
+
+
+
+
+<h3>
+"Will participating restrict what crops I can plant or how I manage my land in the future?"
+</h3>
+
+<p>
+<strong>How Stack Carbon addresses it:</strong>
+ Not at all. Stack Carbon operates on a non-intrusive, 
+agronomy-first model. Farmers maintain 100% decision-making authority over their crop choices,
+ land rotations, and management practices. Our soil amendments—whether finely ground silicate
+  rock or biochar—are integrated into existing farming calendars
+ without requiring farmers to alter their traditional agricultural routines or sign away control over their land.
+
+
+
+
+<p>
+These are just a few of the many candid questions raised during our community town halls.
+ From discussing feedstock safety and road traffic during spreading seasons to clarifying 
+ how soil data is stored and shared, we welcome every concern. Open, unfiltered dialogue before deployment 
+isn't a hurdle for us—it is the foundation of mutual trust and long-term operational success.
+</p>
+
+
+
+
+<h2>
+Social Permanence Protects Carbon Permanence
+</h2>
+
+<p>
+For corporate buyers seeking 100-to-1,000+ year durability under frameworks like the <strong>SBTi Corporate 
+Net-Zero Standard V2.0,</strong> project continuity is paramount. While geochemical mechanisms guarantee the chemical
+ permanence of locked CO2, operational stability ensures that field operations survive over decades.
+
+
+
+<!-- DUAL PERMANENCE -->
+
+<div class="permanence-box">
+
+<div class="permanence-title">
+The Dual-Permanence Integrity Framework
+</div>
+
+<div class="permanence-grid">
+
+<div class="permanence-column">
+
+<h3>
+Geochemical Permanence
+</h3>
+
+<ul>
+
+<li>Silicate rock dissolution</li>
+
+<li>Stable bicarbonate formation</li>
+
+<li>Biochar recalcitrant carbon</li>
+
+</ul>
+
+</div>
+
+
+<div class="permanence-column">
+
+<h3>
+Social Permanence
+</h3>
+
+<ul>
+
+<li>Local community trust</li>
+
+<li>Cooperative stewardship</li>
+
+<li>Multi-generational alignment</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="permanence-result">
+
+HIGH-INTEGRITY, LOW-RISK CARBON REMOVAL ASSETS
+
+</div>
+
+</div>
+
+
+<p>
+Even the strongest technical protocol cannot survive without local partnership. 
+When farmers observe tangible, multi-year benefits, such as balanced soil pH, 
+restored soil organic carbon, and enhanced drought resilience, they become the primary stewards 
+of the deployment. Social permanence protects physical permanence.
+</p>
+
+
+
+
+
+
+<h2>
+Community Partnership Drives Ground-Truth MRV
+</h2>
+
+<p>
+High-integrity MRV requires dense, continuous data collection:
+baseline soil core sampling, trace-element monitoring, pH tracking,
+and application logging across distributed farm plots.
+</p>
+
+<p>
+Attempting to execute field-level MRV purely through external, fly-in technical teams
+ is inefficient and difficult to scale. By grounding our operations 
+in community partnership, Stack Carbon embeds technical capacity directly on the ground:
+</p>
+
+
+<ul>
+
+<li>
+<strong>Local Agronomic Training:</strong>
+Training community members as field technicians to conduct standardized
+soil sampling, GPS mapping, and moisture monitoring.
+</li>
+
+<li>
+<strong>Ground-Truth Feedback:</strong>
+Utilizing local farming knowledge to optimize feedstock transport,
+local grinding operations, and spreading techniques tailored to
+micro-climates.
+</li>
+
+<li>
+<strong>Data Transparency:</strong>
+Returning soil test results directly to farmers, empowering them with
+actionable agronomic data to optimize their own crop management.
+</li>
+
+</ul>
+
+<p>
+This creates a resilient operational network where scientific
+verification is carried out by the people who know the soil best.
+</p>
+
+
+<h2>
+What Corporate Buyers Should Look For in Project Due Diligence
+</h2>
+
+<p>
+For corporate procurement teams navigating land-based carbon dioxide removal (CDR) under frameworks
+ like the SBTi Corporate Net-Zero Standard V2.0, evaluating social integrity is just as critical as 
+ validating geochemical modeling.
+ Projects that overlook community alignment carry severe delivery, operational, and reputational risks.
+</p>
+
+<p>
+When conducting due diligence on project developers,
+ corporate buyers should scrutinize three core pillars of community-centered design:
+</p>
+
+
+
+
+<!-- DUE DILIGENCE -->
+
+<div class="diligence">
+
+<div class="diligence-card">
+
+<div class="diligence-number">
+1
+</div>
+
+<h3>
+Authentic Consultation vs. Post-Hoc Notification
+</h3>
+
+<p>
+<strong>The Benchmark:</strong> Does the developer engage local communities before physical deployment begins?
+</p>
+
+<p>
+<strong>What to Look For:</strong> Evidence of structured community engagement and open consultation 
+frameworks where landowners, local leaders, and smallholder farmers
+ are invited to interrogate the science, clarify land autonomy, and shape field scheduling.
+
+</div>
+
+
+<div class="diligence-card">
+
+<div class="diligence-number">
+2
+</div>
+
+<h3>
+Tangible Agronomic & Economic Alignment
+</h3>
+
+<p>
+<strong>The Benchmark:</strong> Does the carbon removal pathway actively enhance the host landscape?
+</p>
+
+<p>
+<strong>What to Look For:</strong> Clear evidence that the technology delivers direct, 
+measurable benefits to local agricultural systems, such as soil acidity neutralization,
+ restored soil organic carbon, micronutrient replenishment, and improved moisture retention.
+</p>
+
+</div>
+
+
+<div class="diligence-card">
+
+<div class="diligence-number">
+3
+</div>
+
+<h3>
+Embedded Local Infrastructure & Supply Chains
+</h3>
+
+<p><strong>The Benchmark:</strong> Is long-term operational capital staying within the host economy?
+
+</p>
+
+<p>
+<strong>What to Look For:</strong> Investment in physical regional infrastructure, 
+such as local laboratories, regional feedstock crushing and grinding partnerships, 
+biochar processing setups, and localized transport networks. Building in-country operational capacity 
+ensures multi-decade stability and local economic integration.
+
+</div>
+
+</div>
+
+
+<h2>
+One Community at a Time
+</h2>
+
+<p>
+High-integrity carbon removal is not an abstract financial transaction, 
+it is a physical process rooted in real soils, real farms, and real human relationships.
+</p>
+
+<p>
+As Stack Carbon prepares for our next phases of deployment across East Africa, 
+our work remains guided by a core conviction: lasting climate impact is built together.
+ By pairing rigorous science with deep community trust, we ensure that every tonne of carbon removed represents 
+both verified atmospheric permanence and verified rural regeneration—one community at a time.
+</p>
+
+
+
+</div>
+
+</article>
+
+</main>
+
+
+<!-- =========================
+NEWSLETTER
+========================= -->
+
+<section class="newsletter">
+
+<div class="newsletter-inner reveal">
+
+<div class="newsletter-label">
+Stay Connected
+</div>
+
+<h2>
+Get Stack Carbon Insights
+</h2>
+
+<p>
+Get the latest Stack Carbon insights, project updates and climate stories.
+</p>
+
+<form class="newsletter-form" id="newsletterForm">
+
+<input
+id="newsletterEmail"
+type="email"
+placeholder="Enter your email address"
+aria-label="Email address"
+autocomplete="email"
+required>
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+<div
+class="newsletter-message"
+id="newsletterMessage"
+role="status">
+
+Thank you for subscribing to Stack Carbon.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer class="main-footer">
+
+<img
+class="footer-watermark"
+src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771854835/seedlings-7110591_rocloz.jpg"
+alt=""
+aria-hidden="true"
+loading="lazy">
+
+<div class="container footer-inner">
+
+<div class="footer-col reveal">
+
+<a href="index.html">
+
+<img
+src="https://res.cloudinary.com/drqsua6wp/image/upload/v1771314512/STACK_CARBON__Logo_Orientation_1_Green_1_1_t8yhre.png"
+alt="Stack Carbon Logo"
+class="footer-logo">
+
+</a>
+
+<p>
+Scaling impact-driven climate action in Africa.
+</p>
+
+</div>
+
+
+<div class="footer-col reveal">
+
+<h4>
+Company
+</h4>
+
+<a href="karibu.html">Projects</a>
+<a href="our-team.html">Our Team</a>
+<a href="who-we-are.html">Who We Are</a>
+<a href="blog.html">Insights</a>
+
+</div>
+
+
+<div class="footer-col reveal">
+
+<h4>
+Contact
+</h4>
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+info@stackcarbon.earth
+</p>
+
+<p>
+<i class="fa-solid fa-phone"></i>
+(+256) 039 3001954
+</p>
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+8H9R+27V, Nile Ave,<br>
+Kampala, Uganda
+</p>
+
+<a
+href="https://www.linkedin.com/company/stack-carbon/"
+target="_blank"
+rel="noopener noreferrer"
+class="footer-social">
+
+<i class="fa-brands fa-linkedin"></i>
+LinkedIn
+
+</a>
+<br>
+
+<a href="contact.html" class="footer-btn">
+Get in touch →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="container footer-bottom">
+
+© <span id="year"></span>
+Stack Carbon. All rights reserved.
+
+<br>
+
+Designed by Trixie Technologies
+
+</div>
+
+</footer>
+
+
+<script>
+
+"use strict";
+
+/* YEAR */
+
+const yearElement = document.getElementById("year");
+
+if(yearElement){
+yearElement.textContent = new Date().getFullYear();
+}
+
+
+/* HEADER */
+
+const navShell = document.getElementById("navShell");
+
+function updateHeader(){
+
+if(navShell){
+
+navShell.classList.toggle(
+"scrolled",
+window.scrollY > 10
+);
+
+}
+
+}
+
+updateHeader();
+
+window.addEventListener(
+"scroll",
+updateHeader,
+{passive:true}
+);
+
+
+/* MOBILE DRAWER */
+
+const drawer = document.getElementById("drawer");
+
+const openDrawer =
+document.getElementById("openDrawer");
+
+const closeDrawer =
+document.getElementById("closeDrawer");
+
+
+function closeMenu(){
+
+if(!drawer) return;
+
+drawer.classList.remove("open");
+
+drawer.setAttribute(
+"aria-hidden",
+"true"
+);
+
+if(openDrawer){
+
+openDrawer.setAttribute(
+"aria-expanded",
+"false"
+);
+
+}
+
+document.body.style.overflow = "";
+
+}
+
+
+if(openDrawer && drawer){
+
+openDrawer.addEventListener(
+"click",
+function(){
+
+drawer.classList.add("open");
+
+drawer.setAttribute(
+"aria-hidden",
+"false"
+);
+
+openDrawer.setAttribute(
+"aria-expanded",
+"true"
+);
+
+document.body.style.overflow = "hidden";
+
+}
+);
+
+}
+
+
+if(closeDrawer){
+
+closeDrawer.addEventListener(
+"click",
+closeMenu
+);
+
+}
+
+
+if(drawer){
+
+drawer.addEventListener(
+"click",
+function(e){
+
+if(
+e.target === drawer ||
+e.target.closest("a")
+){
+
+closeMenu();
+
+}
+
+}
+);
+
+}
+
+
+document.addEventListener(
+"keydown",
+function(e){
+
+if(e.key === "Escape"){
+
+closeMenu();
+
+}
+
+}
+);
+
+
+/* MOBILE ACCORDIONS */
+
+document.querySelectorAll(
+".acc-btn"
+).forEach(function(button){
+
+button.addEventListener(
+"click",
+function(){
+
+const panel =
+button.nextElementSibling;
+
+if(!panel) return;
+
+panel.classList.toggle(
+"open"
+);
+
+button.setAttribute(
+"aria-expanded",
+String(
+panel.classList.contains("open")
+)
+);
+
+}
+);
+
+});
+
+
+/* DESKTOP DROPDOWNS */
+
+document.querySelectorAll(
+".drop-btn"
+).forEach(function(button){
+
+button.addEventListener(
+"click",
+function(e){
+
+e.stopPropagation();
+
+const parent =
+button.closest(".dropdown");
+
+if(!parent) return;
+
+document.querySelectorAll(
+".dropdown"
+).forEach(function(dropdown){
+
+if(dropdown !== parent){
+
+dropdown.classList.remove("open");
+
+}
+
+});
+
+parent.classList.toggle("open");
+
+}
+);
+
+});
+
+
+document.addEventListener(
+"click",
+function(){
+
+document.querySelectorAll(
+".dropdown"
+).forEach(function(dropdown){
+
+dropdown.classList.remove("open");
+
+});
+
+}
+);
+
+
+/* NEWSLETTER */
+
+const newsletterForm =
+document.getElementById(
+"newsletterForm"
+);
+
+const newsletterMessage =
+document.getElementById(
+"newsletterMessage"
+);
+
+
+if(
+newsletterForm &&
+newsletterMessage
+){
+
+newsletterForm.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+newsletterMessage.style.display =
+"block";
+
+newsletterForm.reset();
+
+}
+);
+
+}
+
+
+/* SCROLL REVEAL */
+
+const revealElements =
+document.querySelectorAll(
+".reveal"
+);
+
+
+if(
+"IntersectionObserver" in window
+){
+
+const observer =
+new IntersectionObserver(
+function(entries, obs){
+
+entries.forEach(
+function(entry){
+
+if(!entry.isIntersecting){
+
+return;
+
+}
+
+entry.target.classList.add(
+"visible"
+);
+
+obs.unobserve(
+entry.target
+);
+
+}
+);
+
+},
+{
+threshold:.08
+}
+);
+
+
+revealElements.forEach(
+function(element,index){
+
+element.style.transitionDelay =
+((index % 5) * 70) + "ms";
+
+observer.observe(element);
+
+}
+);
+
+}else{
+
+revealElements.forEach(
+function(element){
+
+element.classList.add(
+"visible"
+);
+
+}
+);
+
+}
+
+</script>
+
+</body>
+</html>
